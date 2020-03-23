@@ -440,4 +440,169 @@ var bugs_json =
                 "southern": ["january", "february", "march", "october", "november", "december"]
             }
         },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_41_i.png",
+            "name": "stinkbug",
+            "price": 120,
+            "location": "on trees",
+            "time": "all day",
+            "season": {
+                "northern": ["march", "april", "may", "june", "july", "august", "september", "october"],
+                "southern": ["january", "february", "march", "april", "september", "october", "november", "december"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_42_i.png",
+            "name": "man-faced stinkbug",
+            "price": 1000,
+            "location": "on flowers",
+            "time": "7pm - 8am",
+            "season": {
+                "northern": ["march", "april", "may", "june", "july", "august", "september", "october"],
+                "southern": ["january", "february", "march", "april", "september", "october", "november", "december"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_43_i.png",
+            "name": "ladybug",
+            "price": 200,
+            "location": "on flowers",
+            "time": "8am - 5pm",
+            "season": {
+                "northern": ["march", "april", "may", "june", "october"],
+                "southern": []
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_44_i.png",
+            "name": "tiger beetle",
+            "price": 240,
+            "location": "flying",
+            "time": "all day",
+            "season": {
+                "northern": ["february", "march", "april", "may", "june", "july", "august", "september", "october"],
+                "southern": ["january", "february", "march", "september", "october", "november", "december"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_45_i.png",
+            "name": "jewel beetle",
+            "price": 0,
+            "location": "on trees",
+            "time": "all day",
+            "season": {
+                "northern": ["april", "may", "june", "july", "august"],
+                "southern": []
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_47_i.png",
+            "name": "citrus long-horned beetle",
+            "price": 350,
+            "location": "on tree stumps",
+            "time": "all day",
+            "season": {
+                "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
+                "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_48_i.png",
+            "name": "rosalia batesi beetle",
+            "price": 3000,
+            "location": "on tree stumps",
+            "time": "all day",
+            "season": {
+                "northern": ["may", "june", "july", "august", "september"],
+                "southern": ["january", "february", "march", "november", "december"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_49_i.png",
+            "name": "blue weevil beetle",
+            "price": 0,
+            "location": "on trees",
+            "time": "all day",
+            "season": {
+                "northern": ["july", "august"],
+                "southern": []
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_46_i.png",
+            "name": "violin beetle",
+            "price": 450,
+            "location": "on trees",
+            "time": "all day",
+            "season": {
+                "northern": ["may", "june", "september", "october", "november"],
+                "southern": ["march", "april", "may", "november", "december"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_50_i.png",
+            "name": "dung beetle",
+            "price": 0,
+            "location": "on ground",
+            "time": "all day",
+            "season": {
+                "northern": [],
+                "southern": []
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_51_i.png",
+            "name": "earth-boring dung beetle",
+            "price": 300,
+            "location": "on ground",
+            "time": "all day",
+            "season": {
+                "northern": ["july", "august", "september"],
+                "southern": ["january", "february", "march"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_52_i.png",
+            "name": "scarab beetle",
+            "price": 0,
+            "location": "on trees",
+            "time": "11pm - 8am",
+            "season": {
+                "northern": ["july", "august"],
+                "southern": []
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_53_i.png",
+            "name": "drone beetle",
+            "price": 200,
+            "location": "on trees",
+            "time": "all day",
+            "season": {
+                "northern": ["june", "july", "august"],
+                "southern": ["january", "february", "december"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_54_i.png",
+            "name": "goliath beetle",
+            "price": 0,
+            "location": "on trees",
+            "time": "5pm - 8am",
+            "season": {
+                "northern": ["june", "july", "august", "september"],
+                "southern": []
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_55_i.png",
+            "name": "saw stag",
+            "price": 0,
+            "location": "on trees",
+            "time": "all day",
+            "season": {
+                "northern": ["july", "august"],
+                "southern": []
+            }
+        },
     ]

@@ -34,20 +34,25 @@ function createBug(bug) {
   bugName.classList.add("bug__name");
   
   var bugPrice = document.createElement("p");
-  bugPrice.innerText = bug.price;
+  bugPrice.innerText = "Sell for: " + bug.price + " bells";
   bugPrice.classList.add("bug__price");
 
   var bugLocation = document.createElement("p");
-  bugLocation.innerText = bug.location != "" ? bug.location : "none";
+  bugLocation.innerText = bug.location != "" ? "Location: " + bug.location : "none";
   bugLocation.classList.add("bug__location");
 
   var bugTime = document.createElement("p");
-  bugTime.innerText = bug.time != "" ? bug.time : "none";
+  bugTime.innerText = bug.time != "" ? "Time: " + bug.time : "none";
   bugTime.classList.add("bug__time");
 
   var bugMonths = document.createElement("p");
-  bugMonths.innerText = hemisphere == "Southern" ? bug.season.southern : bug.season.northern;
-  if (!bugMonths.innerText) { bugMonths.innerText = "none" };
+  if (hemisphere == "Southern" && bug.season.southern.length != 0) {
+    bugMonths.innerText = "Months: " + bug.season.southern.join(", ");
+  } else if (hemisphere == "Northern" && bug.season.northern.length != 0) {
+    bugMonths.innerText = "Months: " + bug.season.northern.join(", ");
+  } else {
+    bugMonths.innerText = "none";
+  }
   bugMonths.classList.add("bug__months");
 
   var bugTrackers = document.createElement("div");
@@ -104,7 +109,13 @@ function switchHem() {
 
   // Specifically only replace the bugMonths of each bug
   for (var i = 0; i < bugs.length; i++) {
-    container.children[i].children[5].innerText = hemisphere == "Southern" ? bugs[i].season.southern : bugs[i].season.northern;
+    if (hemisphere == "Southern" && bugs[i].season.southern.length != 0) {
+      container.children[i].children[5].innerText = "Months: " + bugs[i].season.southern.join(", ");
+    } else if (hemisphere == "Northern" && bugs[i].season.northern.length != 0) {
+      container.children[i].children[5].innerText = "Months: " + bugs[i].season.northern.join(", ");
+    } else {
+      container.children[i].children[5].innerText = "none";
+    }
   }
 }
 
