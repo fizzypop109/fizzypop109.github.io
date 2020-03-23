@@ -66,8 +66,9 @@ function createBug(bug) {
   bugCaught_label.htmlFor = bug.name + "_caught";
 
   var bugDonated = document.createElement("input");
+  bugDonated.classList.add("bug__donated");
   bugDonated.type = "checkbox";
-  bugDonated.name = "Caught";
+  bugDonated.name = "Donated";
   bugDonated.id = bug.name + "_donated";
 
   var bugDonated_label = document.createElement("label");
@@ -106,3 +107,35 @@ function switchHem() {
 }
 
 initBugs();
+
+// CHECKBOXES LOCAL STORAGE SETUP //
+
+var data = {}
+
+var caughtValues = JSON.parse(localStorage.getItem('caughtValues')) || {};
+var caughtCheckboxes = document.getElementsByClassName('bug__caught');
+
+for (let i = 0; i < caughtCheckboxes.length; i++) {
+  caughtCheckboxes[i].addEventListener("change", function() {
+    caughtValues[this.id] = this.checked;
+
+    data['caughtValues'] = caughtValues;
+
+    localStorage.setItem('data', JSON.stringify(data));
+    console.log(localStorage.getItem("data"));
+  });
+}
+
+var donatedValues = JSON.parse(localStorage.getItem('donatedValues')) || {};
+var donatedCheckboxes = document.getElementsByClassName('bug__donated');
+
+for (let i = 0; i < donatedCheckboxes.length; i++) {
+  donatedCheckboxes[i].addEventListener("change", function() {
+    donatedValues[this.id] = this.checked;
+
+    data['donatedValues'] = donatedValues;
+
+    localStorage.setItem('data', JSON.stringify(data));
+    console.log(localStorage.getItem("data"));
+  });
+}
