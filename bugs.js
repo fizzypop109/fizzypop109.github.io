@@ -4,6 +4,7 @@ var bugs = JSON.parse(JSON.stringify(bugs_json));
 var container = document.getElementsByClassName("bugs__container")[0];
 var hemisphere = "Southern";
 var hemButton = document.getElementsByClassName("button__hemisphere")[0];
+var data = {};
 
 // INITIALISE BUG DISPLAY //
 
@@ -70,6 +71,7 @@ function createBug(bug) {
   bugDonated.type = "checkbox";
   bugDonated.name = "Donated";
   bugDonated.id = bug.name + "_donated";
+  bugDonated.disabled = true;
 
   var bugDonated_label = document.createElement("label");
   bugDonated_label.innerText = "Donated?";
@@ -108,34 +110,61 @@ function switchHem() {
 
 initBugs();
 
-// CHECKBOXES LOCAL STORAGE SETUP //
+// LOAD CHECKBOX DATA ON PAGE LOAD //
 
-var data = {}
+function loadData() {
+  data = JSON.parse(localStorage.getItem('data')) || {};
 
-var caughtValues = JSON.parse(localStorage.getItem('caughtValues')) || {};
-var caughtCheckboxes = document.getElementsByClassName('bug__caught');
+  if (Object.keys(data).length !== 0) {
+    var caughtValues = Object.entries(data['caughtValues']);
+    var donatedValues = Object.entries(data['donatedValues']);
 
-for (let i = 0; i < caughtCheckboxes.length; i++) {
-  caughtCheckboxes[i].addEventListener("change", function() {
-    caughtValues[this.id] = this.checked;
+    for (const [name, value] of caughtValues) {
+      document.getElementById(name).checked = value;
+    }
 
-    data['caughtValues'] = caughtValues;
+    for (const [name, value] of donatedValues) {
+      document.getElementById(name).checked = value;
+    }
+  }
 
-    localStorage.setItem('data', JSON.stringify(data));
-    console.log(localStorage.getItem("data"));
-  });
+  // Make sure data is set before we run through the checkboxes
+  checkboxSetup();
 }
 
-var donatedValues = JSON.parse(localStorage.getItem('donatedValues')) || {};
-var donatedCheckboxes = document.getElementsByClassName('bug__donated');
+// CHECKBOXES LOCAL STORAGE SETUP //
 
-for (let i = 0; i < donatedCheckboxes.length; i++) {
-  donatedCheckboxes[i].addEventListener("change", function() {
-    donatedValues[this.id] = this.checked;
+function checkboxSetup() {
 
-    data['donatedValues'] = donatedValues;
+  var caughtCheckboxes = document.getElementsByClassName('bug__caught');
+  var caughtValues = data['caughtValues'] || {};
 
-    localStorage.setItem('data', JSON.stringify(data));
-    console.log(localStorage.getItem("data"));
-  });
+  for (let i = 0; i < caughtCheckboxes.length; i++) {
+    // CANNOT UNTICK CAUGHT ATM
+    caughtCheckboxes[i].addEventListener("change", function() {
+      caughtValues[this.id] = this.checked;
+
+      if (this.checked = true) {
+        // Enable Donated checkbox
+        document.getElementById(this.id).nextSibling.nextSibling.disabled = false;
+      }
+
+      data['caughtValues'] = caughtValues;
+
+      localStorage.setItem('data', JSON.stringify(data));
+    });
+  }
+
+  var donatedCheckboxes = document.getElementsByClassName('bug__donated');
+  var donatedValues = data['donatedValues'] || {};
+
+  for (let i = 0; i < donatedCheckboxes.length; i++) {
+    donatedCheckboxes[i].addEventListener("change", function() {
+      donatedValues[this.id] = this.checked;
+
+      data['donatedValues'] = donatedValues;
+
+      localStorage.setItem('data', JSON.stringify(data));
+    });
+  }
 }

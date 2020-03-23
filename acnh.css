@@ -87,6 +87,7 @@
 
 /* INDEX PAGE STYLES */
 .index__body {
+  height: 100vh;
   background-color: #f8f8ef;
   display: flex;
   flex-direction: column;
