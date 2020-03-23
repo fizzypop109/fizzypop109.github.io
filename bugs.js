@@ -46,7 +46,7 @@ function createBug(bug) {
 
   var bugMonths = document.createElement("p");
   bugMonths.innerText = hemisphere == "Southern" ? bug.season.southern : bug.season.northern;
-  if (bugMonths.innerText == "") { bugMonths.innerText = "none" };
+  if (!bugMonths.innerText) { bugMonths.innerText = "none" };
   bugMonths.classList.add("bug__months");
 
   var bugTrackers = document.createElement("div");
