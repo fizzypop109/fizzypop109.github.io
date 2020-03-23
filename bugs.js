@@ -59,18 +59,20 @@ function createBug(bug) {
   bugCaught.classList.add("bug__caught");
   bugCaught.type = "checkbox";
   bugCaught.name = "Caught";
-  bugCaught.id = "bugCaught";
+  bugCaught.id = bug.name + "_caught";
+
   var bugCaught_label = document.createElement("label");
   bugCaught_label.innerText = "Caught?";
-  bugCaught_label.htmlFor = "bugCaught";
+  bugCaught_label.htmlFor = bug.name + "_caught";
 
   var bugDonated = document.createElement("input");
   bugDonated.type = "checkbox";
   bugDonated.name = "Caught";
-  bugDonated.id = "bugDonated";
+  bugDonated.id = bug.name + "_donated";
+
   var bugDonated_label = document.createElement("label");
   bugDonated_label.innerText = "Donated?";
-  bugDonated_label.htmlFor = "bugDonated";
+  bugDonated_label.htmlFor = bug.name + "_donated";
 
   bugTrackersItems.appendChild(bugCaught_label);
   bugTrackersItems.appendChild(bugCaught);
