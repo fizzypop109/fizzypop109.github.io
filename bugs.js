@@ -144,9 +144,12 @@ function checkboxSetup() {
     caughtCheckboxes[i].addEventListener("change", function() {
       caughtValues[this.id] = this.checked;
 
-      if (this.checked = true) {
-        // Enable Donated checkbox
-        document.getElementById(this.id).nextSibling.nextSibling.disabled = false;
+      // Enable/disable Donated checkbox
+      document.getElementById(this.id).nextSibling.nextSibling.disabled = !this.checked;
+
+      // Remove donated tick if unchecking caught
+      if (this.checked == false) {
+        document.getElementById(this.id).nextSibling.nextSibling.checked = false;
       }
 
       data['caughtValues'] = caughtValues;
