@@ -1,0 +1,131 @@
+* {
+  font-family: 'Mali', cursive;
+  text-transform: capitalize;
+  border-radius: 20px;
+}
+
+/* BUGS PAGE */
+.bugs__body {
+  background-color: #b2d6c9;
+}
+
+.bugs__header {
+  display: flex;
+  align-items: center;
+  margin: 10px 30px;
+}
+
+.bugs__title {
+  margin: auto;
+  font-size: 50px;
+  color: #4c7566;
+}
+
+.bugs__container {
+  margin: 0 30px;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bug__container {
+  background-color: #70998a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 250px;
+  width: 20vw;
+  margin: 10px;
+}
+
+.bug__container img {
+  margin-top: 10px;
+  height: 110px;
+  border: 5px solid #4c7566;
+}
+
+.bug__container p, .bug__container h2 {
+  color: white;
+  word-break: break-all;
+  text-align: center;
+}
+
+.bug__container label {
+  color: white;
+  font-size: 18px;
+}
+
+.bug__container > * {
+  margin: 10px 0;
+}
+
+.bug__name {
+  color: white;
+}
+
+.bug__months {
+  padding: 0 15px;
+}
+
+.bug__trackers {
+  background-color: #4c7566;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 20px 20px;
+  width: 100%;
+  margin: 10px 0 0 0;
+}
+
+.bug__trackers__items {
+  width: 80%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* INDEX PAGE STYLES */
+.index__body {
+  background-color: #f8f8ef;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.index__logo {
+  height: 400px;
+}
+
+.index__menu {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.index__menu__button {
+  padding: 10px 35px;
+}
+
+/* Universal Button Styles */
+button {
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  background-color: #4c7566;
+  color: white;
+}
+
+button:active, button:focus {
+  outline: none;
+}
+
+button:hover {
+  background-color: #315246;
+}
+
+button:active {
+  background-color: #213d33;
+}
