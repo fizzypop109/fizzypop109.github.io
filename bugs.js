@@ -34,15 +34,15 @@ function createBug(bug) {
   bugName.classList.add("bug__name");
   
   var bugPrice = document.createElement("p");
-  bugPrice.innerText = "Sell for: " + bug.price + " bells";
+  bugPrice.innerText = bug.price != 0 ? "Sell for: " + bug.price + " bells" : "Sell for: Unknown bells";
   bugPrice.classList.add("bug__price");
 
   var bugLocation = document.createElement("p");
-  bugLocation.innerText = bug.location != "" ? "Location: " + bug.location : "none";
+  bugLocation.innerText = bug.location != "" ? "Location: " + bug.location : "Location: Unknown";
   bugLocation.classList.add("bug__location");
 
   var bugTime = document.createElement("p");
-  bugTime.innerText = bug.time != "" ? "Time: " + bug.time : "none";
+  bugTime.innerText = bug.time != "" ? "Time: " + bug.time : "Time: Unknown";
   bugTime.classList.add("bug__time");
 
   var bugMonths = document.createElement("p");
@@ -51,7 +51,7 @@ function createBug(bug) {
   } else if (hemisphere == "Northern" && bug.season.northern.length != 0) {
     bugMonths.innerText = "Months: " + bug.season.northern.join(", ");
   } else {
-    bugMonths.innerText = "none";
+    bugMonths.innerText = "Months: Unknown";
   }
   bugMonths.classList.add("bug__months");
 
@@ -159,7 +159,6 @@ function checkboxSetup() {
   var caughtValues = data['caughtValues'] || {};
 
   for (let i = 0; i < caughtCheckboxes.length; i++) {
-    // CANNOT UNTICK CAUGHT ATM
     caughtCheckboxes[i].addEventListener("change", function() {
       caughtValues[this.id] = this.checked;
 
@@ -170,10 +169,12 @@ function checkboxSetup() {
       if (this.checked == false) {
         document.getElementById(this.id).nextSibling.nextSibling.checked = false;
         donatedValues[document.getElementById(this.id).nextSibling.nextSibling.id] = false;
-        saveData(donatedValues);
+        data['donatedValues'] = donatedValues;
+        localStorage.setItem('data', JSON.stringify(data));
       }
 
-      saveData(caughtValues);
+      data['caughtValues'] = caughtValues;
+      localStorage.setItem('data', JSON.stringify(data));
     });
   }
 
@@ -183,12 +184,8 @@ function checkboxSetup() {
   for (let i = 0; i < donatedCheckboxes.length; i++) {
     donatedCheckboxes[i].addEventListener("change", function() {
       donatedValues[this.id] = this.checked;
-      saveData(donatedValues);
+      data['donatedValues'] = donatedValues;
+      localStorage.setItem('data', JSON.stringify(data));
     });
   }
-}
-
-function saveData(array) {
-  data[array] = array;
-  localStorage.setItem('data', JSON.stringify(data));
 }

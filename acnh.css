@@ -4,31 +4,31 @@
   border-radius: 20px;
 }
 
-/* BUGS PAGE */
-.bugs__body {
+/* PAGE */
+.body {
   background-color: #b2d6c9;
 }
 
-.bugs__header {
+.header {
   display: flex;
   align-items: center;
   margin: 10px 30px;
 }
 
-.bugs__title {
+.title {
   margin: auto;
   font-size: 50px;
   color: #4c7566;
 }
 
-.bugs__container {
+.main-container {
   margin: 0 30px;
   justify-content: space-between;
   display: flex;
   flex-wrap: wrap;
 }
 
-.bug__container {
+.container {
   background-color: #70998a;
   display: flex;
   flex-direction: column;
@@ -39,36 +39,36 @@
   margin: 10px;
 }
 
-.bug__container img {
+.container img {
   margin-top: 10px;
   height: 110px;
   border: 5px solid #4c7566;
 }
 
-.bug__container p, .bug__container h2 {
+.container p, .container h2 {
   color: white;
   word-break: break-all;
   text-align: center;
 }
 
-.bug__container label {
+.container label {
   color: white;
   font-size: 18px;
 }
 
-.bug__container > * {
+.container > * {
   margin: 10px 0;
 }
 
-.bug__name {
+.name {
   color: white;
 }
 
-.bug__months {
+.months {
   padding: 0 15px;
 }
 
-.bug__trackers {
+.trackers {
   background-color: #4c7566;
   display: flex;
   align-items: center;
@@ -78,7 +78,7 @@
   margin: 10px 0 0 0;
 }
 
-.bug__trackers__items {
+.trackers__items {
   width: 100%;
   padding: 10px;
   display: flex;
