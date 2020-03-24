@@ -34,7 +34,7 @@ var bugs_json =
             }
         },
         {
-            "image": "https://res.cloudinary.com/teepublic/image/private/s--BSZyGypj--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1546161249/production/designs/3849643_0.jpg",
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_4_i.png",
             "name": "peacock butterfly",
             "price": 2500,
             "location": "above purple, black, and blue flowers",
@@ -67,7 +67,7 @@ var bugs_json =
             }
         },
         {
-            "image": "https://res.cloudinary.com/teepublic/image/private/s--BSZyGypj--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1546161249/production/designs/3849643_0.jpg",
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_7_i.png",
             "name": "great purple emperor",
             "price": 0,
             "location": "",
@@ -100,7 +100,7 @@ var bugs_json =
             }
         },
         {
-            "image": "https://res.cloudinary.com/teepublic/image/private/s--BSZyGypj--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1546161249/production/designs/3849643_0.jpg",
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_10_i.png",
             "name": "agrias butterfly",
             "price": 3000,
             "location": "flying",
@@ -122,7 +122,7 @@ var bugs_json =
             }
         },
         {
-            "image": "https://res.cloudinary.com/teepublic/image/private/s--BSZyGypj--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1546161249/production/designs/3849643_0.jpg",
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_12_i.png",
             "name": "queen alexandra's birdwing",
             "price": 4000,
             "location": "flying",
@@ -177,7 +177,7 @@ var bugs_json =
             }
         },
         {
-            "image": "https://res.cloudinary.com/teepublic/image/private/s--BSZyGypj--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1546161249/production/designs/3849643_0.jpg",
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_17_i.png",
             "name": "migratory locust",
             "price": 200,
             "location": "in grass",
@@ -232,7 +232,7 @@ var bugs_json =
             }
         },
         {
-            "image": "https://res.cloudinary.com/teepublic/image/private/s--BSZyGypj--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1546161249/production/designs/3849643_0.jpg",
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_22_i.png",
             "name": "mantis",
             "price": 430,
             "location": "on flowers",
@@ -243,7 +243,7 @@ var bugs_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/assets/images/common/transparent1px.png",
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_23_i.png",
             "name": "orchid mantis",
             "price": 2400,
             "location": "on flowers",
@@ -254,7 +254,7 @@ var bugs_json =
             }
         },
         {
-            "image": "https://res.cloudinary.com/teepublic/image/private/s--BSZyGypj--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1546161249/production/designs/3849643_0.jpg",
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_24_i.png",
             "name": "honeybee",
             "price": 200,
             "location": "above flowers",
@@ -276,7 +276,7 @@ var bugs_json =
             }
         },
         {
-            "image": "https://res.cloudinary.com/teepublic/image/private/s--BSZyGypj--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1546161249/production/designs/3849643_0.jpg",
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_26_i.png",
             "name": "brown cicada",
             "price": 250,
             "location": "on trees",
@@ -287,7 +287,7 @@ var bugs_json =
             }
         },
         {
-            "image": "https://res.cloudinary.com/teepublic/image/private/s--BSZyGypj--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1546161249/production/designs/3849643_0.jpg",
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_27_i.png",
             "name": "robust cicada",
             "price": 0,
             "location": "",
@@ -298,7 +298,7 @@ var bugs_json =
             }
         },
         {
-            "image": "https://res.cloudinary.com/teepublic/image/private/s--BSZyGypj--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1546161249/production/designs/3849643_0.jpg",
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_28_i.png",
             "name": "giant cicada",
             "price": 0,
             "location": "",
@@ -320,7 +320,7 @@ var bugs_json =
             }
         },
         {
-            "image": "https://res.cloudinary.com/teepublic/image/private/s--BSZyGypj--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1546161249/production/designs/3849643_0.jpg",
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_30_i.png",
             "name": "evening cicada",
             "price": 0,
             "location": "",
@@ -331,7 +331,7 @@ var bugs_json =
             }
         },
         {
-            "image": "https://res.cloudinary.com/teepublic/image/private/s--BSZyGypj--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1546161249/production/designs/3849643_0.jpg",
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_31_i.png",
             "name": "cicada shell",
             "price": 0,
             "location": "",
@@ -364,7 +364,7 @@ var bugs_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/assets/images/common/transparent1px.png",
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_34_i.png",
             "name": "banded dragonfly",
             "price": 0,
             "location": "",
@@ -386,7 +386,7 @@ var bugs_json =
             }
         },
         {
-            "image": "https://res.cloudinary.com/teepublic/image/private/s--BSZyGypj--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1546161249/production/designs/3849643_0.jpg",
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_36_i.png",
             "name": "firefly",
             "price": 300,
             "location": "above freshwater",
@@ -397,7 +397,7 @@ var bugs_json =
             }
         },
         {
-            "image": "https://res.cloudinary.com/teepublic/image/private/s--BSZyGypj--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1546161249/production/designs/3849643_0.jpg",
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_37_i.png",
             "name": "mole cricket",
             "price": 500,
             "location": "underground",
