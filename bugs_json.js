@@ -605,4 +605,279 @@ var bugs_json =
                 "southern": []
             }
         },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_56_i.png",
+            "name": "miyama stag",
+            "price": 0,
+            "location": "on trees",
+            "time": "all day",
+            "season": {
+                "northern": ["july", "august"],
+                "southern": ["january", "february"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_57_i.png",
+            "name": "giant stag",
+            "price": 0,
+            "location": "on trees",
+            "time": "11pm - 8am",
+            "season": {
+                "northern": ["july", "august"],
+                "southern": ["january", "february"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_58_i.png",
+            "name": "rainbow stag",
+            "price": 0,
+            "location": "on trees",
+            "time": "7pm - 8am",
+            "season": {
+                "northern": ["june", "july", "august", "september"],
+                "southern": ["january", "february", "march", "december"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_59_i.png",
+            "name": "cyclommatus stag",
+            "price": 0,
+            "location": "on trees",
+            "time": "5pm - 8am",
+            "season": {
+                "northern": ["july", "august"],
+                "southern": ["january", "february"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_60_i.png",
+            "name": "golden stag",
+            "price": 0,
+            "location": "on trees",
+            "time": "5pm - 8am",
+            "season": {
+                "northern": ["july", "august"],
+                "southern": ["january", "february"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_61_i.png",
+            "name": "giraffe stag",
+            "price": 0,
+            "location": "on trees",
+            "time": "5pm - 8am",
+            "season": {
+                "northern": ["july", "august"],
+                "southern": ["january", "february"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_62_i.png",
+            "name": "horned dynastid",
+            "price": 0,
+            "location": "on trees",
+            "time": "5pm - 8am",
+            "season": {
+                "northern": ["july", "august"],
+                "southern": ["january", "february"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_63_i.png",
+            "name": "horned atlas",
+            "price": 0,
+            "location": "on trees",
+            "time": "5pm - 8am",
+            "season": {
+                "northern": ["july", "august"],
+                "southern": ["january", "february"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_64_i.png",
+            "name": "horned elephant",
+            "price": 0,
+            "location": "on trees",
+            "time": "5pm - 8am",
+            "season": {
+                "northern": ["july", "august"],
+                "southern": ["january", "february"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_65_i.png",
+            "name": "horned hercules",
+            "price": 0,
+            "location": "on trees",
+            "time": "5pm - 8am",
+            "season": {
+                "northern": ["july", "august"],
+                "southern": ["january", "february"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_66_i.png",
+            "name": "walking stick",
+            "price": 0,
+            "location": "on trees",
+            "time": "4am - 8am, 5pm - 7pm",
+            "season": {
+                "northern": ["july", "august", "september", "october", "november"],
+                "southern": ["january", "february", "march", "april", "may"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_67_i.png",
+            "name": "walking leaf",
+            "price": 600,
+            "location": "on ground (beneath trees)",
+            "time": "all day",
+            "season": {
+                "northern": ["july", "august", "september"],
+                "southern": ["january", "february", "march"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_68_i.png",
+            "name": "bagworm",
+            "price": 600,
+            "location": "on trees",
+            "time": "all day",
+            "season": {
+                "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
+                "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_69_i.png",
+            "name": "ant",
+            "price": 80,
+            "location": "on rotten turnips and fruit",
+            "time": "all day",
+            "season": {
+                "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
+                "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_70_i.png",
+            "name": "hermit crab",
+            "price": 1000,
+            "location": "on beach",
+            "time": "7pm - 8am",
+            "season": {
+                "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
+                "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_71_i.png",
+            "name": "wharf roach",
+            "price": 0,
+            "location": "on beach (rocks)",
+            "time": "all day",
+            "season": {
+                "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
+                "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_72_i.png",
+            "name": "fly",
+            "price": 0,
+            "location": "on rotten food and garbage",
+            "time": "all day",
+            "season": {
+                "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
+                "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_73_i.png",
+            "name": "mosquito",
+            "price": 130,
+            "location": "flying",
+            "time": "5pm - 4am",
+            "season": {
+                "northern": ["june", "july", "august", "september"],
+                "southern": ["january", "february", "march", "december"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_74_i.png",
+            "name": "flea",
+            "price": 70,
+            "location": "on flea-infested villagers",
+            "time": "all day",
+            "season": {
+                "northern": ["april", "may", "june", "july", "august", "september", "october", "november"],
+                "southern": ["january", "february", "march", "april", "may", "october", "november", "december"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_75_i.png",
+            "name": "snail",
+            "price": 250,
+            "location": "under rocks",
+            "time": "all day",
+            "season": {
+                "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
+                "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_76_i.png",
+            "name": "pill bug",
+            "price": 250,
+            "location": "under rocks",
+            "time": "11pm - 4pm",
+            "season": {
+                "northern": ["january", "february", "march", "april", "may", "june", "september", "october", "november", "december"],
+                "southern": ["march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_77_i.png",
+            "name": "centipede",
+            "price": 430,
+            "location": "under rocks",
+            "time": "5pm - 11pm",
+            "season": {
+                "northern": ["january", "february", "march", "april", "may", "june", "september", "october", "november", "december"],
+                "southern": ["march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_78_i.png",
+            "name": "spider",
+            "price": 600,
+            "location": "shaking trees",
+            "time": "7pm - 8am",
+            "season": {
+                "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
+                "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_79_i.png",
+            "name": "tarantula",
+            "price": 8000,
+            "location": "on ground",
+            "time": "7pm - 4am",
+            "season": {
+                "northern": ["january", "february", "march", "april", "november", "december"],
+                "southern": ["may", "june", "july", "august", "september", "october"]
+            }
+        },
+        {
+            "image": "https://gamewith-en.akamaized.net/img/c30dafd2080da93930e89326968932e3.jpg",
+            "name": "scorpion",
+            "price": 0,
+            "location": "on ground",
+            "time": "7pm - 4am",
+            "season": {
+                "northern": ["may", "june", "july", "august", "september", "october"],
+                "southern": ["january", "february", "march", "april", "november", "december"]
+            }
+        },
     ]
