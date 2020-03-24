@@ -132,10 +132,18 @@ function loadData() {
 
     for (const [name, value] of caughtValues) {
       document.getElementById(name).checked = value;
+      // If the caught box is checked, enable the donated box
+      if (value == true) {
+        document.getElementById(name).nextSibling.nextSibling.disabled = false;
+      }
     }
 
     for (const [name, value] of donatedValues) {
       document.getElementById(name).checked = value;
+      // If the donated box is checked, enable it
+      if (value == true) {
+        document.getElementById(name).disabled = false;
+      }
     }
   }
 
@@ -161,11 +169,11 @@ function checkboxSetup() {
       // Remove donated tick if unchecking caught
       if (this.checked == false) {
         document.getElementById(this.id).nextSibling.nextSibling.checked = false;
+        donatedValues[document.getElementById(this.id).nextSibling.nextSibling.id] = false;
+        saveData(donatedValues);
       }
 
-      data['caughtValues'] = caughtValues;
-
-      localStorage.setItem('data', JSON.stringify(data));
+      saveData(caughtValues);
     });
   }
 
@@ -175,10 +183,12 @@ function checkboxSetup() {
   for (let i = 0; i < donatedCheckboxes.length; i++) {
     donatedCheckboxes[i].addEventListener("change", function() {
       donatedValues[this.id] = this.checked;
-
-      data['donatedValues'] = donatedValues;
-
-      localStorage.setItem('data', JSON.stringify(data));
+      saveData(donatedValues);
     });
   }
+}
+
+function saveData(array) {
+  data[array] = array;
+  localStorage.setItem('data', JSON.stringify(data));
 }
