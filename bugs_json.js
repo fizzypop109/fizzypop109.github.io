@@ -5,10 +5,10 @@ var bugs_json =
             "name": "common butterfly",
             "price": 160,
             "location": "above flowers",
-            "time": "4am - 7pm",
+            "time": "4 - 19",
             "season": {
-                "northern": ["january", "february", "march", "april", "may", "june", "september", "october", "november", "december"],
-                "southern": ["march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+                "northern": ["january", "february", "march", "april", "may", "june", "", "", "september", "october", "november", "december"],
+                "southern": ["", "", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
             }
         },
         {
@@ -16,10 +16,10 @@ var bugs_json =
             "name": "yellow butterfly",
             "price": 160,
             "location": "flying",
-            "time": "4am - 7pm",
+            "time": "4 - 19",
             "season": {
-                "northern": ["march", "april", "may", "june", "september", "october"],
-                "southern": ["march", "april", "september", "october", "november", "december"]
+                "northern": ["", "", "march", "april", "may", "june", "", "", "september", "october", "", ""],
+                "southern": ["", "", "march", "april", "", "", "", "", "september", "october", "november", "december"]
             }
         },
         {
@@ -27,10 +27,10 @@ var bugs_json =
             "name": "tiger butterfly",
             "price": 240,
             "location": "flying",
-            "time": "4am - 7pm",
+            "time": "4 - 19",
             "season": {
-                "northern": ["march", "april", "may", "june", "july", "august", "september"],
-                "southern": ["january", "february", "march", "september", "october", "november", "december"]
+                "northern": ["", "", "march", "april", "may", "june", "july", "august", "september", "", "", ""],
+                "southern": ["january", "february", "march", "", "", "", "", "", "september", "october", "november", "december"]
             }
         },
         {
@@ -38,10 +38,10 @@ var bugs_json =
             "name": "peacock butterfly",
             "price": 2500,
             "location": "above purple, black, and blue flowers",
-            "time": "4am - 7pm",
+            "time": "4 - 19",
             "season": {
-                "northern": ["march", "april", "may", "june"],
-                "southern": []
+                "northern": ["", "", "march", "april", "may", "june", "", "", "", "", "", ""],
+                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -49,10 +49,10 @@ var bugs_json =
             "name": "common bluebottle",
             "price": 0,
             "location": "",
-            "time": "4am - 7pm",
+            "time": "4 - 19",
             "season": {
-                "northern": ["april", "may", "june", "july", "august"],
-                "southern": []
+                "northern": ["", "", "", "april", "may", "june", "july", "august", "", "", "", ""],
+                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -60,7 +60,7 @@ var bugs_json =
             "name": "paper kite butterfly",
             "price": 1000,
             "location": "flying",
-            "time": "8am - 7pm",
+            "time": "8 - 19",
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -71,10 +71,10 @@ var bugs_json =
             "name": "great purple emperor",
             "price": 0,
             "location": "",
-            "time": "4am - 7am",
+            "time": "4 - 7",
             "season": {
-                "northern": ["may", "june", "july", "august"],
-                "southern": []
+                "northern": ["", "", "", "", "may", "june", "july", "august", "", "", "", ""],
+                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -82,10 +82,10 @@ var bugs_json =
             "name": "monarch butterfly",
             "price": 140,
             "location": "flying",
-            "time": "4am - 5pm",
+            "time": "4 - 17",
             "season": {
-                "northern": ["september", "october", "november"],
-                "southern": ["march", "april", "may"]
+                "northern": ["", "", "", "", "", "", "", "", "september", "october", "november", ""],
+                "southern": ["", "", "march", "april", "may", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -93,10 +93,10 @@ var bugs_json =
             "name": "emperor butterfly",
             "price": 4000,
             "location": "flying",
-            "time": "5pm - 8am",
+            "time": "17 - 8",
             "season": {
-                "northern": ["january", "february", "march", "june", "july", "august", "september", "december"],
-                "southern": ["january", "february", "march", "june", "july", "august", "september", "december"]
+                "northern": ["january", "february", "march", "", "", "june", "july", "august", "september", "", "", "december"],
+                "southern": ["january", "february", "march", "", "", "june", "july", "august", "september", "", "", "december"]
             }
         },
         {
@@ -104,10 +104,10 @@ var bugs_json =
             "name": "agrias butterfly",
             "price": 3000,
             "location": "flying",
-            "time": "8am - 5pm",
+            "time": "8 - 17",
             "season": {
-                "northern": ["april", "may", "june", "july", "august", "september"],
-                "southern": ["january", "february", "march", "october", "november", "december"]
+                "northern": ["", "", "", "april", "may", "june", "july", "august", "september", "", "", ""],
+                "southern": ["january", "february", "march", "", "", "", "", "", "", "october", "november", "december"]
             }
         },
         {
@@ -115,10 +115,10 @@ var bugs_json =
             "name": "raja brooke's birdwing",
             "price": 2500,
             "location": "above purple, black, and blue flowers",
-            "time": "8am - 5pm",
+            "time": "8 - 17",
             "season": {
-                "northern": ["january", "february", "april", "may", "june", "july", "august", "september", "december"],
-                "southern": ["january", "february", "march", "june", "july", "august", "october", "november", "december"]
+                "northern": ["january", "february", "", "april", "may", "june", "july", "august", "september", "", "", "december"],
+                "southern": ["january", "february", "march", "", "", "june", "july", "august", "", "october", "november", "december"]
             }
         },
         {
@@ -126,10 +126,10 @@ var bugs_json =
             "name": "queen alexandra's birdwing",
             "price": 4000,
             "location": "flying",
-            "time": "8am - 4pm",
+            "time": "8 - 16",
             "season": {
-                "northern": ["may", "june", "july", "august", "september"],
-                "southern": ["january", "february", "march", "november", "december"]
+                "northern": ["", "", "", "", "may", "june", "july", "august", "september", "", "", ""],
+                "southern": ["january", "february", "march", "", "", "", "", "", "", "", "november", "december"]
             }
         },
         {
@@ -137,7 +137,7 @@ var bugs_json =
             "name": "moth",
             "price": 130,
             "location": "around light",
-            "time": "7pm - 4am",
+            "time": "19 - 4",
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -148,10 +148,10 @@ var bugs_json =
             "name": "atlas moth",
             "price": 0,
             "location": "",
-            "time": "7pm - 4am",
+            "time": "19 - 4",
             "season": {
-                "northern": ["april", "may", "june", "july", "august", "september"],
-                "southern": ["january", "february", "march", "october", "november", "december"]
+                "northern": ["", "", "", "april", "may", "june", "july", "august", "september", "", "", ""],
+                "southern": ["january", "february", "march", "", "", "", "", "", "", "october", "november", "december"]
             }
         },
         {
@@ -159,10 +159,10 @@ var bugs_json =
             "name": "madagascan sunset moth",
             "price": 2500,
             "location": "flying",
-            "time": "8am - 4pm",
+            "time": "8 - 16",
             "season": {
-                "northern": ["april", "may", "june", "july", "august", "september"],
-                "southern": ["january", "february", "march", "october", "november", "december"]
+                "northern": ["", "", "", "april", "may", "june", "july", "august", "september", "", "", ""],
+                "southern": ["january", "february", "march", "", "", "", "", "", "", "october", "november", "december"]
             }
         },
         {
@@ -170,10 +170,10 @@ var bugs_json =
             "name": "long locust",
             "price": 200,
             "location": "in grass",
-            "time": "8am - 7pm",
+            "time": "8 - 19",
             "season": {
-                "northern": ["april", "may", "june", "july", "august", "september", "october", "november"],
-                "southern": ["january", "february", "march", "april", "may", "october", "november", "december"]
+                "northern": ["", "", "", "april", "may", "june", "july", "august", "september", "october", "november", ""],
+                "southern": ["january", "february", "march", "april", "may", "", "", "", "", "october", "november", "december"]
             }
         },
         {
@@ -181,10 +181,10 @@ var bugs_json =
             "name": "migratory locust",
             "price": 200,
             "location": "in grass",
-            "time": "8am - 7pm",
+            "time": "8 - 19",
             "season": {
-                "northern": ["august", "september", "october", "november"],
-                "southern": ["february", "march", "april", "may"]
+                "northern": ["", "", "", "", "", "", "", "august", "september", "october", "november", ""],
+                "southern": ["", "february", "march", "april", "may", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -192,10 +192,10 @@ var bugs_json =
             "name": "rice grasshopper",
             "price": 1600,
             "location": "in grass",
-            "time": "8am - 7pm",
+            "time": "8 - 19",
             "season": {
-                "northern": ["august", "september", "october", "november"],
-                "southern": ["february", "march", "april", "may"]
+                "northern": ["", "", "", "", "", "", "", "august", "september", "october", "november", ""],
+                "southern": ["", "february", "march", "april", "may", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -203,10 +203,10 @@ var bugs_json =
             "name": "grasshopper",
             "price": 160,
             "location": "in grass",
-            "time": "8am - 5pm",
+            "time": "8 - 17",
             "season": {
-                "northern": ["july", "august", "september"],
-                "southern": ["january", "february", "march"]
+                "northern": ["", "", "", "", "", "", "july", "august", "september", "", "", ""],
+                "southern": ["january", "february", "march", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -214,10 +214,10 @@ var bugs_json =
             "name": "cricket",
             "price": 130,
             "location": "in grass",
-            "time": "5pm - 8am",
+            "time": "17 - 8",
             "season": {
-                "northern": ["september", "october", "november"],
-                "southern": ["march", "april", "may"]
+                "northern": ["", "", "", "", "", "", "", "", "september", "october", "november", ""],
+                "southern": ["", "", "march", "april", "may", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -225,10 +225,10 @@ var bugs_json =
             "name": "bell cricket",
             "price": 0,
             "location": "in grass",
-            "time": "5pm - 8am",
+            "time": "17 - 8",
             "season": {
-                "northern": ["september", "october"],
-                "southern": ["march", "april"]
+                "northern": ["", "", "", "", "", "", "", "", "september", "october", "", ""],
+                "southern": ["", "", "march", "april", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -236,10 +236,10 @@ var bugs_json =
             "name": "mantis",
             "price": 430,
             "location": "on flowers",
-            "time": "8am - 5pm",
+            "time": "8 - 17",
             "season": {
-                "northern": ["march", "april", "may", "june", "july", "august", "september", "october", "november"],
-                "southern": ["january", "march", "april", "september", "october", "november", "december"]
+                "northern": ["", "", "march", "april", "may", "june", "july", "august", "september", "october", "november", ""],
+                "southern": ["january", "", "march", "april", "", "", "", "", "september", "october", "november", "december"]
             }
         },
         {
@@ -247,10 +247,10 @@ var bugs_json =
             "name": "orchid mantis",
             "price": 2400,
             "location": "on flowers",
-            "time": "8am - 5pm",
+            "time": "8 - 17",
             "season": {
-                "northern": ["march", "april", "may", "june", "july", "august", "september", "october", "november"],
-                "southern": ["january", "february", "march", "april", "may", "september", "october", "november", "december"]
+                "northern": ["", "", "march", "april", "may", "june", "july", "august", "september", "october", "november", ""],
+                "southern": ["january", "february", "march", "april", "may", "", "", "", "september", "october", "november", "december"]
             }
         },
         {
@@ -258,10 +258,10 @@ var bugs_json =
             "name": "honeybee",
             "price": 200,
             "location": "above flowers",
-            "time": "8am - 5pm",
+            "time": "8 - 17",
             "season": {
-                "northern": ["march", "april", "may", "june", "july"],
-                "southern": ["january", "september", "october", "november", "december"]
+                "northern": ["", "", "march", "april", "may", "june", "july", "", "", "", "", ""],
+                "southern": ["january", "", "", "", "", "", "", "", "september", "october", "november", "december"]
             }
         },
         {
@@ -269,7 +269,7 @@ var bugs_json =
             "name": "wasp",
             "price": 2500,
             "location": "on trees",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -280,10 +280,10 @@ var bugs_json =
             "name": "brown cicada",
             "price": 250,
             "location": "on trees",
-            "time": "8am - 5pm",
+            "time": "8 - 17",
             "season": {
-                "northern": ["july", "august"],
-                "southern": []
+                "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
+                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -291,10 +291,10 @@ var bugs_json =
             "name": "robust cicada",
             "price": 0,
             "location": "",
-            "time": "8am - 5pm",
+            "time": "8 - 17",
             "season": {
-                "northern": ["july", "august"],
-                "southern": []
+                "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
+                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -302,10 +302,10 @@ var bugs_json =
             "name": "giant cicada",
             "price": 0,
             "location": "",
-            "time": "8am - 5pm",
+            "time": "8 - 17",
             "season": {
-                "northern": ["july", "august"],
-                "southern": []
+                "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
+                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -313,10 +313,10 @@ var bugs_json =
             "name": "walker cicada",
             "price": 400,
             "location": "on trees",
-            "time": "8am - 4pm",
+            "time": "8 - 16",
             "season": {
-                "northern": ["august", "september"],
-                "southern": ["february", "march"]
+                "northern": ["", "", "", "", "", "", "", "august", "september", "", "", ""],
+                "southern": ["", "february", "march", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -324,10 +324,10 @@ var bugs_json =
             "name": "evening cicada",
             "price": 0,
             "location": "",
-            "time": "4am - 8am, 4pm - 7pm",
+            "time": "4 - 8, 16 - 19",
             "season": {
-                "northern": ["july", "august"],
-                "southern": []
+                "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
+                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -335,10 +335,10 @@ var bugs_json =
             "name": "cicada shell",
             "price": 0,
             "location": "",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
-                "northern": ["july", "august"],
-                "southern": []
+                "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
+                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -346,10 +346,10 @@ var bugs_json =
             "name": "red dragonfly",
             "price": 180,
             "location": "flying",
-            "time": "8am - 7pm",
+            "time": "8 - 19",
             "season": {
-                "northern": ["september", "october"],
-                "southern": ["march", "april"]
+                "northern": ["", "", "", "", "", "", "", "", "september", "october", "", ""],
+                "southern": ["", "", "march", "april", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -357,10 +357,10 @@ var bugs_json =
             "name": "darner dragonfly",
             "price": 230,
             "location": "flying",
-            "time": "8am - 5pm",
+            "time": "8 - 17",
             "season": {
-                "northern": ["april", "may", "june", "july", "august", "september", "october"],
-                "southern": ["january", "february", "march", "april", "october", "november", "december"]
+                "northern": ["", "", "", "april", "may", "june", "july", "august", "september", "october", "", ""],
+                "southern": ["january", "february", "march", "april", "", "", "", "", "", "october", "november", "december"]
             }
         },
         {
@@ -368,10 +368,10 @@ var bugs_json =
             "name": "banded dragonfly",
             "price": 0,
             "location": "",
-            "time": "8am - 5pm",
+            "time": "8 - 17",
             "season": {
-                "northern": ["may", "june", "july", "august", "september", "october"],
-                "southern": []
+                "northern": ["", "", "", "", "may", "june", "july", "august", "september", "october", "", ""],
+                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -379,10 +379,10 @@ var bugs_json =
             "name": "damselfly",
             "price": 500,
             "location": "flying",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
-                "northern": ["january", "february", "november", "december"],
-                "southern": ["may", "june", "july", "august"]
+                "northern": ["january", "february", "", "", "", "", "", "", "", "", "november", "december"],
+                "southern": ["", "", "", "", "may", "june", "july", "august", "", "", "", ""]
             }
         },
         {
@@ -390,10 +390,10 @@ var bugs_json =
             "name": "firefly",
             "price": 300,
             "location": "above freshwater",
-            "time": "7pm - 4pm",
+            "time": "19 - 16",
             "season": {
-                "northern": ["june"],
-                "southern": []
+                "northern": ["", "", "", "", "", "june", "", "", "", "", "", ""],
+                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -401,10 +401,10 @@ var bugs_json =
             "name": "mole cricket",
             "price": 500,
             "location": "underground",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
-                "northern": ["january", "february", "march", "april", "may", "november", "december"],
-                "southern": ["may", "june", "july", "august", "september", "october", "november"]
+                "northern": ["january", "february", "march", "april", "may", "", "", "", "", "", "november", "december"],
+                "southern": ["", "", "", "", "may", "june", "july", "august", "september", "october", "november", ""]
             }
         },
         {
@@ -412,10 +412,10 @@ var bugs_json =
             "name": "pond skater",
             "price": 130,
             "location": "in rivers",
-            "time": "8am - 7pm",
+            "time": "8 - 19",
             "season": {
-                "northern": ["may", "june", "july", "august", "september"],
-                "southern": ["january", "february", "march", "november", "december"]
+                "northern": ["", "", "", "", "may", "june", "july", "august", "september", "", "", ""],
+                "southern": ["january", "february", "march", "", "", "", "", "", "", "", "november", "december"]
             }
         },
         {
@@ -423,10 +423,10 @@ var bugs_json =
             "name": "diving beetle",
             "price": 800,
             "location": "in rivers",
-            "time": "8am - 7pm",
+            "time": "8 - 19",
             "season": {
-                "northern": ["may", "june", "july", "august", "september"],
-                "southern": ["january", "february", "march", "november", "december"]
+                "northern": ["", "", "", "", "may", "june", "july", "august", "september", "", "", ""],
+                "southern": ["january", "february", "march", "", "", "", "", "", "", "", "november", "december"]
             }
         },
         {
@@ -434,10 +434,10 @@ var bugs_json =
             "name": "giant water beetle",
             "price": 2000,
             "location": "",
-            "time": "7pm - 8am",
+            "time": "19 - 8",
             "season": {
-                "northern": ["april", "may", "june", "july", "august", "september"],
-                "southern": ["january", "february", "march", "october", "november", "december"]
+                "northern": ["", "", "", "april", "may", "june", "july", "august", "september", "", "", ""],
+                "southern": ["january", "february", "march", "", "", "", "", "", "", "october", "november", "december"]
             }
         },
         {
@@ -445,10 +445,10 @@ var bugs_json =
             "name": "stinkbug",
             "price": 120,
             "location": "on trees",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
-                "northern": ["march", "april", "may", "june", "july", "august", "september", "october"],
-                "southern": ["january", "february", "march", "april", "september", "october", "november", "december"]
+                "northern": ["", "", "march", "april", "may", "june", "july", "august", "september", "october", "", ""],
+                "southern": ["january", "february", "march", "april", "", "", "", "", "september", "october", "november", "december"]
             }
         },
         {
@@ -456,10 +456,10 @@ var bugs_json =
             "name": "man-faced stinkbug",
             "price": 1000,
             "location": "on flowers",
-            "time": "7pm - 8am",
+            "time": "19 - 8",
             "season": {
-                "northern": ["march", "april", "may", "june", "july", "august", "september", "october"],
-                "southern": ["january", "february", "march", "april", "september", "october", "november", "december"]
+                "northern": ["", "", "march", "april", "may", "june", "july", "august", "september", "october", "", ""],
+                "southern": ["january", "february", "march", "april", "", "", "", "", "september", "october", "november", "december"]
             }
         },
         {
@@ -467,10 +467,10 @@ var bugs_json =
             "name": "ladybug",
             "price": 200,
             "location": "on flowers",
-            "time": "8am - 5pm",
+            "time": "8 - 17",
             "season": {
-                "northern": ["march", "april", "may", "june", "october"],
-                "southern": []
+                "northern": ["", "", "march", "april", "may", "june", "", "", "", "october", "", ""],
+                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -478,10 +478,10 @@ var bugs_json =
             "name": "tiger beetle",
             "price": 240,
             "location": "flying",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
-                "northern": ["february", "march", "april", "may", "june", "july", "august", "september", "october"],
-                "southern": ["january", "february", "march", "september", "october", "november", "december"]
+                "northern": ["", "february", "march", "april", "may", "june", "july", "august", "september", "october", "", ""],
+                "southern": ["january", "february", "march", "", "", "", "", "", "september", "october", "november", "december"]
             }
         },
         {
@@ -489,10 +489,10 @@ var bugs_json =
             "name": "jewel beetle",
             "price": 0,
             "location": "on trees",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
-                "northern": ["april", "may", "june", "july", "august"],
-                "southern": []
+                "northern": ["", "", "", "april", "may", "june", "july", "august", "", "", "", ""],
+                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -500,7 +500,7 @@ var bugs_json =
             "name": "citrus long-horned beetle",
             "price": 350,
             "location": "on tree stumps",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -511,10 +511,10 @@ var bugs_json =
             "name": "rosalia batesi beetle",
             "price": 3000,
             "location": "on tree stumps",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
-                "northern": ["may", "june", "july", "august", "september"],
-                "southern": ["january", "february", "march", "november", "december"]
+                "northern": ["", "", "", "", "may", "june", "july", "august", "september", "", "", ""],
+                "southern": ["january", "february", "march", "", "", "", "", "", "", "", "november", "december"]
             }
         },
         {
@@ -522,10 +522,10 @@ var bugs_json =
             "name": "blue weevil beetle",
             "price": 0,
             "location": "on trees",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
-                "northern": ["july", "august"],
-                "southern": []
+                "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
+                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -533,10 +533,10 @@ var bugs_json =
             "name": "violin beetle",
             "price": 450,
             "location": "on trees",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
-                "northern": ["may", "june", "september", "october", "november"],
-                "southern": ["march", "april", "may", "november", "december"]
+                "northern": ["", "", "", "", "may", "june", "", "", "september", "october", "november", ""],
+                "southern": ["", "", "march", "april", "may", "", "", "", "", "", "november", "december"]
             }
         },
         {
@@ -544,10 +544,10 @@ var bugs_json =
             "name": "dung beetle",
             "price": 0,
             "location": "on ground",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
-                "northern": [],
-                "southern": []
+                "northern": ["", "", "", "", "", "", "", "", "", "", "", ""],
+                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -555,10 +555,10 @@ var bugs_json =
             "name": "earth-boring dung beetle",
             "price": 300,
             "location": "on ground",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
-                "northern": ["july", "august", "september"],
-                "southern": ["january", "february", "march"]
+                "northern": ["", "", "", "", "", "", "july", "august", "september", "", "", ""],
+                "southern": ["january", "february", "march", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -566,10 +566,10 @@ var bugs_json =
             "name": "scarab beetle",
             "price": 0,
             "location": "on trees",
-            "time": "11pm - 8am",
+            "time": "23 - 8",
             "season": {
-                "northern": ["july", "august"],
-                "southern": []
+                "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
+                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -577,10 +577,10 @@ var bugs_json =
             "name": "drone beetle",
             "price": 200,
             "location": "on trees",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
-                "northern": ["june", "july", "august"],
-                "southern": ["january", "february", "december"]
+                "northern": ["", "", "", "", "", "june", "july", "august", "", "", "", ""],
+                "southern": ["january", "february", "", "", "", "", "", "", "", "", "", "december"]
             }
         },
         {
@@ -588,10 +588,10 @@ var bugs_json =
             "name": "goliath beetle",
             "price": 0,
             "location": "on trees",
-            "time": "5pm - 8am",
+            "time": "17 - 8",
             "season": {
-                "northern": ["june", "july", "august", "september"],
-                "southern": []
+                "northern": ["", "", "", "", "", "june", "july", "august", "september", "", "", ""],
+                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -599,10 +599,10 @@ var bugs_json =
             "name": "saw stag",
             "price": 0,
             "location": "on trees",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
-                "northern": ["july", "august"],
-                "southern": []
+                "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
+                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -610,10 +610,10 @@ var bugs_json =
             "name": "miyama stag",
             "price": 0,
             "location": "on trees",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
-                "northern": ["july", "august"],
-                "southern": ["january", "february"]
+                "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
+                "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -621,10 +621,10 @@ var bugs_json =
             "name": "giant stag",
             "price": 0,
             "location": "on trees",
-            "time": "11pm - 8am",
+            "time": "23 - 8",
             "season": {
-                "northern": ["july", "august"],
-                "southern": ["january", "february"]
+                "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
+                "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -632,10 +632,10 @@ var bugs_json =
             "name": "rainbow stag",
             "price": 0,
             "location": "on trees",
-            "time": "7pm - 8am",
+            "time": "19 - 8",
             "season": {
-                "northern": ["june", "july", "august", "september"],
-                "southern": ["january", "february", "march", "december"]
+                "northern": ["", "", "", "", "", "june", "july", "august", "september", "", "", ""],
+                "southern": ["january", "february", "march", "", "", "", "", "", "", "", "", "december"]
             }
         },
         {
@@ -643,10 +643,10 @@ var bugs_json =
             "name": "cyclommatus stag",
             "price": 0,
             "location": "on trees",
-            "time": "5pm - 8am",
+            "time": "17 - 8",
             "season": {
-                "northern": ["july", "august"],
-                "southern": ["january", "february"]
+                "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
+                "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -654,10 +654,10 @@ var bugs_json =
             "name": "golden stag",
             "price": 0,
             "location": "on trees",
-            "time": "5pm - 8am",
+            "time": "17 - 8",
             "season": {
-                "northern": ["july", "august"],
-                "southern": ["january", "february"]
+                "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
+                "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -665,10 +665,10 @@ var bugs_json =
             "name": "giraffe stag",
             "price": 0,
             "location": "on trees",
-            "time": "5pm - 8am",
+            "time": "17 - 8",
             "season": {
-                "northern": ["july", "august"],
-                "southern": ["january", "february"]
+                "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
+                "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -676,10 +676,10 @@ var bugs_json =
             "name": "horned dynastid",
             "price": 0,
             "location": "on trees",
-            "time": "5pm - 8am",
+            "time": "17 - 8",
             "season": {
-                "northern": ["july", "august"],
-                "southern": ["january", "february"]
+                "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
+                "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -687,10 +687,10 @@ var bugs_json =
             "name": "horned atlas",
             "price": 0,
             "location": "on trees",
-            "time": "5pm - 8am",
+            "time": "17 - 8",
             "season": {
-                "northern": ["july", "august"],
-                "southern": ["january", "february"]
+                "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
+                "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -698,10 +698,10 @@ var bugs_json =
             "name": "horned elephant",
             "price": 0,
             "location": "on trees",
-            "time": "5pm - 8am",
+            "time": "17 - 8",
             "season": {
-                "northern": ["july", "august"],
-                "southern": ["january", "february"]
+                "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
+                "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -709,10 +709,10 @@ var bugs_json =
             "name": "horned hercules",
             "price": 0,
             "location": "on trees",
-            "time": "5pm - 8am",
+            "time": "17 - 8",
             "season": {
-                "northern": ["july", "august"],
-                "southern": ["january", "february"]
+                "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
+                "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -720,10 +720,10 @@ var bugs_json =
             "name": "walking stick",
             "price": 0,
             "location": "on trees",
-            "time": "4am - 8am, 5pm - 7pm",
+            "time": "4 - 8, 17 - 19",
             "season": {
-                "northern": ["july", "august", "september", "october", "november"],
-                "southern": ["january", "february", "march", "april", "may"]
+                "northern": ["", "", "", "", "", "", "july", "august", "september", "october", "november", ""],
+                "southern": ["january", "february", "march", "april", "may", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -731,10 +731,10 @@ var bugs_json =
             "name": "walking leaf",
             "price": 600,
             "location": "on ground (beneath trees)",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
-                "northern": ["july", "august", "september"],
-                "southern": ["january", "february", "march"]
+                "northern": ["", "", "", "", "", "", "july", "august", "september", "", "", ""],
+                "southern": ["january", "february", "march", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -742,7 +742,7 @@ var bugs_json =
             "name": "bagworm",
             "price": 600,
             "location": "on trees",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -753,7 +753,7 @@ var bugs_json =
             "name": "ant",
             "price": 80,
             "location": "on rotten turnips and fruit",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -764,7 +764,7 @@ var bugs_json =
             "name": "hermit crab",
             "price": 1000,
             "location": "on beach",
-            "time": "7pm - 8am",
+            "time": "19 - 8",
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -775,7 +775,7 @@ var bugs_json =
             "name": "wharf roach",
             "price": 0,
             "location": "on beach (rocks)",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -786,7 +786,7 @@ var bugs_json =
             "name": "fly",
             "price": 0,
             "location": "on rotten food and garbage",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -797,10 +797,10 @@ var bugs_json =
             "name": "mosquito",
             "price": 130,
             "location": "flying",
-            "time": "5pm - 4am",
+            "time": "17 - 4",
             "season": {
-                "northern": ["june", "july", "august", "september"],
-                "southern": ["january", "february", "march", "december"]
+                "northern": ["", "", "", "", "", "june", "july", "august", "september", "", "", ""],
+                "southern": ["january", "february", "march", "", "", "", "", "", "", "", "", "december"]
             }
         },
         {
@@ -808,10 +808,10 @@ var bugs_json =
             "name": "flea",
             "price": 70,
             "location": "on flea-infested villagers",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
-                "northern": ["april", "may", "june", "july", "august", "september", "october", "november"],
-                "southern": ["january", "february", "march", "april", "may", "october", "november", "december"]
+                "northern": ["", "", "", "april", "may", "june", "july", "august", "september", "october", "november", ""],
+                "southern": ["january", "february", "march", "april", "may", "", "", "", "", "october", "november", "december"]
             }
         },
         {
@@ -819,7 +819,7 @@ var bugs_json =
             "name": "snail",
             "price": 250,
             "location": "under rocks",
-            "time": "all day",
+            "time": "0 - 24",
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -830,10 +830,10 @@ var bugs_json =
             "name": "pill bug",
             "price": 250,
             "location": "under rocks",
-            "time": "11pm - 4pm",
+            "time": "23 - 16",
             "season": {
-                "northern": ["january", "february", "march", "april", "may", "june", "september", "october", "november", "december"],
-                "southern": ["march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+                "northern": ["january", "february", "march", "april", "may", "june", "", "", "september", "october", "november", "december"],
+                "southern": ["", "", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
             }
         },
         {
@@ -841,10 +841,10 @@ var bugs_json =
             "name": "centipede",
             "price": 430,
             "location": "under rocks",
-            "time": "5pm - 11pm",
+            "time": "17 - 23",
             "season": {
-                "northern": ["january", "february", "march", "april", "may", "june", "september", "october", "november", "december"],
-                "southern": ["march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+                "northern": ["january", "february", "march", "april", "may", "june", "", "", "september", "october", "november", "december"],
+                "southern": ["", "", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
             }
         },
         {
@@ -852,7 +852,7 @@ var bugs_json =
             "name": "spider",
             "price": 600,
             "location": "shaking trees",
-            "time": "7pm - 8am",
+            "time": "19 - 8",
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -863,10 +863,10 @@ var bugs_json =
             "name": "tarantula",
             "price": 8000,
             "location": "on ground",
-            "time": "7pm - 4am",
+            "time": "19 - 4",
             "season": {
-                "northern": ["january", "february", "march", "april", "november", "december"],
-                "southern": ["may", "june", "july", "august", "september", "october"]
+                "northern": ["january", "february", "march", "april", "", "", "", "", "", "", "november", "december"],
+                "southern": ["", "", "", "", "may", "june", "july", "august", "september", "october", "", ""]
             }
         },
         {
@@ -874,10 +874,10 @@ var bugs_json =
             "name": "scorpion",
             "price": 0,
             "location": "on ground",
-            "time": "7pm - 4am",
+            "time": "19 - 4",
             "season": {
-                "northern": ["may", "june", "july", "august", "september", "october"],
-                "southern": ["january", "february", "march", "april", "november", "december"]
+                "northern": ["", "", "", "", "may", "june", "july", "august", "september", "october", "", ""],
+                "southern": ["january", "february", "march", "april", "", "", "", "", "", "", "november", "december"]
             }
         },
     ]

@@ -18,6 +18,7 @@ var container = document.getElementsByClassName("main-container")[0];
 var hemisphere = "Southern";
 var hemButton = document.getElementsByClassName("button__hemisphere")[0];
 var data = {};
+var MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
 
 // INITIALISE BUG DISPLAY //
 
@@ -54,19 +55,24 @@ function createItem(item) {
   itemLocation.innerText = item.location != "" ? "Location: " + item.location : "Location: Unknown";
   itemLocation.classList.add(itemType + "__location", "location");
 
-  var itemTime = document.createElement("p");
-  itemTime.innerText = item.time != "" ? "Time: " + item.time : "Time: Unknown";
-  itemTime.classList.add(itemType + "__time", "time");
+  // var itemTime = document.createElement("p");
+  // itemTime.innerText = item.time != "" ? "Time: " + item.time : "Time: Unknown";
+  // itemTime.classList.add(itemType + "__time", "time");
 
-  var itemMonths = document.createElement("p");
-  if (hemisphere == "Southern" && item.season.southern.length != 0) {
-    itemMonths.innerText = "Months: " + item.season.southern.join(", ");
-  } else if (hemisphere == "Northern" && item.season.northern.length != 0) {
-    itemMonths.innerText = "Months: " + item.season.northern.join(", ");
-  } else {
-    itemMonths.innerText = "Months: Unknown";
-  }
-  itemMonths.classList.add(itemType + "__months", "months");
+  // Create and populate a 24-hour clock bar to display the time
+  var itemTime = createClock(item);
+
+  // var itemMonths = document.createElement("p");
+  // if (hemisphere == "Southern" && item.season.southern.length != 0) {
+  //   itemMonths.innerText = "Months: " + item.season.southern.join(", ");
+  // } else if (hemisphere == "Northern" && item.season.northern.length != 0) {
+  //   itemMonths.innerText = "Months: " + item.season.northern.join(", ");
+  // } else {
+  //   itemMonths.innerText = "Months: Unknown";
+  // }
+  // itemMonths.classList.add(itemType + "__months", "months");
+
+  var itemMonths = createCalendar(item);
 
   var itemTrackers = document.createElement("div");
   itemTrackers.classList.add(itemType + "__trackers", "trackers");
@@ -120,16 +126,128 @@ function switchHem() {
   hemisphere = hemisphere == "Southern" ? "Northern" : "Southern";
   hemButton.innerText = hemisphere;
 
-  // Specifically only replace the bugMonths of each bug
-  for (var i = 0; i < items.length; i++) {
+  var itemContainers = document.getElementsByClassName("container");
+
+  for (var i = 0; i < itemContainers.length; i++) {
+    var calendarDiv = itemContainers[i].children[5].children[0];
+    var months = calendarDiv.getElementsByTagName('*');
+
+    for (var j = 0; j < months.length; j++) {
+      months[j].classList.remove("available");
+    }
+
+    var itemMonths = [];
+
     if (hemisphere == "Southern" && items[i].season.southern.length != 0) {
-      container.children[i].children[5].innerText = "Months: " + items[i].season.southern.join(", ");
+      itemMonths = items[i].season.southern;
     } else if (hemisphere == "Northern" && items[i].season.northern.length != 0) {
-      container.children[i].children[5].innerText = "Months: " + items[i].season.northern.join(", ");
-    } else {
-      container.children[i].children[5].innerText = "none";
+      itemMonths = items[i].season.northern;
+    }
+
+    for (let k = 0; k < itemMonths.length; k++) {
+      if (itemMonths[k] == MONTHS[k]) { months[k].classList.add("available") };
     }
   }
+}
+
+function createClock(item) {
+  var clockContainer = document.createElement("div");
+  clockContainer.classList.add(itemType + "__time", "time");
+
+  var clock = document.createElement("div");
+  clock.classList.add(itemType + "__time__clock", "clock");
+
+  var hourDivs = [];
+
+  for (let i = 0; i < 24; i++) {
+    var hourDiv = document.createElement("div");
+    hourDiv.classList.add(itemType + "__time__" + i, "hour");
+    if (i == 11) { hourDiv.classList.add("eleven-am") }
+    clock.appendChild(hourDiv);
+    hourDivs.push(hourDiv);
+  }
+
+  var times = item.time.split(" - ");
+  var start = parseInt(times[0]);
+  var end = parseInt(times[1]);
+
+  for (let i = start; i < end; i++) {
+    hourDivs[i].classList.add("available");
+  }
+
+  clockContainer.appendChild(clock);
+
+  var clockTextContainer = document.createElement("div");
+  clockTextContainer.classList.add(itemType + "__time__text", "time__text");
+
+  var twelveAMl = document.createElement("p");
+  twelveAMl.classList.add(itemType + "__time__12am-l", "12am-l");
+  twelveAMl.innerText = "12am";
+
+  var twelvePM = document.createElement("p");
+  twelvePM.classList.add(itemType + "__time__12pm", "12pm");
+  twelvePM.innerText = "12pm";
+
+  var twelveAMr = document.createElement("p");
+  twelveAMr.classList.add(itemType + "__time__12am-r", "12am-r");
+  twelveAMr.innerText = "12am";
+
+  clockTextContainer.appendChild(twelveAMl);
+  clockTextContainer.appendChild(twelvePM);
+  clockTextContainer.appendChild(twelveAMr);
+
+  clockContainer.appendChild(clockTextContainer);
+
+  return clockContainer;
+}
+
+function createCalendar(item) {
+  var calendarContainer = document.createElement("div");
+  calendarContainer.classList.add(itemType + "__months", "months");
+
+  var calendar = document.createElement("div");
+  calendar.classList.add(itemType + "__time__calendar", "calendar");
+
+  var monthDivs = [];
+
+  for (let i = 0; i < MONTHS.length; i++) {
+    var monthDiv = document.createElement("div");
+    monthDiv.classList.add(itemType + "__month__" + MONTHS[i], "month");
+    calendar.appendChild(monthDiv);
+    monthDivs.push(monthDiv);
+  }
+
+  var itemMonths = [];
+
+  if (hemisphere == "Southern" && item.season.southern.length != 0) {
+    itemMonths = item.season.southern;
+  } else if (hemisphere == "Northern" && item.season.northern.length != 0) {
+    itemMonths = item.season.northern;
+  }
+
+  for (let i = 0; i < itemMonths.length; i++) {
+    if (itemMonths[i] == MONTHS[i]) { monthDivs[i].classList.add("available"); };
+  }
+
+  calendarContainer.appendChild(calendar);
+
+  var calendarTextContainer = document.createElement("div");
+  calendarTextContainer.classList.add(itemType + "__months__text", "months__text");
+
+  var jan = document.createElement("p");
+  jan.classList.add(itemType + "__months__jan", "jan");
+  jan.innerText = "Jan";
+
+  var dec = document.createElement("p");
+  dec.classList.add(itemType + "__months__dec", "dec");
+  dec.innerText = "Dec";
+
+  calendarTextContainer.appendChild(jan);
+  calendarTextContainer.appendChild(dec);
+
+  calendarContainer.appendChild(calendarTextContainer);
+
+  return calendarContainer;
 }
 
 initItems();
