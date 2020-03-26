@@ -5,7 +5,7 @@ var fish_json =
             "name": "bitterling",
             "price": 900,
             "location": "river",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "", "", "", "", "", "", "", "november", "december"],
                 "southern": ["", "", "", "", "may", "june", "july", "august", "september", "", "", ""]
@@ -16,7 +16,7 @@ var fish_json =
             "name": "pale chub",
             "price": 160,
             "location": "river",
-            "time": "9 - 16",
+            "time": ["", "", "", "", "", "", "", "", "", "9", "10", "11", "12", "13", "14", "15", "", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -27,7 +27,7 @@ var fish_json =
             "name": "crucian carp",
             "price": 160,
             "location": "river",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -38,7 +38,7 @@ var fish_json =
             "name": "dace",
             "price": 240,
             "location": "river",
-            "time": "16 - 9",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "", "", "", "", "", "", "", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -49,7 +49,7 @@ var fish_json =
             "name": "carp",
             "price": 300,
             "location": "pond",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -60,7 +60,7 @@ var fish_json =
             "name": "koi",
             "price": 4000,
             "location": "pond",
-            "time": "16 - 9",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "", "", "", "", "", "", "", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -71,7 +71,7 @@ var fish_json =
             "name": "goldfish",
             "price": 1300,
             "location": "pond",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -82,7 +82,7 @@ var fish_json =
             "name": "pop-eyed goldfish",
             "price": 1300,
             "location": "pond",
-            "time": "9 - 16",
+            "time": ["", "", "", "", "", "", "", "", "", "9", "10", "11", "12", "13", "14", "15", "", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -93,7 +93,7 @@ var fish_json =
             "name": "ranchu goldfish",
             "price": 4500,
             "location": "pond",
-            "time": "9 - 16",
+            "time": ["", "", "", "", "", "", "", "", "", "9", "10", "11", "12", "13", "14", "15", "", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -104,7 +104,7 @@ var fish_json =
             "name": "killifish",
             "price": 300,
             "location": "pond",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "april", "may", "june", "july", "august", "", "", "", ""],
                 "southern": ["january", "february", "", "", "", "", "", "", "", "october", "november", "december"]
@@ -115,7 +115,7 @@ var fish_json =
             "name": "crawfish",
             "price": 200,
             "location": "pond",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "april", "may", "june", "july", "august", "september", "", "", ""],
                 "southern": ["january", "february", "march", "", "", "", "", "", "", "october", "november", "december"]
@@ -126,7 +126,7 @@ var fish_json =
             "name": "soft-shelled turtle",
             "price": 3750,
             "location": "river",
-            "time": "16 - 9",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "", "", "", "", "", "", "", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "", "august", "september", "", "", ""],
                 "southern": ["", "february", "march", "", "", "", "", "", "", "", "", ""]
@@ -137,7 +137,7 @@ var fish_json =
             "name": "snapping turtle",
             "price": 5000,
             "location": "river",
-            "time": "21 - 4",
+            "time": ["0", "1", "2", "3", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "april", "may", "june", "july", "august", "september", "october", "", ""],
                 "southern": ["january", "february", "march", "april", "", "", "", "", "", "october", "november", "december"]
@@ -148,7 +148,7 @@ var fish_json =
             "name": "tadpole",
             "price": 100,
             "location": "pond",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "march", "april", "may", "june", "july", "", "", "", "", ""],
                 "southern": ["january", "", "", "", "", "", "", "", "september", "october", "november", "december"]
@@ -159,7 +159,7 @@ var fish_json =
             "name": "frog",
             "price": 0,
             "location": "pond",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "may", "june", "july", "august", "", "", "", ""],
                 "southern": ["january", "february", "", "", "", "", "", "", "", "", "november", "december"]
@@ -170,7 +170,7 @@ var fish_json =
             "name": "freshwater goby",
             "price": 400,
             "location": "river",
-            "time": "16 - 9",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "", "", "", "", "", "", "", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -181,7 +181,7 @@ var fish_json =
             "name": "loach",
             "price": 400,
             "location": "river",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "march", "april", "may", "", "", "", "", "", "", ""],
                 "southern": ["", "", "", "", "", "", "", "", "september", "october", "november", ""]
@@ -192,7 +192,7 @@ var fish_json =
             "name": "catfish",
             "price": 800,
             "location": "pond",
-            "time": "16 - 9",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "", "", "", "", "", "", "", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "may", "june", "july", "august", "september", "october", "", ""],
                 "southern": ["january", "february", "march", "april", "", "", "", "", "", "", "november", "december"]

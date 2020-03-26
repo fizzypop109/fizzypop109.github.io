@@ -34,8 +34,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-width: 250px;
-  width: 20vw;
+  width: 300px;
   margin: 10px;
 }
 
@@ -109,8 +108,24 @@
   margin: 0;
 }
 
+[data-tooltip]:before {
+  background-color: #f8f8ef;
+  border-radius: 10px;
+  padding: 0 10px;
+  font-weight: bold;
+  color: #213d33;
+  position : absolute;
+  margin-left: 60px;
+  content : attr(data-tooltip);
+  opacity : 0;
+}
+
+[data-tooltip]:hover:before {        
+  opacity : 1;
+}
+
 /* Turn off the border for the last hour div in the clock */
-[class*="__24"] {
+[class*="__23"] {
   border: none;
 }
 

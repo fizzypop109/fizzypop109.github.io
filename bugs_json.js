@@ -5,7 +5,7 @@ var bugs_json =
             "name": "common butterfly",
             "price": 160,
             "location": "above flowers",
-            "time": "4 - 19",
+            "time": ["", "", "", "", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "", "", "", "", ""],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "", "", "september", "october", "november", "december"],
                 "southern": ["", "", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -16,7 +16,7 @@ var bugs_json =
             "name": "yellow butterfly",
             "price": 160,
             "location": "flying",
-            "time": "4 - 19",
+            "time": ["", "", "", "", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "march", "april", "may", "june", "", "", "september", "october", "", ""],
                 "southern": ["", "", "march", "april", "", "", "", "", "september", "october", "november", "december"]
@@ -27,7 +27,7 @@ var bugs_json =
             "name": "tiger butterfly",
             "price": 240,
             "location": "flying",
-            "time": "4 - 19",
+            "time": ["", "", "", "", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "march", "april", "may", "june", "july", "august", "september", "", "", ""],
                 "southern": ["january", "february", "march", "", "", "", "", "", "september", "october", "november", "december"]
@@ -38,7 +38,7 @@ var bugs_json =
             "name": "peacock butterfly",
             "price": 2500,
             "location": "above purple, black, and blue flowers",
-            "time": "4 - 19",
+            "time": ["", "", "", "", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "march", "april", "may", "june", "", "", "", "", "", ""],
                 "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
@@ -49,7 +49,7 @@ var bugs_json =
             "name": "common bluebottle",
             "price": 0,
             "location": "",
-            "time": "4 - 19",
+            "time": ["", "", "", "", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "april", "may", "june", "july", "august", "", "", "", ""],
                 "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
@@ -60,7 +60,7 @@ var bugs_json =
             "name": "paper kite butterfly",
             "price": 1000,
             "location": "flying",
-            "time": "8 - 19",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "", "", "", "", ""],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -71,7 +71,7 @@ var bugs_json =
             "name": "great purple emperor",
             "price": 0,
             "location": "",
-            "time": "4 - 7",
+            "time": ["", "", "", "", "4", "5", "6", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "may", "june", "july", "august", "", "", "", ""],
                 "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
@@ -82,7 +82,7 @@ var bugs_json =
             "name": "monarch butterfly",
             "price": 140,
             "location": "flying",
-            "time": "4 - 17",
+            "time": ["", "", "", "", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "", "", "", "", "september", "october", "november", ""],
                 "southern": ["", "", "march", "april", "may", "", "", "", "", "", "", ""]
@@ -93,7 +93,7 @@ var bugs_json =
             "name": "emperor butterfly",
             "price": 4000,
             "location": "flying",
-            "time": "17 - 8",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "", "", "june", "july", "august", "september", "", "", "december"],
                 "southern": ["january", "february", "march", "", "", "june", "july", "august", "september", "", "", "december"]
@@ -104,7 +104,7 @@ var bugs_json =
             "name": "agrias butterfly",
             "price": 3000,
             "location": "flying",
-            "time": "8 - 17",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "april", "may", "june", "july", "august", "september", "", "", ""],
                 "southern": ["january", "february", "march", "", "", "", "", "", "", "october", "november", "december"]
@@ -115,7 +115,7 @@ var bugs_json =
             "name": "raja brooke's birdwing",
             "price": 2500,
             "location": "above purple, black, and blue flowers",
-            "time": "8 - 17",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["january", "february", "", "april", "may", "june", "july", "august", "september", "", "", "december"],
                 "southern": ["january", "february", "march", "", "", "june", "july", "august", "", "october", "november", "december"]
@@ -126,7 +126,7 @@ var bugs_json =
             "name": "queen alexandra's birdwing",
             "price": 4000,
             "location": "flying",
-            "time": "8 - 16",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "may", "june", "july", "august", "september", "", "", ""],
                 "southern": ["january", "february", "march", "", "", "", "", "", "", "", "november", "december"]
@@ -137,7 +137,7 @@ var bugs_json =
             "name": "moth",
             "price": 130,
             "location": "around light",
-            "time": "19 - 4",
+            "time": ["0", "1", "2", "3", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -148,7 +148,7 @@ var bugs_json =
             "name": "atlas moth",
             "price": 0,
             "location": "",
-            "time": "19 - 4",
+            "time": ["0", "1", "2", "3", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "april", "may", "june", "july", "august", "september", "", "", ""],
                 "southern": ["january", "february", "march", "", "", "", "", "", "", "october", "november", "december"]
@@ -159,7 +159,7 @@ var bugs_json =
             "name": "madagascan sunset moth",
             "price": 2500,
             "location": "flying",
-            "time": "8 - 16",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "april", "may", "june", "july", "august", "september", "", "", ""],
                 "southern": ["january", "february", "march", "", "", "", "", "", "", "october", "november", "december"]
@@ -170,7 +170,7 @@ var bugs_json =
             "name": "long locust",
             "price": 200,
             "location": "in grass",
-            "time": "8 - 19",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "april", "may", "june", "july", "august", "september", "october", "november", ""],
                 "southern": ["january", "february", "march", "april", "may", "", "", "", "", "october", "november", "december"]
@@ -181,7 +181,7 @@ var bugs_json =
             "name": "migratory locust",
             "price": 200,
             "location": "in grass",
-            "time": "8 - 19",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "", "", "", "august", "september", "october", "november", ""],
                 "southern": ["", "february", "march", "april", "may", "", "", "", "", "", "", ""]
@@ -192,7 +192,7 @@ var bugs_json =
             "name": "rice grasshopper",
             "price": 1600,
             "location": "in grass",
-            "time": "8 - 19",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "", "", "", "august", "september", "october", "november", ""],
                 "southern": ["", "february", "march", "april", "may", "", "", "", "", "", "", ""]
@@ -203,7 +203,7 @@ var bugs_json =
             "name": "grasshopper",
             "price": 160,
             "location": "in grass",
-            "time": "8 - 17",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "september", "", "", ""],
                 "southern": ["january", "february", "march", "", "", "", "", "", "", "", "", ""]
@@ -214,7 +214,7 @@ var bugs_json =
             "name": "cricket",
             "price": 130,
             "location": "in grass",
-            "time": "17 - 8",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "", "", "september", "october", "november", ""],
                 "southern": ["", "", "march", "april", "may", "", "", "", "", "", "", ""]
@@ -225,7 +225,7 @@ var bugs_json =
             "name": "bell cricket",
             "price": 0,
             "location": "in grass",
-            "time": "17 - 8",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "", "", "september", "october", "", ""],
                 "southern": ["", "", "march", "april", "", "", "", "", "", "", "", ""]
@@ -236,7 +236,7 @@ var bugs_json =
             "name": "mantis",
             "price": 430,
             "location": "on flowers",
-            "time": "8 - 17",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "march", "april", "may", "june", "july", "august", "september", "october", "november", ""],
                 "southern": ["january", "", "march", "april", "", "", "", "", "september", "october", "november", "december"]
@@ -247,7 +247,7 @@ var bugs_json =
             "name": "orchid mantis",
             "price": 2400,
             "location": "on flowers",
-            "time": "8 - 17",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "march", "april", "may", "june", "july", "august", "september", "october", "november", ""],
                 "southern": ["january", "february", "march", "april", "may", "", "", "", "september", "october", "november", "december"]
@@ -258,7 +258,7 @@ var bugs_json =
             "name": "honeybee",
             "price": 200,
             "location": "above flowers",
-            "time": "8 - 17",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "march", "april", "may", "june", "july", "", "", "", "", ""],
                 "southern": ["january", "", "", "", "", "", "", "", "september", "october", "november", "december"]
@@ -269,7 +269,7 @@ var bugs_json =
             "name": "wasp",
             "price": 2500,
             "location": "on trees",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -280,7 +280,7 @@ var bugs_json =
             "name": "brown cicada",
             "price": 250,
             "location": "on trees",
-            "time": "8 - 17",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
                 "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
@@ -291,7 +291,7 @@ var bugs_json =
             "name": "robust cicada",
             "price": 0,
             "location": "",
-            "time": "8 - 17",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
                 "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
@@ -302,7 +302,7 @@ var bugs_json =
             "name": "giant cicada",
             "price": 0,
             "location": "",
-            "time": "8 - 17",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
                 "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
@@ -313,7 +313,7 @@ var bugs_json =
             "name": "walker cicada",
             "price": 400,
             "location": "on trees",
-            "time": "8 - 16",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "", "", "", "august", "september", "", "", ""],
                 "southern": ["", "february", "march", "", "", "", "", "", "", "", "", ""]
@@ -324,7 +324,7 @@ var bugs_json =
             "name": "evening cicada",
             "price": 0,
             "location": "",
-            "time": "4 - 8, 16 - 19",
+            "time": ["", "", "", "", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "16", "17", "18", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
                 "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
@@ -335,7 +335,7 @@ var bugs_json =
             "name": "cicada shell",
             "price": 0,
             "location": "",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
                 "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
@@ -346,7 +346,7 @@ var bugs_json =
             "name": "red dragonfly",
             "price": 180,
             "location": "flying",
-            "time": "8 - 19",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "", "", "", "", "september", "october", "", ""],
                 "southern": ["", "", "march", "april", "", "", "", "", "", "", "", ""]
@@ -357,7 +357,7 @@ var bugs_json =
             "name": "darner dragonfly",
             "price": 230,
             "location": "flying",
-            "time": "8 - 17",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "april", "may", "june", "july", "august", "september", "october", "", ""],
                 "southern": ["january", "february", "march", "april", "", "", "", "", "", "october", "november", "december"]
@@ -368,7 +368,7 @@ var bugs_json =
             "name": "banded dragonfly",
             "price": 0,
             "location": "",
-            "time": "8 - 17",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "may", "june", "july", "august", "september", "october", "", ""],
                 "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
@@ -379,7 +379,7 @@ var bugs_json =
             "name": "damselfly",
             "price": 500,
             "location": "flying",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "", "", "", "", "", "", "", "", "november", "december"],
                 "southern": ["", "", "", "", "may", "june", "july", "august", "", "", "", ""]
@@ -390,7 +390,7 @@ var bugs_json =
             "name": "firefly",
             "price": 300,
             "location": "above freshwater",
-            "time": "19 - 16",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "", "", "", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "june", "", "", "", "", "", ""],
                 "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
@@ -401,7 +401,7 @@ var bugs_json =
             "name": "mole cricket",
             "price": 500,
             "location": "underground",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "", "", "", "", "", "november", "december"],
                 "southern": ["", "", "", "", "may", "june", "july", "august", "september", "october", "november", ""]
@@ -412,7 +412,7 @@ var bugs_json =
             "name": "pond skater",
             "price": 130,
             "location": "in rivers",
-            "time": "8 - 19",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "may", "june", "july", "august", "september", "", "", ""],
                 "southern": ["january", "february", "march", "", "", "", "", "", "", "", "november", "december"]
@@ -423,7 +423,7 @@ var bugs_json =
             "name": "diving beetle",
             "price": 800,
             "location": "in rivers",
-            "time": "8 - 19",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "may", "june", "july", "august", "september", "", "", ""],
                 "southern": ["january", "february", "march", "", "", "", "", "", "", "", "november", "december"]
@@ -434,7 +434,7 @@ var bugs_json =
             "name": "giant water beetle",
             "price": 2000,
             "location": "",
-            "time": "19 - 8",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "", "", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "april", "may", "june", "july", "august", "september", "", "", ""],
                 "southern": ["january", "february", "march", "", "", "", "", "", "", "october", "november", "december"]
@@ -445,7 +445,7 @@ var bugs_json =
             "name": "stinkbug",
             "price": 120,
             "location": "on trees",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "march", "april", "may", "june", "july", "august", "september", "october", "", ""],
                 "southern": ["january", "february", "march", "april", "", "", "", "", "september", "october", "november", "december"]
@@ -456,7 +456,7 @@ var bugs_json =
             "name": "man-faced stinkbug",
             "price": 1000,
             "location": "on flowers",
-            "time": "19 - 8",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "", "", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "march", "april", "may", "june", "july", "august", "september", "october", "", ""],
                 "southern": ["january", "february", "march", "april", "", "", "", "", "september", "october", "november", "december"]
@@ -467,7 +467,7 @@ var bugs_json =
             "name": "ladybug",
             "price": 200,
             "location": "on flowers",
-            "time": "8 - 17",
+            "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "march", "april", "may", "june", "", "", "", "october", "", ""],
                 "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
@@ -478,7 +478,7 @@ var bugs_json =
             "name": "tiger beetle",
             "price": 240,
             "location": "flying",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "february", "march", "april", "may", "june", "july", "august", "september", "october", "", ""],
                 "southern": ["january", "february", "march", "", "", "", "", "", "september", "october", "november", "december"]
@@ -489,7 +489,7 @@ var bugs_json =
             "name": "jewel beetle",
             "price": 0,
             "location": "on trees",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "april", "may", "june", "july", "august", "", "", "", ""],
                 "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
@@ -500,7 +500,7 @@ var bugs_json =
             "name": "citrus long-horned beetle",
             "price": 350,
             "location": "on tree stumps",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -511,7 +511,7 @@ var bugs_json =
             "name": "rosalia batesi beetle",
             "price": 3000,
             "location": "on tree stumps",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "may", "june", "july", "august", "september", "", "", ""],
                 "southern": ["january", "february", "march", "", "", "", "", "", "", "", "november", "december"]
@@ -522,7 +522,7 @@ var bugs_json =
             "name": "blue weevil beetle",
             "price": 0,
             "location": "on trees",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
                 "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
@@ -533,7 +533,7 @@ var bugs_json =
             "name": "violin beetle",
             "price": 450,
             "location": "on trees",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "may", "june", "", "", "september", "october", "november", ""],
                 "southern": ["", "", "march", "april", "may", "", "", "", "", "", "november", "december"]
@@ -544,7 +544,7 @@ var bugs_json =
             "name": "dung beetle",
             "price": 0,
             "location": "on ground",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "", "", "", "", "", ""],
                 "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
@@ -555,7 +555,7 @@ var bugs_json =
             "name": "earth-boring dung beetle",
             "price": 300,
             "location": "on ground",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "september", "", "", ""],
                 "southern": ["january", "february", "march", "", "", "", "", "", "", "", "", ""]
@@ -566,7 +566,7 @@ var bugs_json =
             "name": "scarab beetle",
             "price": 0,
             "location": "on trees",
-            "time": "23 - 8",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
                 "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
@@ -577,7 +577,7 @@ var bugs_json =
             "name": "drone beetle",
             "price": 200,
             "location": "on trees",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "june", "july", "august", "", "", "", ""],
                 "southern": ["january", "february", "", "", "", "", "", "", "", "", "", "december"]
@@ -588,7 +588,7 @@ var bugs_json =
             "name": "goliath beetle",
             "price": 0,
             "location": "on trees",
-            "time": "17 - 8",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "june", "july", "august", "september", "", "", ""],
                 "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
@@ -599,7 +599,7 @@ var bugs_json =
             "name": "saw stag",
             "price": 0,
             "location": "on trees",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
                 "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
@@ -610,7 +610,7 @@ var bugs_json =
             "name": "miyama stag",
             "price": 0,
             "location": "on trees",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
                 "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
@@ -621,7 +621,7 @@ var bugs_json =
             "name": "giant stag",
             "price": 0,
             "location": "on trees",
-            "time": "23 - 8",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
                 "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
@@ -632,7 +632,7 @@ var bugs_json =
             "name": "rainbow stag",
             "price": 0,
             "location": "on trees",
-            "time": "19 - 8",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "", "", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "june", "july", "august", "september", "", "", ""],
                 "southern": ["january", "february", "march", "", "", "", "", "", "", "", "", "december"]
@@ -643,7 +643,7 @@ var bugs_json =
             "name": "cyclommatus stag",
             "price": 0,
             "location": "on trees",
-            "time": "17 - 8",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
                 "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
@@ -654,7 +654,7 @@ var bugs_json =
             "name": "golden stag",
             "price": 0,
             "location": "on trees",
-            "time": "17 - 8",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
                 "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
@@ -665,7 +665,7 @@ var bugs_json =
             "name": "giraffe stag",
             "price": 0,
             "location": "on trees",
-            "time": "17 - 8",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
                 "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
@@ -676,7 +676,7 @@ var bugs_json =
             "name": "horned dynastid",
             "price": 0,
             "location": "on trees",
-            "time": "17 - 8",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
                 "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
@@ -687,7 +687,7 @@ var bugs_json =
             "name": "horned atlas",
             "price": 0,
             "location": "on trees",
-            "time": "17 - 8",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
                 "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
@@ -698,7 +698,7 @@ var bugs_json =
             "name": "horned elephant",
             "price": 0,
             "location": "on trees",
-            "time": "17 - 8",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
                 "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
@@ -709,7 +709,7 @@ var bugs_json =
             "name": "horned hercules",
             "price": 0,
             "location": "on trees",
-            "time": "17 - 8",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
                 "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
@@ -720,7 +720,7 @@ var bugs_json =
             "name": "walking stick",
             "price": 0,
             "location": "on trees",
-            "time": "4 - 8, 17 - 19",
+            "time": ["", "", "", "", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "september", "october", "november", ""],
                 "southern": ["january", "february", "march", "april", "may", "", "", "", "", "", "", ""]
@@ -731,7 +731,7 @@ var bugs_json =
             "name": "walking leaf",
             "price": 600,
             "location": "on ground (beneath trees)",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "september", "", "", ""],
                 "southern": ["january", "february", "march", "", "", "", "", "", "", "", "", ""]
@@ -742,7 +742,7 @@ var bugs_json =
             "name": "bagworm",
             "price": 600,
             "location": "on trees",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -753,7 +753,7 @@ var bugs_json =
             "name": "ant",
             "price": 80,
             "location": "on rotten turnips and fruit",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -764,7 +764,7 @@ var bugs_json =
             "name": "hermit crab",
             "price": 1000,
             "location": "on beach",
-            "time": "19 - 8",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "", "", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -775,7 +775,7 @@ var bugs_json =
             "name": "wharf roach",
             "price": 0,
             "location": "on beach (rocks)",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -786,7 +786,7 @@ var bugs_json =
             "name": "fly",
             "price": 0,
             "location": "on rotten food and garbage",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -797,7 +797,7 @@ var bugs_json =
             "name": "mosquito",
             "price": 130,
             "location": "flying",
-            "time": "17 - 4",
+            "time": ["0", "1", "2", "3", "", "", "", "", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "june", "july", "august", "september", "", "", ""],
                 "southern": ["january", "february", "march", "", "", "", "", "", "", "", "", "december"]
@@ -808,7 +808,7 @@ var bugs_json =
             "name": "flea",
             "price": 70,
             "location": "on flea-infested villagers",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "april", "may", "june", "july", "august", "september", "october", "november", ""],
                 "southern": ["january", "february", "march", "april", "may", "", "", "", "", "october", "november", "december"]
@@ -819,7 +819,7 @@ var bugs_json =
             "name": "snail",
             "price": 250,
             "location": "under rocks",
-            "time": "0 - 24",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -830,7 +830,7 @@ var bugs_json =
             "name": "pill bug",
             "price": 250,
             "location": "under rocks",
-            "time": "23 - 16",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "", "", "", "", "", "", "", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "", "", "september", "october", "november", "december"],
                 "southern": ["", "", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -852,7 +852,7 @@ var bugs_json =
             "name": "spider",
             "price": 600,
             "location": "shaking trees",
-            "time": "19 - 8",
+            "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "", "", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
                 "southern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -863,7 +863,7 @@ var bugs_json =
             "name": "tarantula",
             "price": 8000,
             "location": "on ground",
-            "time": "19 - 4",
+            "time": ["0", "1", "2", "3", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "", "", "", "", "", "", "november", "december"],
                 "southern": ["", "", "", "", "may", "june", "july", "august", "september", "october", "", ""]
@@ -874,7 +874,7 @@ var bugs_json =
             "name": "scorpion",
             "price": 0,
             "location": "on ground",
-            "time": "19 - 4",
+            "time": ["0", "1", "2", "3", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "may", "june", "july", "august", "september", "october", "", ""],
                 "southern": ["january", "february", "march", "april", "", "", "", "", "", "", "november", "december"]

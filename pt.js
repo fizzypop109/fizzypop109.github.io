@@ -19,6 +19,7 @@ var hemisphere = "Southern";
 var hemButton = document.getElementsByClassName("button__hemisphere")[0];
 var data = {};
 var MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
+var HOURS = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"]
 
 // INITIALISE BUG DISPLAY //
 
@@ -55,22 +56,8 @@ function createItem(item) {
   itemLocation.innerText = item.location != "" ? "Location: " + item.location : "Location: Unknown";
   itemLocation.classList.add(itemType + "__location", "location");
 
-  // var itemTime = document.createElement("p");
-  // itemTime.innerText = item.time != "" ? "Time: " + item.time : "Time: Unknown";
-  // itemTime.classList.add(itemType + "__time", "time");
-
   // Create and populate a 24-hour clock bar to display the time
   var itemTime = createClock(item);
-
-  // var itemMonths = document.createElement("p");
-  // if (hemisphere == "Southern" && item.season.southern.length != 0) {
-  //   itemMonths.innerText = "Months: " + item.season.southern.join(", ");
-  // } else if (hemisphere == "Northern" && item.season.northern.length != 0) {
-  //   itemMonths.innerText = "Months: " + item.season.northern.join(", ");
-  // } else {
-  //   itemMonths.innerText = "Months: Unknown";
-  // }
-  // itemMonths.classList.add(itemType + "__months", "months");
 
   var itemMonths = createCalendar(item);
 
@@ -159,22 +146,18 @@ function createClock(item) {
 
   var hourDivs = [];
 
-  for (let i = 0; i < 24; i++) {
+  for (let i = 0; i < HOURS.length; i++) {
     var hourDiv = document.createElement("div");
-    hourDiv.classList.add(itemType + "__time__" + i, "hour");
-    if (i == 11) { hourDiv.classList.add("eleven-am") }
+    hourDiv.classList.add(itemType + "__hour__" + HOURS[i], "hour");
+    if (i == 11) { hourDiv.classList.add("eleven-am") };
     clock.appendChild(hourDiv);
     hourDivs.push(hourDiv);
   }
 
-  var times = item.time.split(" - ");
-  var start = parseInt(times[0]);
-  var end = parseInt(times[1]);
-
-  for (let i = start; i < end; i++) {
-    hourDivs[i].classList.add("available");
+  for (let i = 0; i < item.time.length; i++) {
+    if (item.time[i] == HOURS[i]) { hourDivs[i].classList.add("available"); };
   }
-
+  
   clockContainer.appendChild(clock);
 
   var clockTextContainer = document.createElement("div");
