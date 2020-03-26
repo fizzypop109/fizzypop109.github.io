@@ -128,6 +128,23 @@ function createItem(item) {
   container.appendChild(itemBox);
 }
 
+// FILTER LIST OF ITEMS BASED ON WHAT'S IN THE SEARCH BAR //
+function filter() {
+// Loop through all containers, and if the title doesn't include the search query, set display to none
+  var query = document.getElementsByClassName("search")[0].value;
+  var filter = query.toUpperCase();
+  var containers = document.getElementsByClassName("container");
+
+  for (i = 0; i < containers.length; i++) {
+    var name = containers[i].getElementsByTagName("h2")[0].innerText;
+    if (name.toUpperCase().indexOf(filter) > -1) {
+      containers[i].style.display = "";
+    } else {
+      containers[i].style.display = "none";
+    }
+  }
+}
+
 // SWITCH HEMISPHERE BUTTON //
 
 function switchHem() {
@@ -265,8 +282,6 @@ function createCalendar(item) {
   currentTimeIcon.src = "white-circle.png";
   monthDivs[currentMonth].appendChild(currentTimeIcon);
 
-  console.log(monthDivs[currentMonth]);
-
   calendarContainer.appendChild(calendar);
 
   // Add a line of text to label January and December for easier reading
@@ -327,7 +342,7 @@ function loadData() {
     }
   }
 
-  // Ensures data has been loaded before we setup the checkboxes
+  // Ensures data has been loaded before we setup the checkboxes and search bar
   checkboxSetup();
 }
 
