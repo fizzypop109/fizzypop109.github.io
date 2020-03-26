@@ -5,6 +5,7 @@
 }
 
 /* GENERAL PAGE */
+
 .body {
   background-color: #b2d6c9;
 }
@@ -38,7 +39,7 @@
   margin: 10px;
 }
 
-.container img {
+.container > img {
   margin-top: 10px;
   height: 110px;
   border: 5px solid #4c7566;
@@ -87,6 +88,9 @@
   border-radius: 0;
   border-right: 2px solid #70998a;
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .eleven-am {
@@ -124,15 +128,20 @@
   opacity : 1;
 }
 
-/* Turn off the border for the last hour div in the clock */
-[class*="__23"] {
-  border: none;
-}
-
 /* Calendar (item months) Styles */
 
 .months {
   padding: 0 15px;
+}
+
+.current__time {
+  width: 50%;
+}
+
+/* Turn off the border for the last hour div in the clock and the last month div in the calendar */
+
+[class*="__23"], [class*="__december"] {
+  border: none;
 }
 
 /* Trackers (checkboxes) Styles */
@@ -188,6 +197,7 @@ button {
   padding: 10px;
   background-color: #4c7566;
   color: white;
+  transition: 0.3s;
 }
 
 button:active, button:focus {
