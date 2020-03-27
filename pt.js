@@ -233,7 +233,7 @@ function switchHem() {
 
   // Go through the calendar month divs and remove the "available" classes
   for (var i = 0; i < itemContainers.length; i++) {
-    var calendarDiv = itemContainers[i].children[5].children[0];
+    var calendarDiv = itemContainers[i].children[2].children[0];
     var months = calendarDiv.getElementsByTagName('*');
 
     for (var j = 0; j < months.length; j++) {
