@@ -22,6 +22,8 @@ var hemisphere = "Southern";
 
 var container = document.getElementsByClassName("main-container")[0];
 var hemButton = document.getElementsByClassName("button__hemisphere")[0];
+var nowButton = document.getElementsByClassName("filters__now")[0];
+var nowButtonToggle = false;
 
 var data = {};
 
@@ -129,9 +131,10 @@ function createItem(item) {
 }
 
 // FILTER LIST OF ITEMS BASED ON WHAT'S IN THE SEARCH BAR //
-function filter() {
-// Loop through all containers, and if the title doesn't include the search query, set display to none
-  var query = document.getElementsByClassName("search")[0].value;
+
+function search() {
+  // Loop through all containers, and if the title doesn't include the search query, set display to none
+  var query = document.getElementsByClassName("filters__search")[0].value;
   var filter = query.toUpperCase();
   var containers = document.getElementsByClassName("container");
 
@@ -142,6 +145,69 @@ function filter() {
     } else {
       containers[i].style.display = "none";
     }
+  }
+}
+
+// FILTER LIST OF ITEMS BASED ON WHAT'S AVAILABLE NOW (TIME AND MONTH) //
+
+function filter() {
+  // Loop through all containers, and if the current month and hour are not in the time and months arrays, set display to none
+  var containers = document.getElementsByClassName("container");
+
+  // For each item container
+  for (i = 0; i < containers.length; i++) {
+    // If the user is clicking the button on "Clear Filter", display all the containers again
+    if (nowButtonToggle) {
+      containers[i].style.display = "flex";
+    // If the user is clicking the button on "What Can I Catch Now?", filter and hide as required
+    } else {
+      var availableHours = containers[i].getElementsByClassName("clock")[0].getElementsByClassName("available");
+      var hoursArray = [].slice.call(availableHours);
+
+      var availableMonths = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName("available");
+      var monthsArray = [].slice.call(availableMonths);
+
+      var month = MONTHS[currentMonth];
+
+      var name = containers[i].getElementsByTagName("h2")[0].innerText;
+
+      var hourAvailable = false;
+      var monthAvailable = false;
+
+      // Search through hoursArray
+      for (var j = 0; j < hoursArray.length; j++) {
+        var hourDiv = hoursArray[j];
+        if (hourDiv.className.indexOf(currentHour) !== -1) {
+          // The currently looping container is available in the current hour
+          hourAvailable = true;
+          break;
+        }
+      }
+
+      // Search through monthsArray
+      for (var j = 0; j < monthsArray.length; j++) {
+        var monthDiv = monthsArray[j];
+        if (monthDiv.className.indexOf(month) !== -1) {
+          // The currently looping container is available in the current month
+          monthAvailable = true;
+          break;
+        }
+      }
+
+      // If either hourAvailable or monthAvailable are false, the item is NOT available now, so hide it
+      if (!hourAvailable || !monthAvailable) {
+        containers[i].style.display = "none";
+      }
+    }
+  }
+
+  // Set the button to be whatever it's not
+  nowButtonToggle = !nowButtonToggle;
+
+  if (nowButtonToggle) {
+    nowButton.innerText = "Clear Filter";
+  } else {
+    nowButton.innerText = "What Can I Catch Now?";
   }
 }
 
@@ -176,12 +242,6 @@ function switchHem() {
     for (let k = 0; k < itemMonths.length; k++) {
       if (itemMonths[k] == MONTHS[k]) { months[k].classList.add("available"); };
     }
-
-    // Add a small white dot to the current month
-    var currentTimeIcon = document.createElement("img");
-    currentTimeIcon.classList.add("current__time");
-    currentTimeIcon.src = "white-circle.png";
-    months[currentMonth].appendChild(currentTimeIcon);
   }
 }
 
@@ -199,7 +259,7 @@ function createClock(item) {
   // Create a div for each hour
   for (let i = 0; i < HOURS.length; i++) {
     var hourDiv = document.createElement("div");
-    hourDiv.classList.add(itemType + "__hour__" + HOURS[i], "hour");
+    hourDiv.classList.add(itemType + "__hour__" + HOURS[i], "hour", HOURS[i]);
     if (i == 11) { hourDiv.classList.add("eleven-am") };
     clock.appendChild(hourDiv);
     hourDivs.push(hourDiv);
@@ -257,7 +317,7 @@ function createCalendar(item) {
   // Create a div for each month
   for (let i = 0; i < MONTHS.length; i++) {
     var monthDiv = document.createElement("div");
-    monthDiv.classList.add(itemType + "__month__" + MONTHS[i], "month");
+    monthDiv.classList.add(itemType + "__month__" + MONTHS[i], "month", MONTHS[i]);
     calendar.appendChild(monthDiv);
     monthDivs.push(monthDiv);
   }

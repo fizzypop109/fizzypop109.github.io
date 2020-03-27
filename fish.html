@@ -12,11 +12,16 @@
       <button type="button" class="button__back" onclick="location.href = 'index.html';">
         Back
       </button>
-      <input type="text" class="fish__search search" oninput="filter()"></input>
       <h1 class="fish__title title">Fish</h1>
       <button type="button" class="button__hemisphere" onclick="switchHem()">
         Southern
       </button>
+    </div>
+
+    <div class="fish__filters filters">
+      <button class="fish__filters__now filters__now" onclick="filter()">What Can I Catch Now?</button>
+      <p class="fish__filters__or filters__or">Or</p>
+      <input type="text" class="fish__filters__search filters__search" placeholder="Search!" oninput="search()"></input>
     </div>
 
     <div class="fishes__container main-container">

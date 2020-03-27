@@ -12,15 +12,21 @@
       <button type="button" class="button__back" onclick="location.href = 'index.html';">
         Back
       </button>
-      <input type="text" class="bugs__search search" oninput="filter()"></input>
       <h1 class="bugs__title title">Bugs</h1>
       <button type="button" class="button__hemisphere" onclick="switchHem()">
         Southern
       </button>
     </div>
 
+    <div class="bugs__filters filters">
+      <button class="bugs__filters__now filters__now" onclick="filter()">What Can I Catch Now?</button>
+      <p class="bugs__filters__or filters__or">Or</p>
+      <input type="text" class="bugs__filters__search filters__search" placeholder="Search!" oninput="search()"></input>
+    </div>
+
     <div class="bugs__container main-container">
     </div>
+
   </body>
 
   <script src="bugs_json.js"></script>
