@@ -5,6 +5,7 @@
     <title>Bug List</title>
     <link href="https://fonts.googleapis.com/css?family=Mali&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="acnh.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body class="bugs__body body" onload="loadData()">
@@ -13,9 +14,12 @@
         Back
       </button>
       <h1 class="bugs__title title">Bugs</h1>
-      <button type="button" class="button__hemisphere" onclick="switchHem()">
-        Southern
-      </button>
+      <div class="bugs__hemisphere hemisphere">
+        <p class="bugs__hemisphere__text hemisphere__text">Currently Seeing:</p>
+        <button type="button" class="button__hemisphere" onclick="switchHem()">
+          Southern
+        </button>
+      </div>
     </div>
 
     <div class="bugs__filters filters">

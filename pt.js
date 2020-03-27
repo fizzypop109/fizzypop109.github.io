@@ -52,11 +52,17 @@ function createItem(item) {
   // The main card
   var itemBox = document.createElement("div");
   itemBox.classList.add(itemType + "__container", "container");
+
+  var infoDiv = document.createElement("div");
+  infoDiv.classList.add(itemType + "__container__info", "info");
   
   // Item image
   var itemImage = document.createElement("img");
   itemImage.classList.add(itemType + "__image", "image");
   itemImage.src = item.image;
+
+  var infoTextDiv = document.createElement("div");
+  infoTextDiv.classList.add(itemType + "__container__info__text", "container__info__text");
   
   // Item name
   var itemName = document.createElement("h2");
@@ -111,6 +117,14 @@ function createItem(item) {
 
   // Append all the elements
 
+  infoDiv.appendChild(itemImage);
+
+  infoTextDiv.appendChild(itemName);
+  infoTextDiv.appendChild(itemPrice);
+  infoTextDiv.appendChild(itemLocation);
+
+  infoDiv.appendChild(infoTextDiv);
+
   itemTrackersItems.appendChild(itemCaught_label);
   itemTrackersItems.appendChild(itemCaught);
 
@@ -119,10 +133,7 @@ function createItem(item) {
 
   itemTrackers.appendChild(itemTrackersItems);
 
-  itemBox.appendChild(itemImage);
-  itemBox.appendChild(itemName);
-  itemBox.appendChild(itemPrice);
-  itemBox.appendChild(itemLocation);
+  itemBox.appendChild(infoDiv);
   itemBox.appendChild(itemTime);
   itemBox.appendChild(itemMonths);
   itemBox.appendChild(itemTrackers);
@@ -205,7 +216,7 @@ function filter() {
   nowButtonToggle = !nowButtonToggle;
 
   if (nowButtonToggle) {
-    nowButton.innerText = "Clear Filter";
+    nowButton.innerText = "See All";
   } else {
     nowButton.innerText = "What Can I Catch Now?";
   }

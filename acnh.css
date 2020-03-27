@@ -4,22 +4,87 @@
   border-radius: 20px;
 }
 
-/* GENERAL PAGE */
+/* INDEX PAGE STYLES */
+
+.index__body {
+  height: 100vh;
+  background-color: #f8f8ef;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.index__logo {
+  height: 400px;
+}
+
+.index__menu {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.index__menu__button {
+  padding: 10px 35px;
+}
+
+/* GENERAL ITEM PAGE STYLES */
 
 .body {
   background-color: #b2d6c9;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
   display: flex;
   align-items: center;
   margin: 10px 30px;
+  color: #4c7566;
 }
 
 .title {
   margin: auto;
   font-size: 50px;
+}
+
+.hemisphere {
+  display: flex;
+  align-items: center;
+}
+
+.hemisphere__text {
+  margin: 0;
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+/* Filters Styles */
+
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.filters__or {
+  margin: 0 20px;
+  font-weight: bold;
   color: #4c7566;
+}
+
+.filters__search {
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+.filters__search:active, .filters__search:focus {
+  outline: none;
 }
 
 .main-container {
@@ -28,6 +93,8 @@
   flex-wrap: wrap;
   margin: 0 30px;
 }
+
+/* STYLES FOR ITEM CONTAINER "CARD" */
 
 .container {
   background-color: #70998a;
@@ -39,7 +106,15 @@
   margin: 10px;
 }
 
-.container > img {
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+.info > img {
   margin-top: 10px;
   height: 110px;
   border: 5px solid #4c7566;
@@ -62,23 +137,6 @@
 
 .name {
   color: white;
-}
-
-/* Filters Styles */
-
-.filters {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.filters__or {
-  margin: 0 20px;
-}
-
-.filters__search {
-  padding: 10px 20px;
-  font-size: 20px;
 }
 
 /* Clock (item time) Styles */
@@ -180,31 +238,6 @@
   justify-content: space-between;
 }
 
-/* INDEX PAGE STYLES */
-
-.index__body {
-  height: 100vh;
-  background-color: #f8f8ef;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.index__logo {
-  height: 400px;
-}
-
-.index__menu {
-  display: flex;
-  justify-content: space-between;
-  width: 40%;
-}
-
-.index__menu__button {
-  padding: 10px 35px;
-}
-
 /* Universal Button Styles */
 
 button {
@@ -239,4 +272,34 @@ input[type="checkbox"] {
   transform: scale(2);
   padding: 10px;
   outline: none;
+}
+
+/* MOBILE PHONE SIZE STYLES */
+
+@media screen and (max-width: 620px) {
+  .hemisphere__text {
+    display: none;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .container {
+    flex-grow: 1;
+    height: 400px;
+  }
+
+  .info {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .container__info__text {
+    margin-left: 10px;
+  }
+
+  .container__info__text > h2 {
+    word-spacing: 9999px;
+  }
 }
