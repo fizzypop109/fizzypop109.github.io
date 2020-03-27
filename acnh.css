@@ -290,6 +290,10 @@ input[type="checkbox"] {
     height: 400px;
   }
 
+  .container > * {
+    margin: 0;
+  }
+
   .info {
     flex-direction: row;
     justify-content: space-between;
