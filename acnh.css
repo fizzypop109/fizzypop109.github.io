@@ -277,6 +277,20 @@ input[type="checkbox"] {
 /* MOBILE PHONE SIZE STYLES */
 
 @media (max-width: 620px) {
+  .index__logo {
+    width: 100%;
+    height: auto;
+  }
+
+  .index__menu {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .index__menu__button {
+    margin: 5px 0;
+  }
+
   .hemisphere__text {
     display: none;
   }
