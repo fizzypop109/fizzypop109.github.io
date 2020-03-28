@@ -203,7 +203,7 @@ function filter() {
       // Search through hoursArray
       for (var j = 0; j < hoursArray.length; j++) {
         var hourDiv = hoursArray[j];
-        if (hourDiv.className.indexOf(currentHour) !== -1) {
+        if (hourDiv.classList.contains(currentHour)) {
           // The currently looping container is available in the current hour
           hourAvailable = true;
           break;
@@ -213,7 +213,7 @@ function filter() {
       // Search through monthsArray
       for (var j = 0; j < monthsArray.length; j++) {
         var monthDiv = monthsArray[j];
-        if (monthDiv.className.indexOf(month) !== -1) {
+        if (monthDiv.classList.contains(month)) {
           // The currently looping container is available in the current month
           monthAvailable = true;
           break;
