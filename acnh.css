@@ -236,6 +236,7 @@
   padding: 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* Universal Button Styles */
@@ -304,6 +305,10 @@ input[type="checkbox"] {
     height: 400px;
   }
 
+  .fossil__container {
+    height: 150px;
+  }
+
   .container > * {
     margin: 0;
   }
@@ -319,5 +324,9 @@ input[type="checkbox"] {
 
   .container__info__text > h2 {
     word-spacing: 9999px;
+  }
+
+  .fossil__name {
+    margin-top: 20px;
   }
 }

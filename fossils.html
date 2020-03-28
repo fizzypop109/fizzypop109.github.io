@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Fossil List</title>
+    <link href="https://fonts.googleapis.com/css?family=Mali&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="acnh.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body class="fossils__body body" onload="loadData()">
+    <div class="fossils__header header">
+      <button type="button" class="button__back" onclick="location.href = 'index.html';">
+        Back
+      </button>
+      <h1 class="fossils__title title">Fossils</h1>
+    </div>
+
+    <div class="fossils__filters filters">
+      <input type="text" class="fossils__filters__search filters__search" placeholder="Search!" oninput="search()"></input>
+    </div>
+
+    <div class="fossils__container main-container">
+    </div>
+
+  </body>
+
+  <script src="fossils_json.js"></script>
+  <script src="pt.js"></script>
+
+</html>

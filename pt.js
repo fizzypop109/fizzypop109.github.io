@@ -16,6 +16,10 @@ switch(document.getElementsByClassName('title')[0].innerText) {
     items = JSON.parse(JSON.stringify(bugs_json));
     itemType = 'bug';
     break;
+  case "Fossils":
+    items = JSON.parse(JSON.stringify(fossils_json));
+    itemType = 'fossil';
+    break;
 }
 
 var hemisphere = "Southern";
@@ -55,35 +59,16 @@ function createItem(item) {
 
   var infoDiv = document.createElement("div");
   infoDiv.classList.add(itemType + "__container__info", "info");
-  
-  // Item image
-  var itemImage = document.createElement("img");
-  itemImage.classList.add(itemType + "__image", "image");
-  itemImage.src = item.image;
 
-  var infoTextDiv = document.createElement("div");
-  infoTextDiv.classList.add(itemType + "__container__info__text", "container__info__text");
-  
   // Item name
   var itemName = document.createElement("h2");
   itemName.innerText = item.name;
   itemName.classList.add(itemType + "__name", "name");
-  
+    
   // Item price
   var itemPrice = document.createElement("p");
   itemPrice.innerText = item.price != 0 ? "Sell for: " + item.price + " bells" : "Sell for: Unknown bells";
   itemPrice.classList.add(itemType + "__price", "price");
-
-  // Item location
-  var itemLocation = document.createElement("p");
-  itemLocation.innerText = item.location != "" ? "Location: " + item.location : "Location: Unknown";
-  itemLocation.classList.add(itemType + "__location", "location");
-
-  // Item time availability
-  var itemTime = createClock(item);
-
-  // Item month availability
-  var itemMonths = createCalendar(item);
 
   // Checkbox container and items
   var itemTrackers = document.createElement("div");
@@ -100,7 +85,6 @@ function createItem(item) {
   itemCaught.id = item.name + "_caught";
 
   var itemCaught_label = document.createElement("label");
-  itemCaught_label.innerText = "Caught?";
   itemCaught_label.htmlFor = item.name + "_caught";
 
   // Donated checkbox
@@ -115,15 +99,49 @@ function createItem(item) {
   itemDonated_label.innerText = "Donated?";
   itemDonated_label.htmlFor = item.name + "_donated";
 
-  // Append all the elements
+  // Bug and Fish cards need a separate infoDiv to hold image, name, and price, as well as time and month data
+  if (itemType !== "fossil") {
+    // Item image
+    var itemImage = document.createElement("img");
+    itemImage.classList.add(itemType + "__image", "image");
+    itemImage.src = item.image;
 
-  infoDiv.appendChild(itemImage);
+    var infoTextDiv = document.createElement("div");
+    infoTextDiv.classList.add(itemType + "__container__info__text", "container__info__text");
 
-  infoTextDiv.appendChild(itemName);
-  infoTextDiv.appendChild(itemPrice);
-  infoTextDiv.appendChild(itemLocation);
+    // Item location
+    var itemLocation = document.createElement("p");
+    itemLocation.innerText = item.location != "" ? "Location: " + item.location : "Location: Unknown";
+    itemLocation.classList.add(itemType + "__location", "location");
 
-  infoDiv.appendChild(infoTextDiv);
+    // Item time availability
+    var itemTime = createClock(item);
+
+    // Item month availability
+    var itemMonths = createCalendar(item);
+
+    infoDiv.appendChild(itemImage);
+
+    infoTextDiv.appendChild(itemName);
+    infoTextDiv.appendChild(itemPrice);
+    infoTextDiv.appendChild(itemLocation);
+
+    infoDiv.appendChild(infoTextDiv);
+
+    itemBox.appendChild(infoDiv);
+    itemBox.appendChild(itemTime);
+    itemBox.appendChild(itemMonths);
+
+    itemCaught_label.innerText = "Caught?";
+  } else {
+    // Fossil cards only need to have a name and price
+    itemBox.appendChild(itemName);
+    itemBox.appendChild(itemPrice);
+
+    itemCaught_label.innerText = "Found?";
+  }
+
+  // Append all the universal elements
 
   itemTrackersItems.appendChild(itemCaught_label);
   itemTrackersItems.appendChild(itemCaught);
@@ -133,9 +151,6 @@ function createItem(item) {
 
   itemTrackers.appendChild(itemTrackersItems);
 
-  itemBox.appendChild(infoDiv);
-  itemBox.appendChild(itemTime);
-  itemBox.appendChild(itemMonths);
   itemBox.appendChild(itemTrackers);
 
   container.appendChild(itemBox);
