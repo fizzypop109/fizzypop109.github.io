@@ -91,7 +91,6 @@ function createItem(item) {
   itemDonated.type = "checkbox";
   itemDonated.name = "Donated";
   itemDonated.id = item.name + "_donated";
-  itemDonated.disabled = true;
 
   var itemDonated_label = document.createElement("label");
   itemDonated_label.innerText = "Donated?";
@@ -172,10 +171,15 @@ function search() {
   var filter = query.toUpperCase();
   var containers = document.getElementsByClassName("container");
 
+  // If a user tries to search with a filter applied, that filter is removed first
+  // At least until I figure out how to search within the filtered content
+  var filtersDropdown = document.getElementsByClassName("filters__dropdown")[0];
+  filtersDropdown.value = "all";
+
   for (i = 0; i < containers.length; i++) {
     var name = containers[i].getElementsByTagName("h2")[0].innerText;
     if (name.toUpperCase().indexOf(filter) > -1) {
-      containers[i].style.display = "";
+      containers[i].style.display = "flex";
     } else {
       containers[i].style.display = "none";
     }
@@ -517,10 +521,10 @@ function loadData() {
 
         for (const [name, value] of caughtValues) {
           document.getElementById(name).checked = value;
-          // If the caught box is checked, enable the donated box
-          if (value == true) {
-            document.getElementById(name).nextSibling.nextSibling.disabled = false;
-          }
+          // // If the caught box is checked, enable the donated box
+          // if (value == true) {
+          //   document.getElementById(name).nextSibling.nextSibling.disabled = false;
+          // }
         }
       }
 
@@ -530,10 +534,10 @@ function loadData() {
 
         for (const [name, value] of donatedValues) {
           document.getElementById(name).checked = value;
-          // If the donated box is checked, enable it
-          if (value == true) {
-            document.getElementById(name).disabled = false;
-          }
+          // // If the donated box is checked, enable it
+          // if (value == true) {
+          //   document.getElementById(name).disabled = false;
+          // }
         }
       }
     }
@@ -558,18 +562,15 @@ function checkboxSetup() {
       // Store the checked values in caughtValues
       caughtValues[this.id] = this.checked;
 
-      // Enable/disable Donated checkbox
-      document.getElementById(this.id).nextSibling.nextSibling.disabled = !this.checked;
+      // // Remove donated tick if unchecking caught
+      // if (this.checked == false) {
+      //   document.getElementById(this.id).nextSibling.nextSibling.checked = false;
+      //   donatedValues[document.getElementById(this.id).nextSibling.nextSibling.id] = false;
 
-      // Remove donated tick if unchecking caught
-      if (this.checked == false) {
-        document.getElementById(this.id).nextSibling.nextSibling.checked = false;
-        donatedValues[document.getElementById(this.id).nextSibling.nextSibling.id] = false;
-
-        itemTypeValues['donatedValues'] = donatedValues;
-        data[itemType] = itemTypeValues;
-        localStorage.setItem('data', JSON.stringify(data));
-      }
+      //   itemTypeValues['donatedValues'] = donatedValues;
+      //   data[itemType] = itemTypeValues;
+      //   localStorage.setItem('data', JSON.stringify(data));
+      // }
 
       // add caughtValues to itemTypeValues, add itemTypeValues to data, then set data in localStorage
       itemTypeValues['caughtValues'] = caughtValues;
@@ -586,6 +587,16 @@ function checkboxSetup() {
     donatedCheckboxes[i].addEventListener("change", function() {
       // Store the checked values in donatedValues
       donatedValues[this.id] = this.checked;
+
+      // If donated box is ticked, check the caught box too
+      if (this.checked == true) {
+        document.getElementById(this.id).previousSibling.previousSibling.checked = true;
+        caughtValues[document.getElementById(this.id).previousSibling.previousSibling.id] = true;
+
+        itemTypeValues['caughtValues'] = caughtValues;
+        data[itemType] = itemTypeValues;
+        localStorage.setItem('data', JSON.stringify(data));
+      }
 
       // add donatedValues to itemTypeValues, add itemTypeValues to data, then set data in localStorage
       itemTypeValues['donatedValues'] = donatedValues;
