@@ -177,7 +177,7 @@ function search() {
   // If a user tries to search with a filter applied, that filter is removed first
   // At least until I figure out how to search within the filtered content
   var filtersDropdown = document.getElementsByClassName("filters__dropdown")[0];
-  filtersDropdown.value = "all";
+  if (filtersDropdown) { filtersDropdown.value = "all" };
 
   for (i = 0; i < containers.length; i++) {
     var name = containers[i].getElementsByTagName("h2")[0].innerText;
