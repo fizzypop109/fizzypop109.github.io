@@ -192,7 +192,9 @@ function search() {
 // FILTER LIST OF ITEMS BASED ON THE DROPDOWN SELECTION //
 
 function handleFilterChange(e) {
-  var filterType = e.target.value;
+  // Allows select element to be passed in js without mocking event object
+  var selectElement = e.target || e;
+  var filterType = selectElement.value;
 
   var containers = document.getElementsByClassName("container");
 
@@ -388,6 +390,10 @@ function switchHem() {
       if (itemMonths[k] == MONTHS[k]) { months[k].classList.add("available"); };
     }
   }
+
+  // Perform filtering again with the new hemisphere based on current selection
+  const filterSelect = document.getElementById('filters');
+  handleFilterChange(filterSelect);
 }
 
 // CREATE AND POPULATE A 24-HOUR BAR TO DISPLAY THE TIME AVAILABILITY FOR A GIVEN ITEM //
