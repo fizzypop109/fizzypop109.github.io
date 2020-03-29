@@ -22,10 +22,13 @@ switch(document.getElementsByClassName('title')[0].innerText) {
     break;
 }
 
-var hemisphere = "Southern";
+// Default to southern hemisphere if no local storage value is available
+var hemisphere = localStorage.getItem('hemisphere') || "Southern";
 
 var container = document.getElementsByClassName("main-container")[0];
 var hemButton = document.getElementsByClassName("button__hemisphere")[0];
+// Check required since `hemButton` will not exist on fossil page
+if (hemButton) { hemButton.innerText = hemisphere };
 
 var data = {};
 
@@ -357,6 +360,7 @@ function filterNew(containers) {
 function switchHem() {
   // Change the hemisphere variable and set the text of the button
   hemisphere = hemisphere == "Southern" ? "Northern" : "Southern";
+  localStorage.setItem('hemisphere', hemisphere);
   hemButton.innerText = hemisphere;
 
   var itemContainers = document.getElementsByClassName("container");
