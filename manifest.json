@@ -1,0 +1,22 @@
+{
+	"short_name" : "ACNH Tracker",
+	"name" : "ACNH Progress Tracker",
+	"description" : "",
+	"icons" : [
+		{
+			"src": "ACNH-icon-192.jpg",
+			"type": "image/jpg",
+			"sizes": "192x192"
+		},
+		{
+			"src": "ACNH-icon-512.jpg",
+			"type": "image/jpg",
+			"sizes": "512x512"
+		}
+	],
+	"start_url" : "https://fizzypop109.github.io/index.html",
+	"background_color" : "transparent",
+	"display" : "standalone",
+	"scope" : "/",
+	"theme_color" : "#4c7566"
+}
