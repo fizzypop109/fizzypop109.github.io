@@ -10,7 +10,7 @@ var itemType;
 // Needed to make search functionality work while filtered
 var filterResults = [];
 
-// Set items and itemType based on the open
+// Set items and itemType based on the open page
 switch(document.getElementsByClassName('title')[0].innerText) {
   case "Fish":
     items = JSON.parse(JSON.stringify(fish_json));
@@ -31,6 +31,7 @@ var hemisphere = localStorage.getItem('hemisphere') || "Southern";
 
 var container = document.getElementsByClassName("main-container")[0];
 var hemButton = document.getElementsByClassName("button__hemisphere")[0];
+
 // Check required since `hemButton` will not exist on fossil page
 if (hemButton) { hemButton.innerText = hemisphere };
 
@@ -39,8 +40,11 @@ var data = {};
 var currentMonthIndex = new Date().getMonth();
 var currentHourIndex = new Date().getHours();
 
-// INITIALISE DISPLAY OF ITEMS //
+// INITIALISATION FUNCTIONS //
 
+/**
+ * Create the main container and run a function to create each item container
+ */
 function initItems() {
   // Empty the container
   var child = container.lastElementChild;  
@@ -55,8 +59,10 @@ function initItems() {
   }
 }
 
-// CREATES A CARD FOR A GIVEN ITEM //
-
+/**
+ * Create a container and necessary elements for each given item
+ * @param  {Object} item A single object within the itemType JSON
+ */
 function createItem(item) {
   // The main card
   var itemBox = document.createElement("div");
@@ -170,237 +176,10 @@ function createItem(item) {
   container.appendChild(itemBox);
 }
 
-// FILTER LIST OF ITEMS BASED ON WHAT'S IN THE SEARCH BAR //
-
-function search() {
-  // Loop through all containers, and if the title doesn't include the search query, set display to none
-  var query = document.getElementsByClassName("filters__search")[0].value;
-  var filter = query.toUpperCase();
-  // Use filter results if there is at least one result
-  var containers = filterResults.length ? filterResults : document.getElementsByClassName("container");
-  for (i = 0; i < containers.length; i++) {
-    var name = containers[i].getElementsByTagName("h2")[0].innerText;
-    if (name.toUpperCase().indexOf(filter) > -1) {
-      containers[i].style.display = "flex";
-    } else {
-      containers[i].style.display = "none";
-    }
-  }
-}
-
-// FILTER LIST OF ITEMS BASED ON THE DROPDOWN SELECTION //
-
-function handleFilterChange(e) {
-  // Allows select element to be passed in js without mocking event object
-  var selectElement = e.target || e;
-  var filterType = selectElement.value;
-
-  var containers = document.getElementsByClassName("container");
-  // Clear global variable of any previous results
-  filterResults = [];
-  
-  // Reset display of each container first
-  filterAll(containers);
-
-  switch (filterType) {
-    case "all":
-      // this is done above, before all filters are ran
-      break;
-    case "now":
-      filterNow(containers);
-      break;
-    case "month":
-      filterMonth(containers);
-      break;
-    case "leaving":
-      filterLeaving(containers);
-      break;
-    case "new":
-      filterNew(containers);
-      break;
-  }
-
-  // Call search in case user has current search value
-  search();
-}
-
-// SHOW ALL ITEMS //
-
-function filterAll(containers) {
-  for (i = 0; i < containers.length; i++) {
-    containers[i].style.display = "flex";
-  }
-}
-
-// SHOW ONLY ITEMS AVAILABLE RIGHT NOW (HOUR AND MONTH) //
-
-function filterNow(containers) {
-  // For each item container
-  for (i = 0; i < containers.length; i++) {
-    var availableHours = containers[i].getElementsByClassName("clock")[0].getElementsByClassName("available");
-    var hoursArray = [].slice.call(availableHours);
-
-    var availableMonths = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName("available");
-    var monthsArray = [].slice.call(availableMonths);
-
-    var month = MONTHS[currentMonthIndex];
-
-    var hourAvailable = false;
-    var monthAvailable = false;
-
-    // Search through hoursArray
-    for (var j = 0; j < hoursArray.length; j++) {
-      var hourDiv = hoursArray[j];
-      if (hourDiv.classList.contains(currentHourIndex)) {
-        // The currently looping container is available in the current hour
-        hourAvailable = true;
-        break;
-      }
-    }
-
-    // Search through monthsArray
-    for (var j = 0; j < monthsArray.length; j++) {
-      var monthDiv = monthsArray[j];
-      if (monthDiv.classList.contains(month)) {
-        // The currently looping container is available in the current month
-        monthAvailable = true;
-        break;
-      }
-    }
-
-    // If either hourAvailable or monthAvailable are false, the item is NOT available now, so hide it
-    if (!hourAvailable || !monthAvailable) {
-      containers[i].style.display = "none";
-    } else {
-      // Global variable storing successfully filtered items to enable search + filter
-      filterResults.push(containers[i]);
-    }
-  }
-}
-
-// SHOW ONLY ITEMS AVAILABLE THIS MONTH (HOUR NOT CONSIDERED)
-
-function filterMonth(containers) {
-  // For each item container
-  for (i = 0; i < containers.length; i++) {
-    var availableMonths = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName("available");
-    var monthsArray = [].slice.call(availableMonths);
-
-    var month = MONTHS[currentMonthIndex];
-
-    var monthAvailable = false;
-
-    // Search through monthsArray
-    for (var j = 0; j < monthsArray.length; j++) {
-      var monthDiv = monthsArray[j];
-      if (monthDiv.classList.contains(month)) {
-        // The current item IS available this month, so set the flag and leave the loop
-        monthAvailable = true;
-        break;
-      }
-    }
-
-    // If after looping through each available month, the flag has not been set, hide the item
-    if (!monthAvailable) {
-      containers[i].style.display = "none";
-    } else {
-      // Global variable storing successfully filtered items to enable search + filter
-      filterResults.push(containers[i]);
-    }
-  }
-}
-
-// SHOW ONLY ITEMS NOT AVAILABLE NEXT MONTH AND AVAILABLE THIS MONTH
-
-function filterLeaving(containers) {
-  // For each item container
-  for (i = 0; i < containers.length; i++) {
-    var months = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName("month");
-    var monthsArray = [].slice.call(months);
-
-    var currentMonth = MONTHS[currentMonthIndex];
-    var nextMonth = "";
-    currentMonth == "december" ? nextMonth = "january" : nextMonth = MONTHS[currentMonth + 1];
-
-    currentMonthDiv = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName(currentMonth)[0];
-    var nextMonthDiv = "";
-    currentMonthDiv.classList.contains("december") ? nextMonthDiv = months[0] : nextMonthDiv = currentMonthDiv.nextSibling;
-
-    if (currentMonthDiv.classList.contains("available") && !nextMonthDiv.classList.contains("available")) {
-      // Global variable storing successfully filtered items to enable search + filter
-      filterResults.push(containers[i]);
-    } else {
-      containers[i].style.display = "none";
-    }
-  }
-}
-
-// SHOW ONLY ITEMS NOT AVAILABLE LAST MONTH AND AVAILABLE THIS MONTH
-
-function filterNew(containers) {
-  // For each item container
-  for (i = 0; i < containers.length; i++) {
-    var months = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName("month");
-    var monthsArray = [].slice.call(months);
-
-    var currentMonth = MONTHS[currentMonthIndex];
-    var lastMonth = "";
-    currentMonth == "january" ? lastMonth = "december" : lastMonth = MONTHS[currentMonth - 1];
-
-    currentMonthDiv = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName(currentMonth)[0];
-    var lastMonthDiv = "";
-    currentMonthDiv.classList.contains("january") ? lastMonthDiv = months[11] : lastMonthDiv = currentMonthDiv.previousSibling;
-
-    if (currentMonthDiv.classList.contains("available") && !lastMonthDiv.classList.contains("available")) {
-      // Global variable storing successfully filtered items to enable search + filter
-      filterResults.push(containers[i]);    
-    } else {
-      containers[i].style.display = "none";
-    }
-  }
-}
-
-// SWITCH HEMISPHERE BUTTON //
-
-function switchHem() {
-  // Change the hemisphere variable and set the text of the button
-  hemisphere = hemisphere == "Southern" ? "Northern" : "Southern";
-  localStorage.setItem('hemisphere', hemisphere);
-  hemButton.innerText = hemisphere;
-
-  var itemContainers = document.getElementsByClassName("container");
-
-  // Go through the calendar month divs and remove the "available" classes
-  for (var i = 0; i < itemContainers.length; i++) {
-    var calendarDiv = itemContainers[i].children[2].children[0];
-    var months = calendarDiv.getElementsByTagName('div');
-
-    for (var j = 0; j < months.length; j++) {
-      months[j].classList.remove("available");
-    }
-
-    var itemMonths = [];
-
-    // Set itemMonths to be the new hemisphere's month availability data
-    if (hemisphere == "Southern" && items[i].season.southern.length != 0) {
-      itemMonths = items[i].season.southern;
-    } else if (hemisphere == "Northern" && items[i].season.northern.length != 0) {
-      itemMonths = items[i].season.northern;
-    }
-
-    // Add the "available" class to the divs of the new available months
-    for (let k = 0; k < itemMonths.length; k++) {
-      if (itemMonths[k] == MONTHS[k]) { months[k].classList.add("available"); };
-    }
-  }
-
-  // Perform filtering again with the new hemisphere based on current selection
-  const filterSelect = document.getElementById('filters');
-  handleFilterChange(filterSelect);
-}
-
-// CREATE AND POPULATE A 24-HOUR BAR TO DISPLAY THE TIME AVAILABILITY FOR A GIVEN ITEM //
-
+/**
+ * Create and populate a 24-hour bar to display the time availability for a given item
+ * @param  {Object} item A single object within the itemType JSON
+ */
 function createClock(item) {
   var clockContainer = document.createElement("div");
   clockContainer.classList.add(itemType + "__time", "time");
@@ -457,8 +236,10 @@ function createClock(item) {
   return clockContainer;
 }
 
-// CREATE AND POPULATE A 12-MONTH BAR TO DISPLAY THE MONTH AVAILABILITY FOR A GIVEN ITEM //
-
+/**
+ * Create and populate a 12-month bar to display the month availability for a given item
+ * @param  {Object} item A single object within the itemType JSON
+ */
 function createCalendar(item) {
   var calendarContainer = document.createElement("div");
   calendarContainer.classList.add(itemType + "__months", "months");
@@ -518,8 +299,9 @@ function createCalendar(item) {
   return calendarContainer;
 }
 
-// LOAD CHECKBOX DATA ON PAGE LOAD //
-
+/**
+ * Get the checkbox data from localStorage and set the necessary on-page elements
+ */
 function loadData() {
   data = JSON.parse(localStorage.getItem('data')) || {};
 
@@ -534,10 +316,6 @@ function loadData() {
 
         for (const [name, value] of caughtValues) {
           document.getElementById(name).checked = value;
-          // // If the caught box is checked, enable the donated box
-          // if (value == true) {
-          //   document.getElementById(name).nextSibling.nextSibling.disabled = false;
-          // }
         }
       }
 
@@ -547,10 +325,6 @@ function loadData() {
 
         for (const [name, value] of donatedValues) {
           document.getElementById(name).checked = value;
-          // // If the donated box is checked, enable it
-          // if (value == true) {
-          //   document.getElementById(name).disabled = false;
-          // }
         }
       }
     }
@@ -560,8 +334,9 @@ function loadData() {
   checkboxSetup();
 }
 
-// SETUP LOCAL STORAGE AND GENERAL USABILITY FOR THE CHECKBOXES //
-
+/**
+ * Setup the caught and donated checkboxes with eventListeners and localStorage saving
+ */
 function checkboxSetup() {
 
   var itemTypeValues = data[itemType] || {};
@@ -574,16 +349,6 @@ function checkboxSetup() {
     caughtCheckboxes[i].addEventListener("change", function() {
       // Store the checked values in caughtValues
       caughtValues[this.id] = this.checked;
-
-      // // Remove donated tick if unchecking caught
-      // if (this.checked == false) {
-      //   document.getElementById(this.id).nextSibling.nextSibling.checked = false;
-      //   donatedValues[document.getElementById(this.id).nextSibling.nextSibling.id] = false;
-
-      //   itemTypeValues['donatedValues'] = donatedValues;
-      //   data[itemType] = itemTypeValues;
-      //   localStorage.setItem('data', JSON.stringify(data));
-      // }
 
       // add caughtValues to itemTypeValues, add itemTypeValues to data, then set data in localStorage
       itemTypeValues['caughtValues'] = caughtValues;
@@ -619,5 +384,253 @@ function checkboxSetup() {
   }
 }
 
-// Initialise the display
+// FILTER FUNCTIONS //
+
+/**
+ * Filter the list of items based on the search input value
+ */
+function search() {
+  // Loop through all containers, and if the title doesn't include the search query, set display to none
+  var query = document.getElementsByClassName("filters__search")[0].value;
+  var filter = query.toUpperCase();
+  // Use filter results if there is at least one result
+  var containers = filterResults.length ? filterResults : document.getElementsByClassName("container");
+  for (i = 0; i < containers.length; i++) {
+    var name = containers[i].getElementsByTagName("h2")[0].innerText;
+    if (name.toUpperCase().indexOf(filter) > -1) {
+      containers[i].style.display = "flex";
+    } else {
+      containers[i].style.display = "none";
+    }
+  }
+}
+
+/**
+ * Run a filter function depending on the dropdown selection
+ * @param  {Event} e The triggering element
+ */
+function handleFilterChange(e) {
+  // Allows select element to be passed in js without mocking event object
+  var selectElement = e.target || e;
+  var filterType = selectElement.value;
+
+  var containers = document.getElementsByClassName("container");
+  // Clear global variable of any previous results
+  filterResults = [];
+  
+  // Reset display of each container first
+  filterAll(containers);
+
+  switch (filterType) {
+    case "all":
+      // this is done above, before all filters are ran
+      break;
+    case "now":
+      filterNow(containers);
+      break;
+    case "month":
+      filterMonth(containers);
+      break;
+    case "leaving":
+      filterLeaving(containers);
+      break;
+    case "new":
+      filterNew(containers);
+      break;
+  }
+
+  // Call search in case user has current search value
+  search();
+}
+
+/**
+ * Show all of the items by setting the display of every container to flex
+ * @param  {HTMLCollection} containers A HTMLCollection containing all of the item containers
+ */
+function filterAll(containers) {
+  for (i = 0; i < containers.length; i++) {
+    containers[i].style.display = "flex";
+  }
+}
+
+/**
+ * Show items which are available in the current month AND hour, and hide the others
+ * @param  {HTMLCollection} containers A HTMLCollection containing all of the item containers
+ */
+function filterNow(containers) {
+  // For each item container
+  for (i = 0; i < containers.length; i++) {
+    var availableHours = containers[i].getElementsByClassName("clock")[0].getElementsByClassName("available");
+    var hoursArray = [].slice.call(availableHours);
+
+    var availableMonths = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName("available");
+    var monthsArray = [].slice.call(availableMonths);
+
+    var month = MONTHS[currentMonthIndex];
+
+    var hourAvailable = false;
+    var monthAvailable = false;
+
+    // Search through hoursArray
+    for (var j = 0; j < hoursArray.length; j++) {
+      var hourDiv = hoursArray[j];
+      if (hourDiv.classList.contains(currentHourIndex)) {
+        // The currently looping container is available in the current hour
+        hourAvailable = true;
+        break;
+      }
+    }
+
+    // Search through monthsArray
+    for (var j = 0; j < monthsArray.length; j++) {
+      var monthDiv = monthsArray[j];
+      if (monthDiv.classList.contains(month)) {
+        // The currently looping container is available in the current month
+        monthAvailable = true;
+        break;
+      }
+    }
+
+    // If either hourAvailable or monthAvailable are false, the item is NOT available now, so hide it
+    if (!hourAvailable || !monthAvailable) {
+      containers[i].style.display = "none";
+    } else {
+      // Global variable storing successfully filtered items to enable search + filter
+      filterResults.push(containers[i]);
+    }
+  }
+}
+
+/**
+ * Show items which are available in the current month, and hide the others
+ * @param  {HTMLCollection} containers A HTMLCollection containing all of the item containers
+ */
+function filterMonth(containers) {
+  // For each item container
+  for (i = 0; i < containers.length; i++) {
+    var availableMonths = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName("available");
+    var monthsArray = [].slice.call(availableMonths);
+
+    var month = MONTHS[currentMonthIndex];
+
+    var monthAvailable = false;
+
+    // Search through monthsArray
+    for (var j = 0; j < monthsArray.length; j++) {
+      var monthDiv = monthsArray[j];
+      if (monthDiv.classList.contains(month)) {
+        // The current item IS available this month, so set the flag and leave the loop
+        monthAvailable = true;
+        break;
+      }
+    }
+
+    // If after looping through each available month, the flag has not been set, hide the item
+    if (!monthAvailable) {
+      containers[i].style.display = "none";
+    } else {
+      // Global variable storing successfully filtered items to enable search + filter
+      filterResults.push(containers[i]);
+    }
+  }
+}
+
+/**
+ * Show items which are available in the current month AND NOT available in the next month
+ * @param  {HTMLCollection} containers A HTMLCollection containing all of the item containers
+ */
+function filterLeaving(containers) {
+  // For each item container
+  for (i = 0; i < containers.length; i++) {
+    var months = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName("month");
+    var monthsArray = [].slice.call(months);
+
+    var currentMonth = MONTHS[currentMonthIndex];
+    var nextMonth = "";
+    currentMonth == "december" ? nextMonth = "january" : nextMonth = MONTHS[currentMonth + 1];
+
+    currentMonthDiv = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName(currentMonth)[0];
+    var nextMonthDiv = "";
+    currentMonthDiv.classList.contains("december") ? nextMonthDiv = months[0] : nextMonthDiv = currentMonthDiv.nextSibling;
+
+    if (currentMonthDiv.classList.contains("available") && !nextMonthDiv.classList.contains("available")) {
+      // Global variable storing successfully filtered items to enable search + filter
+      filterResults.push(containers[i]);
+    } else {
+      containers[i].style.display = "none";
+    }
+  }
+}
+
+/**
+ * Show items which are available in the current month AND NOT available in the last month
+ * @param  {HTMLCollection} containers A HTMLCollection containing all of the item containers
+ */
+function filterNew(containers) {
+  // For each item container
+  for (i = 0; i < containers.length; i++) {
+    var months = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName("month");
+    var monthsArray = [].slice.call(months);
+
+    var currentMonth = MONTHS[currentMonthIndex];
+    var lastMonth = "";
+    currentMonth == "january" ? lastMonth = "december" : lastMonth = MONTHS[currentMonth - 1];
+
+    currentMonthDiv = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName(currentMonth)[0];
+    var lastMonthDiv = "";
+    currentMonthDiv.classList.contains("january") ? lastMonthDiv = months[11] : lastMonthDiv = currentMonthDiv.previousSibling;
+
+    if (currentMonthDiv.classList.contains("available") && !lastMonthDiv.classList.contains("available")) {
+      // Global variable storing successfully filtered items to enable search + filter
+      filterResults.push(containers[i]);    
+    } else {
+      containers[i].style.display = "none";
+    }
+  }
+}
+
+/**
+ * Switch the global hemisphere setting
+ */
+function switchHem() {
+  // Change the hemisphere variable and set the text of the button
+  hemisphere = hemisphere == "Southern" ? "Northern" : "Southern";
+  hemButton.innerText = hemisphere;
+
+  // Save the hemisphere selection to localStorage
+  localStorage.setItem('hemisphere', hemisphere);
+
+  var itemContainers = document.getElementsByClassName("container");
+
+  // Go through the calendar month divs and remove the "available" classes
+  for (var i = 0; i < itemContainers.length; i++) {
+    var calendarDiv = itemContainers[i].children[2].children[0];
+    var months = calendarDiv.getElementsByTagName('div');
+
+    for (var j = 0; j < months.length; j++) {
+      months[j].classList.remove("available");
+    }
+
+    var itemMonths = [];
+
+    // Set itemMonths to be the new hemisphere's month availability data
+    if (hemisphere == "Southern" && items[i].season.southern.length != 0) {
+      itemMonths = items[i].season.southern;
+    } else if (hemisphere == "Northern" && items[i].season.northern.length != 0) {
+      itemMonths = items[i].season.northern;
+    }
+
+    // Add the "available" class to the divs of the new available months
+    for (let k = 0; k < itemMonths.length; k++) {
+      if (itemMonths[k] == MONTHS[k]) { months[k].classList.add("available"); };
+    }
+  }
+
+  // Perform filtering again with the new hemisphere based on current selection
+  const filterSelect = document.getElementById('filters');
+  handleFilterChange(filterSelect);
+}
+
+// INITIALISE THE PAGE DISPLAY OF ITEMS //
+
 initItems();
