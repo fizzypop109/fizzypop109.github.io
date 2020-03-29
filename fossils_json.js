@@ -1,29 +1,29 @@
 var fossils_json =
     [
         {
-            "name": "rex skull",
+            "name": "tyrannosaurus rex skull",
             "price": 6000
         },
         {
-            "name": "rex torso",
+            "name": "tyrannosaurus rex torso",
             "price": 5500
         },
         {
-            "name": "rex tail",
+            "name": "tyrannosaurus rex tail",
             "price": 5000
         },
         {
-            "name": "tricera skull",
+            "name": "triceratops skull",
             "price": 6000
         },
         {
             
-            "name": "tricera torso",
+            "name": "triceratops torso",
             "price": 5500
         },
         {
             
-            "name": "tricera tail",
+            "name": "triceratops tail",
             "price": 4500
         },
         {
@@ -38,32 +38,32 @@ var fossils_json =
         },
         {
             
-            "name": "ankylo skull",
+            "name": "ankylosaurus skull",
             "price": 3500
         },
         {
             
-            "name": "ankylo torso",
+            "name": "ankylosaurus torso",
             "price": 3000
         },
         {
             
-            "name": "ankylo tail",
+            "name": "ankylosaurus tail",
             "price": 2500
         },
         {
             
-            "name": "apato skull",
+            "name": "apatosaurus skull",
             "price": 5000
         },
         {
             
-            "name": "apato torso",
+            "name": "apatosaurus torso",
             "price": 4500
         },
         {
             
-            "name": "apato tail",
+            "name": "apatosaurus tail",
             "price": 4000
         },
         {
@@ -98,27 +98,27 @@ var fossils_json =
         },
         {
             
-            "name": "sabertooth skull",
+            "name": "sabretooth skull",
             "price": 2500
         },
         {
             
-            "name": "sabertooth torso",
+            "name": "sabretooth torso",
             "price": 2000
         },
         {
             
-            "name": "pachy skull",
+            "name": "pachysaurus skull",
             "price": 4000
         },
         {
             
-            "name": "pachy torso",
+            "name": "pachysaurus torso",
             "price": 3500
         },
         {
             
-            "name": "pachy tail",
+            "name": "pachysaurus tail",
             "price": 3000
         },
         {
@@ -138,137 +138,137 @@ var fossils_json =
         },
         {
             
-            "name": "diplo skull",
+            "name": "diplodocus skull",
             "price": 5000
         },
         {
             
-            "name": "diplo neck",
+            "name": "diplodocus neck",
             "price": 5000
         },
         {
             
-            "name": "diplo chest",
+            "name": "diplodocus chest",
             "price": 4500
         },
         {
             
-            "name": "diplo hip",
+            "name": "diplodocus hip",
             "price": 4000
         },
         {
             
-            "name": "diplo tail",
+            "name": "diplodocus tail",
             "price": 4500
         },
         {
             
-            "name": "plesio skull",
+            "name": "plesiosaur skull",
             "price": 4000
         },
         {
             
-            "name": "plesio neck",
+            "name": "plesiosaur neck",
             "price": 4500
         },
         {
             
-            "name": "plesio torso",
+            "name": "plesiosaur torso",
             "price": 4500
         },
         {
             
-            "name": "stego skull",
+            "name": "stegosaurus skull",
             "price": 5000
         },
         {
             
-            "name": "stego torso",
+            "name": "stegosaurus torso",
             "price": 4500
         },
         {
             
-            "name": "stego tail",
+            "name": "stegosaurus tail",
             "price": 4000
         },
         {
             
-            "name": "ptera skull",
+            "name": "pteranodon skull",
             "price": 4000
         },
         {
             
-            "name": "ptera left wing",
+            "name": "pteranodon left wing",
             "price": 4500
         },
         {
             
-            "name": "ptera right wing",
+            "name": "pteranodon right wing",
             "price": 4500
         },
         {
             
-            "name": "ichthyo skull",
+            "name": "ichthyosaur skull",
             "price": 2500
         },
         {
             
-            "name": "ichthyo torso",
+            "name": "ichthyosaur torso",
             "price": 2000
         },
         {
             
-            "name": "raptor skull",
+            "name": "velociraptor skull",
             "price": 3000
         },
         {
             
-            "name": "raptor torso",
+            "name": "velociraptor torso",
             "price": 2500
         },
         {
             
-            "name": "styraco skull",
+            "name": "styracosaurus skull",
             "price": 3500
         },
         {
             
-            "name": "styraco torso",
+            "name": "styracosaurus torso",
             "price": 3000
         },
         {
             
-            "name": "styraco tail",
+            "name": "styracosaurus tail",
             "price": 2500
         },
         {
             
-            "name": "spino skull",
+            "name": "spinosaurus skull",
             "price": 4000
         },
         {
             
-            "name": "spino torso",
+            "name": "spinosaurus torso",
             "price": 3000
         },
         {
             
-            "name": "spino tail",
+            "name": "spinosaurus tail",
             "price": 2000
         },
         {
             
-            "name": "megacera skull",
+            "name": "megaceros skull",
             "price": 4500
         },
         {
             
-            "name": "megacera torso",
+            "name": "megaceros torso",
             "price": 3500
         },
         {
             
-            "name": "megacera tail",
+            "name": "megaceros tail",
             "price": 3000
         },
         {

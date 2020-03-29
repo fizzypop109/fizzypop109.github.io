@@ -70,20 +70,21 @@
   align-items: center;
   justify-content: center;
   margin: 30px 0;
+  color: #4c7566;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 .filters__or {
   margin: 0 20px;
-  font-weight: bold;
-  color: #4c7566;
 }
 
-.filters__search {
+.filters__search, .filters__dropdown {
   padding: 10px 20px;
   font-size: 20px;
 }
 
-.filters__search:active, .filters__search:focus {
+.filters__search:active, .filters__search:focus, .filters__dropdown:active, .filters__dropdown:focus {
   outline: none;
 }
 
@@ -296,10 +297,6 @@ input[type="checkbox"] {
     display: none;
   }
 
-  .filters {
-    flex-direction: column;
-  }
-
   .container {
     flex-grow: 1;
     height: 400px;
@@ -328,5 +325,19 @@ input[type="checkbox"] {
 
   .fossil__name {
     margin-top: 20px;
+  }
+}
+
+@media (max-width: 850px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .filters__dropdown {
+    font-size: 14px;
+  }
+
+  .filters__or {
+    margin: 10px 0;
   }
 }

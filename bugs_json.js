@@ -246,7 +246,7 @@ var bugs_json =
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_23_i.png",
             "name": "orchid mantis",
             "price": 2400,
-            "location": "on flowers",
+            "location": "on white flowers",
             "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "march", "april", "may", "june", "july", "august", "september", "october", "november", ""],
@@ -470,14 +470,14 @@ var bugs_json =
             "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "march", "april", "may", "june", "", "", "", "october", "", ""],
-                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
+                "southern": ["", "", "", "april", "", "", "", "", "september", "october", "november", "december"]
             }
         },
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_44_i.png",
             "name": "tiger beetle",
-            "price": 240,
-            "location": "flying",
+            "price": 1500,
+            "location": "on ground",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "february", "march", "april", "may", "june", "july", "august", "september", "october", "", ""],
@@ -546,8 +546,8 @@ var bugs_json =
             "location": "on ground",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
-                "northern": ["", "", "", "", "", "", "", "", "", "", "", ""],
-                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
+                "northern": ["january", "february", "", "", "", "", "", "", "", "", "", "december"],
+                "southern": ["", "", "", "", "", "june", "july", "august", "", "", "", ""]
             }
         },
         {
@@ -818,7 +818,7 @@ var bugs_json =
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_75_i.png",
             "name": "snail",
             "price": 250,
-            "location": "under rocks",
+            "location": "on rocks (raining)",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
@@ -841,7 +841,7 @@ var bugs_json =
             "name": "centipede",
             "price": 430,
             "location": "under rocks",
-            "time": "17 - 23",
+            "time": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "16", "17", "18", "19", "20", "21", "22", ""],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "", "", "september", "october", "november", "december"],
                 "southern": ["", "", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
