@@ -6,6 +6,10 @@ var HOURS = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12",
 var items;
 var itemType;
 
+// Holds successfully filtered items
+// Needed to make search functionality work while filtered
+var filterResults = [];
+
 // Set items and itemType based on the open
 switch(document.getElementsByClassName('title')[0].innerText) {
   case "Fish":
@@ -172,12 +176,7 @@ function search() {
   // Loop through all containers, and if the title doesn't include the search query, set display to none
   var query = document.getElementsByClassName("filters__search")[0].value;
   var filter = query.toUpperCase();
-  var containers = document.getElementsByClassName("container");
-
-  // If a user tries to search with a filter applied, that filter is removed first
-  // At least until I figure out how to search within the filtered content
-  var filtersDropdown = document.getElementsByClassName("filters__dropdown")[0];
-  if (filtersDropdown) { filtersDropdown.value = "all" };
+  var containers = filterResults || document.getElementsByClassName("container");
 
   for (i = 0; i < containers.length; i++) {
     var name = containers[i].getElementsByTagName("h2")[0].innerText;
@@ -197,10 +196,15 @@ function handleFilterChange(e) {
   var filterType = selectElement.value;
 
   var containers = document.getElementsByClassName("container");
+  // Reset display of each container first
+  filterAll(containers);
+  
+  // Clear global variable of any previous results
+  filterResults = [];
 
   switch (filterType) {
     case "all":
-      filterAll(containers);
+      // this is done above, before all filters are ran
       break;
     case "now":
       filterNow(containers);
@@ -222,15 +226,15 @@ function handleFilterChange(e) {
 function filterAll(containers) {
   for (i = 0; i < containers.length; i++) {
     containers[i].style.display = "flex";
+
+    // Global variable storing successfully filtered items to enable search + filter
+    filterResults.push(containers[i]);
   }
 }
 
 // SHOW ONLY ITEMS AVAILABLE RIGHT NOW (HOUR AND MONTH) //
 
 function filterNow(containers) {
-  // Reset display of each container first
-  filterAll(containers);
-
   // For each item container
   for (i = 0; i < containers.length; i++) {
     var availableHours = containers[i].getElementsByClassName("clock")[0].getElementsByClassName("available");
@@ -267,6 +271,9 @@ function filterNow(containers) {
     // If either hourAvailable or monthAvailable are false, the item is NOT available now, so hide it
     if (!hourAvailable || !monthAvailable) {
       containers[i].style.display = "none";
+    } else {
+      // Global variable storing successfully filtered items to enable search + filter
+      filterResults.push(containers[i]);
     }
   }
 }
@@ -274,9 +281,6 @@ function filterNow(containers) {
 // SHOW ONLY ITEMS AVAILABLE THIS MONTH (HOUR NOT CONSIDERED)
 
 function filterMonth(containers) {
-  // Reset display of each container first
-  filterAll(containers);
-
   // For each item container
   for (i = 0; i < containers.length; i++) {
     var availableMonths = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName("available");
@@ -299,6 +303,9 @@ function filterMonth(containers) {
     // If after looping through each available month, the flag has not been set, hide the item
     if (!monthAvailable) {
       containers[i].style.display = "none";
+    } else {
+      // Global variable storing successfully filtered items to enable search + filter
+      filterResults.push(containers[i]);
     }
   }
 }
@@ -306,9 +313,6 @@ function filterMonth(containers) {
 // SHOW ONLY ITEMS NOT AVAILABLE NEXT MONTH AND AVAILABLE THIS MONTH
 
 function filterLeaving(containers) {
-  // Reset display of each container first
-  filterAll(containers);
-
   // For each item container
   for (i = 0; i < containers.length; i++) {
     var months = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName("month");
@@ -323,7 +327,8 @@ function filterLeaving(containers) {
     currentMonthDiv.classList.contains("december") ? nextMonthDiv = months[0] : nextMonthDiv = currentMonthDiv.nextSibling;
 
     if (currentMonthDiv.classList.contains("available") && !nextMonthDiv.classList.contains("available")) {
-      // Do nothing, we only care if this specific combination ISN'T the case
+      // Global variable storing successfully filtered items to enable search + filter
+      filterResults.push(containers[i]);
     } else {
       containers[i].style.display = "none";
     }
@@ -333,9 +338,6 @@ function filterLeaving(containers) {
 // SHOW ONLY ITEMS NOT AVAILABLE LAST MONTH AND AVAILABLE THIS MONTH
 
 function filterNew(containers) {
-  // Reset display of each container first
-  filterAll(containers);
-
   // For each item container
   for (i = 0; i < containers.length; i++) {
     var months = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName("month");
@@ -350,7 +352,8 @@ function filterNew(containers) {
     currentMonthDiv.classList.contains("january") ? lastMonthDiv = months[11] : lastMonthDiv = currentMonthDiv.previousSibling;
 
     if (currentMonthDiv.classList.contains("available") && !lastMonthDiv.classList.contains("available")) {
-      // Do nothing, we only care if this specific combination ISN'T the case
+      // Global variable storing successfully filtered items to enable search + filter
+      filterResults.push(containers[i]);    
     } else {
       containers[i].style.display = "none";
     }
