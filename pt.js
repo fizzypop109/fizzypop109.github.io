@@ -176,8 +176,8 @@ function search() {
   // Loop through all containers, and if the title doesn't include the search query, set display to none
   var query = document.getElementsByClassName("filters__search")[0].value;
   var filter = query.toUpperCase();
-  var containers = filterResults || document.getElementsByClassName("container");
-
+  // Use filter results if there is at least one result
+  var containers = filterResults.length ? filterResults : document.getElementsByClassName("container");
   for (i = 0; i < containers.length; i++) {
     var name = containers[i].getElementsByTagName("h2")[0].innerText;
     if (name.toUpperCase().indexOf(filter) > -1) {
@@ -196,11 +196,11 @@ function handleFilterChange(e) {
   var filterType = selectElement.value;
 
   var containers = document.getElementsByClassName("container");
-  // Reset display of each container first
-  filterAll(containers);
-  
   // Clear global variable of any previous results
   filterResults = [];
+  
+  // Reset display of each container first
+  filterAll(containers);
 
   switch (filterType) {
     case "all":
@@ -219,6 +219,9 @@ function handleFilterChange(e) {
       filterNew(containers);
       break;
   }
+
+  // Call search in case user has current search value
+  search();
 }
 
 // SHOW ALL ITEMS //
@@ -226,9 +229,6 @@ function handleFilterChange(e) {
 function filterAll(containers) {
   for (i = 0; i < containers.length; i++) {
     containers[i].style.display = "flex";
-
-    // Global variable storing successfully filtered items to enable search + filter
-    filterResults.push(containers[i]);
   }
 }
 
