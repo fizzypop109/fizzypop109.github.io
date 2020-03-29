@@ -22,10 +22,13 @@ switch(document.getElementsByClassName('title')[0].innerText) {
     break;
 }
 
-var hemisphere = "Southern";
+// Default to southern hemisphere if no local storage value is available
+var hemisphere = localStorage.getItem('hemisphere') || "Southern";
 
 var container = document.getElementsByClassName("main-container")[0];
 var hemButton = document.getElementsByClassName("button__hemisphere")[0];
+// Check required since `hemButton` will not exist on fossil page
+if (hemButton) { hemButton.innerText = hemisphere };
 
 var data = {};
 
@@ -174,7 +177,7 @@ function search() {
   // If a user tries to search with a filter applied, that filter is removed first
   // At least until I figure out how to search within the filtered content
   var filtersDropdown = document.getElementsByClassName("filters__dropdown")[0];
-  filtersDropdown.value = "all";
+  if (filtersDropdown) { filtersDropdown.value = "all" };
 
   for (i = 0; i < containers.length; i++) {
     var name = containers[i].getElementsByTagName("h2")[0].innerText;
@@ -189,7 +192,9 @@ function search() {
 // FILTER LIST OF ITEMS BASED ON THE DROPDOWN SELECTION //
 
 function handleFilterChange(e) {
-  var filterType = e.target.value;
+  // Allows select element to be passed in js without mocking event object
+  var selectElement = e.target || e;
+  var filterType = selectElement.value;
 
   var containers = document.getElementsByClassName("container");
 
@@ -357,6 +362,7 @@ function filterNew(containers) {
 function switchHem() {
   // Change the hemisphere variable and set the text of the button
   hemisphere = hemisphere == "Southern" ? "Northern" : "Southern";
+  localStorage.setItem('hemisphere', hemisphere);
   hemButton.innerText = hemisphere;
 
   var itemContainers = document.getElementsByClassName("container");
@@ -384,6 +390,10 @@ function switchHem() {
       if (itemMonths[k] == MONTHS[k]) { months[k].classList.add("available"); };
     }
   }
+
+  // Perform filtering again with the new hemisphere based on current selection
+  const filterSelect = document.getElementById('filters');
+  handleFilterChange(filterSelect);
 }
 
 // CREATE AND POPULATE A 24-HOUR BAR TO DISPLAY THE TIME AVAILABILITY FOR A GIVEN ITEM //
