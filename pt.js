@@ -68,56 +68,30 @@ function createItem(item) {
   var itemBox = document.createElement("div");
   itemBox.classList.add(itemType + "__container", "container");
 
-  var infoDiv = document.createElement("div");
-  infoDiv.classList.add(itemType + "__container__info", "info");
-
-  // Item name
-  var itemName = document.createElement("h2");
-  itemName.innerText = item.name;
-  itemName.classList.add(itemType + "__name", "name");
-    
-  // Item price
-  var itemPrice = document.createElement("p");
-  itemPrice.innerText = item.price != 0 ? "Sell for: " + item.price + " bells" : "Sell for: Unknown bells";
-  itemPrice.classList.add(itemType + "__price", "price");
-
-  // Checkbox container and items
-  var itemTrackers = document.createElement("div");
-  itemTrackers.classList.add(itemType + "__trackers", "trackers");
-
-  var itemTrackersItems = document.createElement("div");
-  itemTrackersItems.classList.add(itemType + "__trackers__items", "trackers__items");
-
-  // Caught checkbox
-  var itemCaught = document.createElement("input");
-  itemCaught.classList.add(itemType + "__caught", "caught");
-  itemCaught.type = "checkbox";
-  itemCaught.name = "Caught";
-  itemCaught.id = item.name + "_caught";
-
-  var itemCaught_label = document.createElement("label");
-  itemCaught_label.htmlFor = item.name + "_caught";
-
-  // Donated checkbox
-  var itemDonated = document.createElement("input");
-  itemDonated.classList.add(itemType + "__donated", "donated");
-  itemDonated.type = "checkbox";
-  itemDonated.name = "Donated";
-  itemDonated.id = item.name + "_donated";
-
-  var itemDonated_label = document.createElement("label");
-  itemDonated_label.innerText = "Donated?";
-  itemDonated_label.htmlFor = item.name + "_donated";
-
-  // Bug and Fish cards need a separate infoDiv to hold image, name, and price, as well as time and month data
+  // For Bugs and Fish items
   if (itemType !== "fossil") {
+    // Item info
+    var infoDiv = document.createElement("div");
+    infoDiv.classList.add(itemType + "__container__info", "info");
+
     // Item image
     var itemImage = document.createElement("img");
     itemImage.classList.add(itemType + "__image", "image");
     itemImage.src = item.image;
 
+    // Item info text (name, price, location)
     var infoTextDiv = document.createElement("div");
     infoTextDiv.classList.add(itemType + "__container__info__text", "container__info__text");
+
+    // Item name
+    var itemName = document.createElement("h2");
+    itemName.innerText = item.name;
+    itemName.classList.add(itemType + "__name", "name");
+      
+    // Item price
+    var itemPrice = document.createElement("p");
+    itemPrice.innerText = item.price != 0 ? "Sell for: " + item.price + " bells" : "Sell for: Unknown bells";
+    itemPrice.classList.add(itemType + "__price", "price");
 
     // Item location
     var itemLocation = document.createElement("p");
@@ -130,13 +104,39 @@ function createItem(item) {
     // Item month availability
     var itemMonths = createCalendar(item);
 
-    infoDiv.appendChild(itemImage);
+    // Checkbox container and items
+    var itemTrackers = document.createElement("div");
+    itemTrackers.classList.add(itemType + "__trackers", "trackers");
 
+    var itemTrackersItems = document.createElement("div");
+    itemTrackersItems.classList.add(itemType + "__trackers__items", "trackers__items");
+
+    // Caught checkbox
+    var itemCaught = document.createElement("input");
+    itemCaught.classList.add(itemType + "__caught", "caught");
+    itemCaught.type = "checkbox";
+    itemCaught.name = "Caught";
+    itemCaught.id = item.name + "_caught";
+
+    var itemCaught_label = document.createElement("label");
+    itemCaught_label.htmlFor = item.name + "_caught";
+
+    // Donated checkbox
+    var itemDonated = document.createElement("input");
+    itemDonated.classList.add(itemType + "__donated", "donated");
+    itemDonated.type = "checkbox";
+    itemDonated.name = "Donated";
+    itemDonated.id = item.name + "_donated";
+
+    var itemDonated_label = document.createElement("label");
+    itemDonated_label.innerText = "Donated?";
+    itemDonated_label.htmlFor = item.name + "_donated";
+
+    infoDiv.appendChild(itemImage);
     infoTextDiv.appendChild(itemName);
     infoTextDiv.appendChild(itemPrice);
     infoTextDiv.appendChild(itemLocation);
 
-    // Fish have an extra piece of info - shadow size
     if (itemType == "fish") {
       // Fish shadow size
       var itemSize = document.createElement("p");
@@ -153,27 +153,155 @@ function createItem(item) {
     itemBox.appendChild(itemMonths);
 
     itemCaught_label.innerText = "Caught?";
+
+    // Append all the universal elements
+
+    itemTrackersItems.appendChild(itemCaught_label);
+    itemTrackersItems.appendChild(itemCaught);
+
+    itemTrackersItems.appendChild(itemDonated_label);
+    itemTrackersItems.appendChild(itemDonated);
+
+    itemTrackers.appendChild(itemTrackersItems);
+
+    itemBox.appendChild(itemTrackers);
+
+    container.appendChild(itemBox);
   } else {
-    // Fossil cards only need to have a name and price
-    itemBox.appendChild(itemName);
-    itemBox.appendChild(itemPrice);
+    // If the fossil has multiple parts, create those elements, otherwise, just add a name and price
+    if (item.parts) {
+      // Item name
+      var itemName = document.createElement("h2");
+      itemName.innerText = item.name;
+      itemName.classList.add(itemType + "__name", "name");
 
-    itemCaught_label.innerText = "Found?";
+      // Item parts
+      var partsDiv = document.createElement("div");
+      partsDiv.classList.add(itemType + "__container__parts", "parts");
+
+      // For each part in one fossil
+      for (var i = 0; i < item.parts.length; i++) {
+        // Item part div
+        var partDiv = document.createElement("div");
+        partDiv.classList.add(itemType + "__container__part", "part");
+
+        // Item part name
+        var itemPart = document.createElement("h2");
+        itemPart.innerText = item.parts[i].name;
+        itemPart.classList.add(itemType + "__part__name", "part__name");
+            
+        // Item price
+        var itemPartPrice = document.createElement("p");
+        itemPartPrice.innerText = item.parts[i].price != 0 ? "Sell for: " + item.parts[i].price + " bells" : "Sell for: Unknown bells";
+        itemPartPrice.classList.add(itemType + "__part__price", "part__price");
+
+        // Checkbox container and items
+        var itemTrackers = document.createElement("div");
+        itemTrackers.classList.add(itemType + "__trackers", "trackers");
+
+        var itemTrackersItems = document.createElement("div");
+        itemTrackersItems.classList.add(itemType + "__trackers__items", "trackers__items");
+
+        // Caught checkbox
+        var itemCaught = document.createElement("input");
+        itemCaught.classList.add(itemType + "__caught", "caught");
+        itemCaught.type = "checkbox";
+        itemCaught.name = "Caught";
+        itemCaught.id = item.name + "__" + item.parts[i].name + "_caught";
+
+        var itemCaught_label = document.createElement("label");
+        itemCaught_label.htmlFor = item.name + "_caught";
+        itemCaught_label.innerText = "Found?";
+
+        // Donated checkbox
+        var itemDonated = document.createElement("input");
+        itemDonated.classList.add(itemType + "__donated", "donated");
+        itemDonated.type = "checkbox";
+        itemDonated.name = "Donated";
+        itemDonated.id = item.name + "__" + item.parts[i].name + "_donated";
+
+        var itemDonated_label = document.createElement("label");
+        itemDonated_label.innerText = "Donated?";
+        itemDonated_label.htmlFor = item.name + "_donated";
+
+        // Append elements
+
+        itemTrackersItems.appendChild(itemCaught_label);
+        itemTrackersItems.appendChild(itemCaught);
+
+        itemTrackersItems.appendChild(itemDonated_label);
+        itemTrackersItems.appendChild(itemDonated);
+
+        itemTrackers.appendChild(itemTrackersItems);
+
+        partDiv.appendChild(itemPart);
+        partDiv.appendChild(itemPartPrice);
+        partDiv.appendChild(itemTrackers);
+
+        partsDiv.appendChild(partDiv);
+      }
+
+      itemBox.appendChild(itemName);
+      itemBox.appendChild(partsDiv);
+
+      container.appendChild(itemBox);
+    } else {
+      // Item name
+      var itemName = document.createElement("h2");
+      itemName.innerText = item.name;
+      itemName.classList.add(itemType + "__name", "name");
+        
+      // Item price
+      var itemPrice = document.createElement("p");
+      itemPrice.innerText = item.price != 0 ? "Sell for: " + item.price + " bells" : "Sell for: Unknown bells";
+      itemPrice.classList.add(itemType + "__price", "price");
+
+      // Checkbox container and items
+      var itemTrackers = document.createElement("div");
+      itemTrackers.classList.add(itemType + "__trackers", "trackers");
+
+      var itemTrackersItems = document.createElement("div");
+      itemTrackersItems.classList.add(itemType + "__trackers__items", "trackers__items");
+
+      // Caught checkbox
+      var itemCaught = document.createElement("input");
+      itemCaught.classList.add(itemType + "__caught", "caught");
+      itemCaught.type = "checkbox";
+      itemCaught.name = "Caught";
+      itemCaught.id = item.name + "_caught";
+
+      var itemCaught_label = document.createElement("label");
+      itemCaught_label.htmlFor = item.name + "_caught";
+      itemCaught_label.innerText = "Found?";
+
+      // Donated checkbox
+      var itemDonated = document.createElement("input");
+      itemDonated.classList.add(itemType + "__donated", "donated");
+      itemDonated.type = "checkbox";
+      itemDonated.name = "Donated";
+      itemDonated.id = item.name + "_donated";
+
+      var itemDonated_label = document.createElement("label");
+      itemDonated_label.innerText = "Donated?";
+      itemDonated_label.htmlFor = item.name + "_donated";
+
+      // Append all the universal elements
+
+      itemTrackersItems.appendChild(itemCaught_label);
+      itemTrackersItems.appendChild(itemCaught);
+
+      itemTrackersItems.appendChild(itemDonated_label);
+      itemTrackersItems.appendChild(itemDonated);
+
+      itemTrackers.appendChild(itemTrackersItems);
+
+      itemBox.appendChild(itemName);
+      itemBox.appendChild(itemPrice);
+      itemBox.appendChild(itemTrackers);
+
+      container.appendChild(itemBox);
+    }
   }
-
-  // Append all the universal elements
-
-  itemTrackersItems.appendChild(itemCaught_label);
-  itemTrackersItems.appendChild(itemCaught);
-
-  itemTrackersItems.appendChild(itemDonated_label);
-  itemTrackersItems.appendChild(itemDonated);
-
-  itemTrackers.appendChild(itemTrackersItems);
-
-  itemBox.appendChild(itemTrackers);
-
-  container.appendChild(itemBox);
 }
 
 /**
@@ -344,43 +472,85 @@ function checkboxSetup() {
   var caughtCheckboxes = document.getElementsByClassName(itemType + '__caught');
   var caughtValues = itemTypeValues['caughtValues'] || {};
 
-  // Add a change listener to each caughtCheckbox
-  for (let i = 0; i < caughtCheckboxes.length; i++) {
-    caughtCheckboxes[i].addEventListener("change", function() {
-      // Store the checked values in caughtValues
-      caughtValues[this.id] = this.checked;
-
-      // add caughtValues to itemTypeValues, add itemTypeValues to data, then set data in localStorage
-      itemTypeValues['caughtValues'] = caughtValues;
-      data[itemType] = itemTypeValues;
-      localStorage.setItem('data', JSON.stringify(data));
-    });
-  }
-
   var donatedCheckboxes = document.getElementsByClassName(itemType + '__donated');
   var donatedValues = itemTypeValues['donatedValues'] || {};
 
-  // Add a change listener to each donatedCheckbox
-  for (let i = 0; i < donatedCheckboxes.length; i++) {
-    donatedCheckboxes[i].addEventListener("change", function() {
-      // Store the checked values in donatedValues
-      donatedValues[this.id] = this.checked;
+  // Temporary separation of fossil and non-fossil setup until I clean it up
+  if (itemType !== "fossil") {
+    // Add a change listener to each caughtCheckbox
+    for (let i = 0; i < caughtCheckboxes.length; i++) {
+      caughtCheckboxes[i].addEventListener("change", function() {
+        // Store the checked values in caughtValues
+        caughtValues[this.id] = this.checked;
 
-      // If donated box is ticked, check the caught box too
-      if (this.checked == true) {
-        document.getElementById(this.id).previousSibling.previousSibling.checked = true;
-        caughtValues[document.getElementById(this.id).previousSibling.previousSibling.id] = true;
-
+        // add caughtValues to itemTypeValues, add itemTypeValues to data, then set data in localStorage
         itemTypeValues['caughtValues'] = caughtValues;
         data[itemType] = itemTypeValues;
         localStorage.setItem('data', JSON.stringify(data));
-      }
+      });
+    }
 
-      // add donatedValues to itemTypeValues, add itemTypeValues to data, then set data in localStorage
-      itemTypeValues['donatedValues'] = donatedValues;
-      data[itemType] = itemTypeValues;
-      localStorage.setItem('data', JSON.stringify(data));
-    });
+    // Add a change listener to each donatedCheckbox
+    for (let i = 0; i < donatedCheckboxes.length; i++) {
+      donatedCheckboxes[i].addEventListener("change", function() {
+        // Store the checked values in donatedValues
+        donatedValues[this.id] = this.checked;
+
+        // If donated box is ticked, check the caught box too
+        if (this.checked == true) {
+          document.getElementById(this.id).previousSibling.previousSibling.checked = true;
+          caughtValues[document.getElementById(this.id).previousSibling.previousSibling.id] = true;
+
+          itemTypeValues['caughtValues'] = caughtValues;
+          data[itemType] = itemTypeValues;
+          localStorage.setItem('data', JSON.stringify(data));
+        }
+
+        // add donatedValues to itemTypeValues, add itemTypeValues to data, then set data in localStorage
+        itemTypeValues['donatedValues'] = donatedValues;
+        data[itemType] = itemTypeValues;
+        localStorage.setItem('data', JSON.stringify(data));
+      });
+    }
+  } else {
+    // Add a change listener to each caughtCheckbox
+    for (let i = 0; i < caughtCheckboxes.length; i++) {
+      caughtCheckboxes[i].addEventListener("change", function() {
+        // Store the checked values in caughtValues
+        caughtValues[this.id] = this.checked;
+
+        // add caughtValues to itemTypeValues, add itemTypeValues to data, then set data in localStorage
+        itemTypeValues['caughtValues'] = caughtValues;
+        data[itemType] = itemTypeValues;
+        localStorage.setItem('data', JSON.stringify(data));
+      });
+    }
+
+    var donatedCheckboxes = document.getElementsByClassName(itemType + '__donated');
+    var donatedValues = itemTypeValues['donatedValues'] || {};
+
+    // Add a change listener to each donatedCheckbox
+    for (let i = 0; i < donatedCheckboxes.length; i++) {
+      donatedCheckboxes[i].addEventListener("change", function() {
+        // Store the checked values in donatedValues
+        donatedValues[this.id] = this.checked;
+
+        // If donated box is ticked, check the caught box too
+        if (this.checked == true) {
+          document.getElementById(this.id).previousSibling.previousSibling.checked = true;
+          caughtValues[document.getElementById(this.id).previousSibling.previousSibling.id] = true;
+
+          itemTypeValues['caughtValues'] = caughtValues;
+          data[itemType] = itemTypeValues;
+          localStorage.setItem('data', JSON.stringify(data));
+        }
+
+        // add donatedValues to itemTypeValues, add itemTypeValues to data, then set data in localStorage
+        itemTypeValues['donatedValues'] = donatedValues;
+        data[itemType] = itemTypeValues;
+        localStorage.setItem('data', JSON.stringify(data));
+      });
+    }
   }
 }
 
