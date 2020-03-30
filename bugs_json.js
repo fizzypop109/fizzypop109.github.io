@@ -371,7 +371,7 @@ var bugs_json =
             "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "may", "june", "july", "august", "september", "october", "", ""],
-                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
+                "southern": ["january", "february", "march", "april", "", "", "", "", "", "", "november", "december"]
             }
         },
         {
@@ -591,7 +591,7 @@ var bugs_json =
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "june", "july", "august", "september", "", "", ""],
-                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
+                "southern": ["january", "february", "march", "", "", "", "", "", "", "", "", "december"]
             }
         },
         {

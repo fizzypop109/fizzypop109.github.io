@@ -107,6 +107,11 @@
   margin: 10px;
 }
 
+.container > .parts {
+  width: 90%;
+  border: 2px solid white;
+}
+
 .info {
   display: flex;
   flex-direction: column;
@@ -238,6 +243,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.part:not(:last-child) > .trackers {
+  border-radius: 0
 }
 
 /* Universal Button Styles */
