@@ -29,6 +29,9 @@ switch(document.getElementsByClassName('title')[0].innerText) {
 // Default to southern hemisphere if no local storage value is available
 var hemisphere = localStorage.getItem('hemisphere') || "Southern";
 
+// Check if the user already has had their fossil data cleared, else default to false
+var oldFossilsCleared = localStorage.getItem('oldFossilsCleared') || "false";
+
 var container = document.getElementsByClassName("main-container")[0];
 var hemButton = document.getElementsByClassName("button__hemisphere")[0];
 
@@ -432,6 +435,16 @@ function createCalendar(item) {
  */
 function loadData() {
   data = JSON.parse(localStorage.getItem('data')) || {};
+
+  // Clear out the old fossil data if it hasn't already been done
+  if (oldFossilsCleared == "false") {
+    // Make sure data actually HAS fossil data first
+    if (data['fossil']) {
+      data['fossil'] = {};
+      localStorage.setItem('data', JSON.stringify(data));
+      localStorage.setItem('oldFossilsCleared', "true");
+    }
+  }
 
   // If data isn't empty, separate it out into caughtValues and donatedValues, and set the checkboxes that were stored
   if (Object.keys(data).length !== 0) {
