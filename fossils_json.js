@@ -138,7 +138,7 @@ var fossils_json =
             ]
         },
         {
-            "name": "sabretooth",
+            "name": "sabertooth",
             "parts": [
                 {
                     "name": "skull",
@@ -304,7 +304,7 @@ var fossils_json =
             ]
         },
         {
-            "name": "ophthalmo",
+            "name": "ophthalmosaurus",
             "parts": [
                 {
                     "name": "skull",
