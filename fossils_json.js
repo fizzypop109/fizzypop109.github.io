@@ -304,6 +304,19 @@ var fossils_json =
             ]
         },
         {
+            "name": "ophthalmo",
+            "parts": [
+                {
+                    "name": "skull",
+                    "price": 2500
+                },
+                {
+                    "name": "torso",
+                    "price": 2000
+                }
+            ]
+        },
+        {
             "name": "velociraptor",
             "parts": [
                 {
