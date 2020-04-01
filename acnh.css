@@ -312,10 +312,10 @@ input[type="checkbox"] {
   }
 
   .fossil__container {
-    height: 150px;
+    height: auto;
   }
 
-  .container > * {
+  .fish__container > *, .bug__container > * {
     margin: 0;
   }
 
