@@ -495,5 +495,5 @@ var fossils_json =
                     "price": 2500
                 }
             ]
-        },
+        }
     ]
