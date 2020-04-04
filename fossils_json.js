@@ -112,6 +112,10 @@ var fossils_json =
                     "price": 3000
                 },
                 {
+                    "name": "torso",
+                    "price": 0
+                },
+                {
                     "name": "tail",
                     "price": 2500
                 }
