@@ -75,6 +75,14 @@
   font-size: 24px;
 }
 
+.button__toggleDonated {
+  margin-right: 20px;
+}
+
+.button__toggleDonated:disabled {
+  background-color: #8a8a8a;
+}
+
 .filters__or {
   margin: 0 20px;
 }
@@ -302,10 +310,6 @@ input[type="checkbox"] {
     margin: 5px 0;
   }
 
-  .hemisphere__text {
-    display: none;
-  }
-
   .container {
     flex-grow: 1;
     height: 400px;
@@ -340,6 +344,10 @@ input[type="checkbox"] {
 @media (max-width: 850px) {
   .filters {
     flex-direction: column;
+  }
+
+  .button__toggleDonated {
+    margin-bottom: 20px;
   }
 
   .filters__dropdown {

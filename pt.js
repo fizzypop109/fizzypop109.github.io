@@ -6,9 +6,11 @@ var HOURS = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12",
 var items;
 var itemType;
 
-// Holds successfully filtered items
-// Needed to make search functionality work while filtered
+// Holds successfully filtered items - needed to be able to search already filtered items
 var filterResults = [];
+
+// Holds donated items to hide/show while showing All ONLY
+var donatedItems = [];
 
 // Set items and itemType based on the open page
 switch(document.getElementsByClassName('title')[0].innerText) {
@@ -26,20 +28,30 @@ switch(document.getElementsByClassName('title')[0].innerText) {
     break;
 }
 
-// Default to southern hemisphere if no local storage value is available
+// Get the Hemisphere value from localStorage, else set to Southern
 var hemisphere = localStorage.getItem('hemisphere') || "Southern";
 
-// Check if the user already has had their fossil data cleared, else default to false
+// Get the value of donatedHidden from localStorage, else set to false
+var donatedHidden = localStorage.getItem('donatedHidden') || 'false';
+
+// Check if the user already has had their fossil data cleared, else set to false
 var oldFossilsCleared = localStorage.getItem('oldFossilsCleared') || "false";
 
+// Get and store the main container (holds all the item containers) and the hemipshere button and toggleDonated button
 var container = document.getElementsByClassName("main-container")[0];
 var hemButton = document.getElementsByClassName("button__hemisphere")[0];
+var toggleDonatedButton = document.getElementsByClassName("button__toggleDonated")[0];
 
-// Check required since `hemButton` will not exist on fossil page
+// Check required as `hemButton` doesn't exist on fossil page
 if (hemButton) { hemButton.innerText = hemisphere };
 
+// Check required as `toggleDonatedButton` doesn't exist on fossil page (YET)
+if (toggleDonatedButton) { donatedHidden == 'false' ? toggleDonatedButton.innerText = "Hide Donated" : toggleDonatedButton.innerText = "Show Donated" };
+
+// Setup localStorage object
 var data = {};
 
+// Get and store the current month and hour
 var currentMonthIndex = new Date().getMonth();
 var currentHourIndex = new Date().getHours();
 
@@ -135,7 +147,6 @@ function createItem(item) {
     itemDonated_label.innerText = "Donated?";
     itemDonated_label.htmlFor = item.name + "_donated";
 
-    infoDiv.appendChild(itemImage);
     infoTextDiv.appendChild(itemName);
     infoTextDiv.appendChild(itemPrice);
     infoTextDiv.appendChild(itemLocation);
@@ -149,6 +160,7 @@ function createItem(item) {
       infoTextDiv.appendChild(itemSize);
     }
 
+    infoDiv.appendChild(itemImage);
     infoDiv.appendChild(infoTextDiv);
 
     itemBox.appendChild(infoDiv);
@@ -184,64 +196,13 @@ function createItem(item) {
 
       // For each part in one fossil
       for (var i = 0; i < item.parts.length; i++) {
-        // Item part div
-        var partDiv = document.createElement("div");
-        partDiv.classList.add(itemType + "__container__part", "part");
+        // Fossil/Part container
+        var partContainer = document.createElement("div");
+        partContainer.classList.add("fossil__container__part", "part");
 
-        // Item part name
-        var itemPart = document.createElement("h2");
-        itemPart.innerText = item.parts[i].name;
-        itemPart.classList.add(itemType + "__part__name", "part__name");
-            
-        // Item price
-        var itemPartPrice = document.createElement("p");
-        itemPartPrice.innerText = item.parts[i].price != 0 ? "Sell for: " + item.parts[i].price + " bells" : "Sell for: Unknown bells";
-        itemPartPrice.classList.add(itemType + "__part__price", "part__price");
+        createFossil(item.name, item.parts[i], partContainer)
 
-        // Checkbox container and items
-        var itemTrackers = document.createElement("div");
-        itemTrackers.classList.add(itemType + "__trackers", "trackers");
-
-        var itemTrackersItems = document.createElement("div");
-        itemTrackersItems.classList.add(itemType + "__trackers__items", "trackers__items");
-
-        // Caught checkbox
-        var itemCaught = document.createElement("input");
-        itemCaught.classList.add(itemType + "__caught", "caught");
-        itemCaught.type = "checkbox";
-        itemCaught.name = "Caught";
-        itemCaught.id = item.name + "__" + item.parts[i].name + "_caught";
-
-        var itemCaught_label = document.createElement("label");
-        itemCaught_label.htmlFor = item.name + "_caught";
-        itemCaught_label.innerText = "Found?";
-
-        // Donated checkbox
-        var itemDonated = document.createElement("input");
-        itemDonated.classList.add(itemType + "__donated", "donated");
-        itemDonated.type = "checkbox";
-        itemDonated.name = "Donated";
-        itemDonated.id = item.name + "__" + item.parts[i].name + "_donated";
-
-        var itemDonated_label = document.createElement("label");
-        itemDonated_label.innerText = "Donated?";
-        itemDonated_label.htmlFor = item.name + "_donated";
-
-        // Append elements
-
-        itemTrackersItems.appendChild(itemCaught_label);
-        itemTrackersItems.appendChild(itemCaught);
-
-        itemTrackersItems.appendChild(itemDonated_label);
-        itemTrackersItems.appendChild(itemDonated);
-
-        itemTrackers.appendChild(itemTrackersItems);
-
-        partDiv.appendChild(itemPart);
-        partDiv.appendChild(itemPartPrice);
-        partDiv.appendChild(itemTrackers);
-
-        partsDiv.appendChild(partDiv);
+        partsDiv.appendChild(partContainer);
       }
 
       itemBox.appendChild(itemName);
@@ -249,62 +210,71 @@ function createItem(item) {
 
       container.appendChild(itemBox);
     } else {
-      // Item name
-      var itemName = document.createElement("h2");
-      itemName.innerText = item.name;
-      itemName.classList.add(itemType + "__name", "name");
-        
-      // Item price
-      var itemPrice = document.createElement("p");
-      itemPrice.innerText = item.price != 0 ? "Sell for: " + item.price + " bells" : "Sell for: Unknown bells";
-      itemPrice.classList.add(itemType + "__price", "price");
-
-      // Checkbox container and items
-      var itemTrackers = document.createElement("div");
-      itemTrackers.classList.add(itemType + "__trackers", "trackers");
-
-      var itemTrackersItems = document.createElement("div");
-      itemTrackersItems.classList.add(itemType + "__trackers__items", "trackers__items");
-
-      // Caught checkbox
-      var itemCaught = document.createElement("input");
-      itemCaught.classList.add(itemType + "__caught", "caught");
-      itemCaught.type = "checkbox";
-      itemCaught.name = "Caught";
-      itemCaught.id = item.name + "_caught";
-
-      var itemCaught_label = document.createElement("label");
-      itemCaught_label.htmlFor = item.name + "_caught";
-      itemCaught_label.innerText = "Found?";
-
-      // Donated checkbox
-      var itemDonated = document.createElement("input");
-      itemDonated.classList.add(itemType + "__donated", "donated");
-      itemDonated.type = "checkbox";
-      itemDonated.name = "Donated";
-      itemDonated.id = item.name + "_donated";
-
-      var itemDonated_label = document.createElement("label");
-      itemDonated_label.innerText = "Donated?";
-      itemDonated_label.htmlFor = item.name + "_donated";
-
-      // Append all the universal elements
-
-      itemTrackersItems.appendChild(itemCaught_label);
-      itemTrackersItems.appendChild(itemCaught);
-
-      itemTrackersItems.appendChild(itemDonated_label);
-      itemTrackersItems.appendChild(itemDonated);
-
-      itemTrackers.appendChild(itemTrackersItems);
-
-      itemBox.appendChild(itemName);
-      itemBox.appendChild(itemPrice);
-      itemBox.appendChild(itemTrackers);
+      createFossil(item.name, item, itemBox);
 
       container.appendChild(itemBox);
     }
   }
+}
+
+/**
+ * Create and populate a name, price, and trackers for a given fossil or part
+ */
+function createFossil(fossil, part, container) {
+  // Item name
+  var partName = document.createElement("h2");
+  partName.innerText = part.name;
+  partName.classList.add("fossil__part__name", "part__name");
+       
+  // Item price
+  var partPrice = document.createElement("p");
+  partPrice.innerText = part.price != 0 ? "Sell for: " + part.price + " bells" : "Sell for: Unknown bells";
+  partPrice.classList.add("fossil__part__price", "price");
+
+  // Checkbox container and items
+  var partTrackers = document.createElement("div");
+  partTrackers.classList.add("fossil__trackers", "trackers");
+
+  var partTrackersItems = document.createElement("div");
+  partTrackersItems.classList.add("fossil__trackers__items", "trackers__items");
+
+  // Caught checkbox
+  var partFound = document.createElement("input");
+  partFound.classList.add("fossil__caught", "caught");
+  partFound.type = "checkbox";
+  partFound.name = "Caught";
+  partFound.id = "";
+  part.name == fossil ? partFound.id = part.name + "_caught" : partFound.id = fossil + "__" + part.name + "_caught";
+
+  var partFound_label = document.createElement("label");
+  partFound_label.htmlFor = part.name + "_caught";
+  partFound_label.innerText = "Found?";
+
+  // Donated checkbox
+  var partDonated = document.createElement("input");
+  partDonated.classList.add("fossil__donated", "donated");
+  partDonated.type = "checkbox";
+  partDonated.name = "Donated";
+  partDonated.id = "";
+  part.name == fossil ? partDonated.id = part.name + "_donated" : partDonated.id = fossil + "__" + part.name + "_donated";
+
+  var partDonated_label = document.createElement("label");
+  partDonated_label.innerText = "Donated?";
+  partDonated_label.htmlFor = part.name + "_donated";
+
+  // Append all the universal elements
+
+  partTrackersItems.appendChild(partFound_label);
+  partTrackersItems.appendChild(partFound);
+
+  partTrackersItems.appendChild(partDonated_label);
+  partTrackersItems.appendChild(partDonated);
+
+  partTrackers.appendChild(partTrackersItems);
+
+  container.appendChild(partName);
+  container.appendChild(partPrice);
+  container.appendChild(partTrackers);
 }
 
 /**
@@ -466,8 +436,17 @@ function loadData() {
 
         for (const [name, value] of donatedValues) {
           document.getElementById(name).checked = value;
+          // If the checkbox is ticked, add the whole container to donatedItems
+          value == true ? donatedItems.push(document.getElementById(name).parentElement.parentElement.parentElement) : "";
         }
       }
+    }
+  }
+
+  // If donatedHidden is true, then hide all the divs in the array
+  if (donatedHidden == 'true') {
+    for (var i = 0; i < donatedItems.length; i++) {
+      donatedItems[i].style.display = "none";
     }
   }
 
@@ -479,7 +458,6 @@ function loadData() {
  * Setup the caught and donated checkboxes with eventListeners and localStorage saving
  */
 function checkboxSetup() {
-
   var itemTypeValues = data[itemType] || {};
 
   var caughtCheckboxes = document.getElementsByClassName(itemType + '__caught');
@@ -586,6 +564,13 @@ function search() {
       containers[i].style.display = "none";
     }
   }
+
+  // If donatedHidden is true, then hide all the divs in the array
+  if (donatedHidden == 'true') {
+    for (var i = 0; i < donatedItems.length; i++) {
+      donatedItems[i].style.display = "none";
+    }
+  }
 }
 
 /**
@@ -606,18 +591,24 @@ function handleFilterChange(e) {
 
   switch (filterType) {
     case "all":
+      // Enable toggle donated button
+      toggleDonatedButton.disabled = false;
       // this is done above, before all filters are ran
       break;
     case "now":
+      toggleDonatedButton.disabled = true;
       filterNow(containers);
       break;
     case "month":
+      toggleDonatedButton.disabled = true;
       filterMonth(containers);
       break;
     case "leaving":
+      toggleDonatedButton.disabled = true;
       filterLeaving(containers);
       break;
     case "new":
+      toggleDonatedButton.disabled = true;
       filterNew(containers);
       break;
   }
@@ -633,6 +624,13 @@ function handleFilterChange(e) {
 function filterAll(containers) {
   for (i = 0; i < containers.length; i++) {
     containers[i].style.display = "flex";
+  }
+
+  // If donatedHidden is true, then hide all the divs in the array
+  if (donatedHidden == 'true') {
+    for (var i = 0; i < donatedItems.length; i++) {
+      donatedItems[i].style.display = "none";
+    }
   }
 }
 
@@ -682,6 +680,13 @@ function filterNow(containers) {
       filterResults.push(containers[i]);
     }
   }
+
+  // If donatedHidden is true, then hide all the divs in the array
+  if (donatedHidden == 'true') {
+    for (var i = 0; i < donatedItems.length; i++) {
+      donatedItems[i].style.display = "none";
+    }
+  }
 }
 
 /**
@@ -716,6 +721,13 @@ function filterMonth(containers) {
       filterResults.push(containers[i]);
     }
   }
+
+  // If donatedHidden is true, then hide all the divs in the array
+  if (donatedHidden == 'true') {
+    for (var i = 0; i < donatedItems.length; i++) {
+      donatedItems[i].style.display = "none";
+    }
+  }
 }
 
 /**
@@ -741,6 +753,13 @@ function filterLeaving(containers) {
       filterResults.push(containers[i]);
     } else {
       containers[i].style.display = "none";
+    }
+  }
+
+  // If donatedHidden is true, then hide all the divs in the array
+  if (donatedHidden == 'true') {
+    for (var i = 0; i < donatedItems.length; i++) {
+      donatedItems[i].style.display = "none";
     }
   }
 }
@@ -769,6 +788,30 @@ function filterNew(containers) {
     } else {
       containers[i].style.display = "none";
     }
+  }
+
+  // If donatedHidden is true, then hide all the divs in the array
+  if (donatedHidden == 'true') {
+    for (var i = 0; i < donatedItems.length; i++) {
+      donatedItems[i].style.display = "none";
+    }
+  }
+}
+
+/**
+ * Toggle (hide/show) the donated items ONLY if the ALL filter is selected and the searchbox is empty
+ */
+function toggleDonated() {
+  // Change the donatedHidden variable and set the text of the button
+  donatedHidden == 'false' ? donatedHidden = 'true' : donatedHidden = 'false';
+  donatedHidden == 'false' ? toggleDonatedButton.innerText = "Hide Donated" : toggleDonatedButton.innerText = "Show Donated";
+
+  // Save the donatedHidden selection to localStorage
+  localStorage.setItem('donatedHidden', donatedHidden);
+
+  // Hide or show all the divs that are in donatedItems
+  for (var i = 0; i < donatedItems.length; i++) {
+    donatedHidden == 'true' ? donatedItems[i].style.display = "none" : donatedItems[i].style.display = "flex";
   }
 }
 
