@@ -437,7 +437,7 @@ function loadData() {
         for (const [name, value] of donatedValues) {
           document.getElementById(name).checked = value;
           // If the checkbox is ticked, add the whole container to donatedItems
-          value == true ? donatedItems.push(document.getElementById(name).parentElement.parentElement.parentElement) : "";
+          value ? donatedItems.push(document.getElementById(name).parentElement.parentElement.parentElement) : "";
         }
       }
     }
@@ -487,20 +487,32 @@ function checkboxSetup() {
         // Store the checked values in donatedValues
         donatedValues[this.id] = this.checked;
 
+        const itemContainer = this.parentElement.parentElement.parentElement;
+
         // If donated box is ticked, check the caught box too
-        if (this.checked == true) {
+        if (this.checked) {
           document.getElementById(this.id).previousSibling.previousSibling.checked = true;
           caughtValues[document.getElementById(this.id).previousSibling.previousSibling.id] = true;
 
           itemTypeValues['caughtValues'] = caughtValues;
           data[itemType] = itemTypeValues;
           localStorage.setItem('data', JSON.stringify(data));
+
+          // add item container to the donatedItems array for filtering purposes
+          donatedItems.push(itemContainer)
+        } else {
+          // remove item from the donatedItems array for filtering purposes
+          const itemIndex = donatedItems.findIndex((item) => item === itemContainer);
+          donatedItems.splice(itemIndex, 1);
         }
 
         // add donatedValues to itemTypeValues, add itemTypeValues to data, then set data in localStorage
         itemTypeValues['donatedValues'] = donatedValues;
         data[itemType] = itemTypeValues;
         localStorage.setItem('data', JSON.stringify(data));
+
+        // run search to ensure
+        search()
       });
     }
   } else {
@@ -591,24 +603,18 @@ function handleFilterChange(e) {
 
   switch (filterType) {
     case "all":
-      // Enable toggle donated button
-      toggleDonatedButton.disabled = false;
       // this is done above, before all filters are ran
       break;
     case "now":
-      toggleDonatedButton.disabled = true;
       filterNow(containers);
       break;
     case "month":
-      toggleDonatedButton.disabled = true;
       filterMonth(containers);
       break;
     case "leaving":
-      toggleDonatedButton.disabled = true;
       filterLeaving(containers);
       break;
     case "new":
-      toggleDonatedButton.disabled = true;
       filterNew(containers);
       break;
   }
@@ -811,7 +817,19 @@ function toggleDonated() {
 
   // Hide or show all the divs that are in donatedItems
   for (var i = 0; i < donatedItems.length; i++) {
-    donatedHidden == 'true' ? donatedItems[i].style.display = "none" : donatedItems[i].style.display = "flex";
+    var containers = filterResults.length ? filterResults : document.getElementsByClassName("container");
+    var indexOfDonatedItemInContainers = Array.prototype.findIndex
+      .call(containers, (htmlNode) => htmlNode === donatedItems[i])
+
+    if (donatedHidden == 'false' && indexOfDonatedItemInContainers !== -1) {
+      containers[indexOfDonatedItemInContainers].style.display = "flex";
+    } else if (indexOfDonatedItemInContainers !== -1) {
+      containers[indexOfDonatedItemInContainers].style.display = "none";
+    } else {
+      donatedItems[i].style.display = "none";
+    }
+
+    search()
   }
 }
 
