@@ -103,6 +103,11 @@
   margin: 0 30px;
 }
 
+.main-container.hide-donated > .is-donated {
+  /* Use important to overide inline style from search */
+  display: none !important;
+}
+
 /* STYLES FOR ITEM CONTAINER "CARD" */
 
 .container {
@@ -151,6 +156,11 @@
 
 .name {
   color: white;
+}
+
+.container.is-filtered {
+  /* Use important to overide inline style from search */
+  display: none !important; 
 }
 
 /* Clock (item time) Styles */
