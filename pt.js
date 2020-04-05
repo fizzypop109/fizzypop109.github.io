@@ -717,7 +717,7 @@ function filterNow() {
  * Show items which are available in the current month, and hide the others
  * @param  {HTMLCollection} containers A HTMLCollection containing all of the item containers
  */
-function filterMonth(containers) {
+function filterMonth() {
   // For each item container
   for (i = 0; i < containers.length; i++) {
     var availableMonths = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName("available");
