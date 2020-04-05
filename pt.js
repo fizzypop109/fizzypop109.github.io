@@ -48,15 +48,12 @@ var containers = document.getElementsByClassName("container");
 // Check required as `hemButton` doesn't exist on fossil page
 if (hemButton) { hemButton.innerText = hemisphere };
 
-// Check required as `toggleDonatedButton` doesn't exist on fossil page (YET)
-if (toggleDonatedButton) { 
-  if (donatedHidden == 'false') {
-    toggleDonatedButton.innerText = "Hide Donated";
-  } else {
-    toggleDonatedButton.innerText = "Show Donated";
-    container.classList.add('hide-donated');
-  }
-};
+if (donatedHidden == 'false') {
+  toggleDonatedButton.innerText = "Hide Donated";
+} else {
+  toggleDonatedButton.innerText = "Show Donated";
+  container.classList.add('hide-donated');
+}
 
 // Setup localStorage object
 var data = {};
@@ -448,7 +445,15 @@ function loadData() {
           document.getElementById(name).checked = value;
           // If the checkbox is ticked, add `is-donated` class to the item container
           if (value) {
-            document.getElementById(name).parentElement.parentElement.parentElement.classList.add('is-donated')
+            if (itemType !== 'fossil') {
+              document.getElementById(name).parentElement.parentElement.parentElement.classList.add('is-donated')
+            } else {
+              const itemContainer = getFossilContainer(document.getElementById(name));
+
+              if (checkFossilCompletion(itemContainer)) {
+                itemContainer.classList.add('is-donated');
+              }
+            }
           }
         }
       }
@@ -538,6 +543,8 @@ function checkboxSetup() {
 
     // Add a change listener to each donatedCheckbox
     for (let i = 0; i < donatedCheckboxes.length; i++) {
+      const itemContainer = getFossilContainer(donatedCheckboxes[i])
+      
       donatedCheckboxes[i].addEventListener("change", function() {
         // Store the checked values in donatedValues
         donatedValues[this.id] = this.checked;
@@ -550,6 +557,16 @@ function checkboxSetup() {
           itemTypeValues['caughtValues'] = caughtValues;
           data[itemType] = itemTypeValues;
           localStorage.setItem('data', JSON.stringify(data));
+
+          // add is-donated class to the container for filtering purposes
+          if (itemContainer.classList.contains('parts')) {
+            itemContainer.classList.add('is-donated');
+          } else if (checkFossilCompletion(itemContainer)) {
+            itemContainer.classList.add('is-donated');
+          }
+        } else {
+          // remove is-donated class from the container for filtering purposes
+          itemContainer.classList.remove('is-donated')
         }
 
         // add donatedValues to itemTypeValues, add itemTypeValues to data, then set data in localStorage
@@ -559,6 +576,36 @@ function checkboxSetup() {
       });
     }
   }
+}
+
+/**
+ * Checks fossil collection container for complete donated set
+ * @param fossilCollectionContainer Container of the fossil being checked
+ * @returns boolean
+ */
+function checkFossilCompletion(fossilCollectionContainer) {
+  const collectionDonatedCheckboxes = fossilCollectionContainer.querySelectorAll('.donated');
+  for (var i=0; i < collectionDonatedCheckboxes.length; i++) {
+    if (!collectionDonatedCheckboxes[i].checked) {
+      return false;
+    }
+  }
+  return true;
+}
+
+/**
+ * Returns the appropriate container for either a fossil item or collection
+ * @param fossilDonatedCheckbox HTML node of the checkbox for the fossil
+ * @returns HTML element
+ */
+function getFossilContainer(fossilDonatedCheckbox) {
+  // Check to see if checked item is part of a collection
+  const threeParentsUp = fossilDonatedCheckbox.parentElement.parentElement.parentElement;
+  const isInCollection = threeParentsUp.classList.contains('part');
+  // Target container of overall collection/single item
+  const fossilContainer = isInCollection ? threeParentsUp.parentElement.parentElement : threeParentsUp;
+
+  return fossilContainer;
 }
 
 // FILTER FUNCTIONS //
@@ -670,7 +717,7 @@ function filterNow() {
  * Show items which are available in the current month, and hide the others
  * @param  {HTMLCollection} containers A HTMLCollection containing all of the item containers
  */
-function filterMonth(containers) {
+function filterMonth() {
   // For each item container
   for (i = 0; i < containers.length; i++) {
     var availableMonths = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName("available");
