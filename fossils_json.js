@@ -1,51 +1,19 @@
 var fossils_json =
     [
         {
-            "name": "tyrannosaurus rex",
-            "parts": [
-                {
-                    "name": "skull",
-                    "price": 6000
-                },
-                {
-                    "name": "torso",
-                    "price": 5500
-                },
-                {
-                    "name": "tail",
-                    "price": 5000
-                }
-            ]
+            
+            "name": "acanthostega",
+            "price": 2000
         },
         {
-            "name": "triceratops",
-            "parts": [
-                {
-                    "name": "skull",
-                    "price": 6000
-                },
-                {
-                    "name": "torso",
-                    "price": 5500
-                },
-                {
-                    "name": "tail",
-                    "price": 4500
-                }
-            ]
+            
+            "name": "amber",
+            "price": 1200
         },
         {
-            "name": "mammoth",
-            "parts": [
-                {
-                    "name": "skull",
-                    "price": 3000
-                },
-                {
-                    "name": "torso",
-                    "price": 2500
-                }
-            ]
+            
+            "name": "ammonite",
+            "price": 1100
         },
         {
             "name": "ankylosaurus",
@@ -65,6 +33,11 @@ var fossils_json =
             ]
         },
         {
+            
+            "name": "anomalocaris",
+            "price": 2000
+        },
+        {
             "name": "apatosaurus",
             "parts": [
                 {
@@ -82,24 +55,12 @@ var fossils_json =
             ]
         },
         {
-            "name": "dimetrodon",
-            "parts": [
-                {
-                    "name": "skull",
-                    "price": 5500
-                },
-                {
-                    "name": "torso",
-                    "price": 5000
-                },
-                {
-                    "name": "tail",
-                    "price": 4500
-                }
-            ]
+            
+            "name": "archaeopteryx",
+            "price": 1300
         },
         {
-            "name": "iguanodon",
+            "name": "archelon",
             "parts": [
                 {
                     "name": "skull",
@@ -108,12 +69,13 @@ var fossils_json =
                 {
                     "name": "torso",
                     "price": 3500
-                },
-                {
-                    "name": "tail",
-                    "price": 3000
                 }
             ]
+        },
+        {
+            
+            "name": "australopithecus",
+            "price": 1100
         },
         {
             "name": "brachiosaurus",
@@ -138,7 +100,101 @@ var fossils_json =
             ]
         },
         {
-            "name": "sabretooth",
+            
+            "name": "coprolite",
+            "price": 1100
+        },
+        {
+            "name": "deinonychus",
+            "parts": [
+                {
+                    "name": "skull",
+                    "price": 3000
+                },
+                {
+                    "name": "torso",
+                    "price": 0
+                },
+                {
+                    "name": "tail",
+                    "price": 2500
+                }
+            ]
+        },
+        {
+            "name": "dimetrodon",
+            "parts": [
+                {
+                    "name": "skull",
+                    "price": 5500
+                },
+                {
+                    "name": "torso",
+                    "price": 5000
+                },
+                {
+                    "name": "tail",
+                    "price": 4500
+                }
+            ]
+        },
+        {
+            
+            "name": "dinosaur egg",
+            "price": 1400
+        },
+        {
+            
+            "name": "dinosaur track",
+            "price": 1000
+        },
+        {
+            "name": "diplodocus",
+            "parts": [
+                {
+                    "name": "skull",
+                    "price": 5000
+                },
+                {
+                    "name": "neck",
+                    "price": 5000
+                },
+                {
+                    "name": "chest",
+                    "price": 4500
+                },
+                {
+                    "name": "hip",
+                    "price": 4000
+                },
+                {
+                    "name": "tail",
+                    "price": 4500
+                }
+            ]
+        },
+        {
+            
+            "name": "dunkleosteus",
+            "price": 3500
+        },
+        {
+            
+            "name": "eusthenopteron",
+            "price": 2000
+        },
+        {
+            
+            "name": "fern fossil",
+            "price": 1000
+        },
+        {
+            
+            "name": "fossilized feces",
+            "price": 1100
+        },
+        {
+            "name": "ichthyosaur",
             "parts": [
                 {
                     "name": "skull",
@@ -151,15 +207,85 @@ var fossils_json =
             ]
         },
         {
-            "name": "deinonychus",
+            "name": "iguanodon",
+            "parts": [
+                {
+                    "name": "skull",
+                    "price": 4000
+                },
+                {
+                    "name": "torso",
+                    "price": 3500
+                },
+                {
+                    "name": "tail",
+                    "price": 3000
+                }
+            ]
+        },
+        {
+            
+            "name": "juramaia",
+            "price": 1500
+        },
+        {
+            "name": "mammoth",
             "parts": [
                 {
                     "name": "skull",
                     "price": 3000
                 },
                 {
-                    "name": "tail",
+                    "name": "torso",
                     "price": 2500
+                }
+            ]
+        },
+        {
+            "name": "megacerops",
+            "parts": [
+                {
+                    "name": "skull",
+                    "price": 4500
+                },
+                {
+                    "name": "torso",
+                    "price": 3500
+                },
+                {
+                    "name": "tail",
+                    "price": 3000
+                }
+            ]
+        },
+        {
+            "name": "megalocerops",
+            "parts": [
+                {
+                    "name": "left",
+                    "price": 4000
+                },
+                {
+                    "name": "right",
+                    "price": 5500
+                }
+            ]
+        },
+        {
+            
+            "name": "myllokunmingia",
+            "price": 1500
+        },
+        {
+            "name": "ophthalmosaurus",
+            "parts": [
+                {
+                    "name": "skull",
+                    "price": 2500
+                },
+                {
+                    "name": "torso",
+                    "price": 2000
                 }
             ]
         },
@@ -198,29 +324,9 @@ var fossils_json =
             ]
         },
         {
-            "name": "diplodocus",
-            "parts": [
-                {
-                    "name": "skull",
-                    "price": 5000
-                },
-                {
-                    "name": "neck",
-                    "price": 5000
-                },
-                {
-                    "name": "chest",
-                    "price": 4500
-                },
-                {
-                    "name": "hip",
-                    "price": 4000
-                },
-                {
-                    "name": "tail",
-                    "price": 4500
-                }
-            ]
+            
+            "name": "peking man",
+            "price": 1100
         },
         {
             "name": "plesiosaur",
@@ -236,23 +342,6 @@ var fossils_json =
                 {
                     "name": "torso",
                     "price": 4500
-                }
-            ]
-        },
-        {
-            "name": "stegosaurus",
-            "parts": [
-                {
-                    "name": "skull",
-                    "price": 5000
-                },
-                {
-                    "name": "torso",
-                    "price": 4500
-                },
-                {
-                    "name": "tail",
-                    "price": 4000
                 }
             ]
         },
@@ -291,7 +380,7 @@ var fossils_json =
             ]
         },
         {
-            "name": "ichthyosaur",
+            "name": "sabertooth",
             "parts": [
                 {
                     "name": "skull",
@@ -304,15 +393,41 @@ var fossils_json =
             ]
         },
         {
-            "name": "velociraptor",
+            
+            "name": "shark tooth",
+            "price": 1000
+        },
+        {
+            "name": "spinosaurus",
             "parts": [
                 {
                     "name": "skull",
-                    "price": 3000
+                    "price": 4000
                 },
                 {
                     "name": "torso",
-                    "price": 2500
+                    "price": 3000
+                },
+                {
+                    "name": "tail",
+                    "price": 2000
+                }
+            ]
+        },
+        {
+            "name": "stegosaurus",
+            "parts": [
+                {
+                    "name": "skull",
+                    "price": 5000
+                },
+                {
+                    "name": "torso",
+                    "price": 4500
+                },
+                {
+                    "name": "tail",
+                    "price": 4000
                 }
             ]
         },
@@ -334,109 +449,21 @@ var fossils_json =
             ]
         },
         {
-            "name": "spinosaurus",
+            "name": "triceratops",
             "parts": [
                 {
                     "name": "skull",
-                    "price": 4000
+                    "price": 6000
                 },
                 {
                     "name": "torso",
-                    "price": 3000
-                },
-                {
-                    "name": "tail",
-                    "price": 2000
-                }
-            ]
-        },
-        {
-            "name": "megacerops",
-            "parts": [
-                {
-                    "name": "skull",
-                    "price": 4500
-                },
-                {
-                    "name": "torso",
-                    "price": 3500
-                },
-                {
-                    "name": "tail",
-                    "price": 3000
-                }
-            ]
-        },
-        {
-            "name": "megalocerops",
-            "parts": [
-                {
-                    "name": "left",
-                    "price": 4000
-                },
-                {
-                    "name": "right",
                     "price": 5500
-                }
-            ]
-        },
-        {
-            "name": "archelon",
-            "parts": [
-                {
-                    "name": "skull",
-                    "price": 4000
                 },
                 {
-                    "name": "torso",
-                    "price": 3500
+                    "name": "tail",
+                    "price": 4500
                 }
             ]
-        },
-        {
-            
-            "name": "amber",
-            "price": 1200
-        },
-        {
-            
-            "name": "ammonite",
-            "price": 1100
-        },
-        {
-            
-            "name": "coprolite",
-            "price": 1100
-        },
-        {
-            
-            "name": "dinosaur egg",
-            "price": 1400
-        },
-        {
-            
-            "name": "fern fossil",
-            "price": 1000
-        },
-        {
-            
-            "name": "dinosaur track",
-            "price": 1000
-        },
-        {
-            
-            "name": "archaeopteryx",
-            "price": 1300
-        },
-        {
-            
-            "name": "peking man",
-            "price": 1100
-        },
-        {
-            
-            "name": "shark tooth",
-            "price": 1000
         },
         {
             
@@ -444,43 +471,33 @@ var fossils_json =
             "price": 1300
         },
         {
-            
-            "name": "australopithecus",
-            "price": 1100
+            "name": "tyrannosaurus rex",
+            "parts": [
+                {
+                    "name": "skull",
+                    "price": 6000
+                },
+                {
+                    "name": "torso",
+                    "price": 5500
+                },
+                {
+                    "name": "tail",
+                    "price": 5000
+                }
+            ]
         },
         {
-            
-            "name": "acanthostega",
-            "price": 2000
-        },
-        {
-            
-            "name": "anomalocaris",
-            "price": 2000
-        },
-        {
-            
-            "name": "fossilized feces",
-            "price": 1100
-        },
-        {
-            
-            "name": "juramaia",
-            "price": 1500
-        },
-        {
-            
-            "name": "dunkleosteus",
-            "price": 3500
-        },
-        {
-            
-            "name": "myllokunmingia",
-            "price": 1500
-        },
-        {
-            
-            "name": "eusthenopteron",
-            "price": 2000
-        },
+            "name": "velociraptor",
+            "parts": [
+                {
+                    "name": "skull",
+                    "price": 3000
+                },
+                {
+                    "name": "torso",
+                    "price": 2500
+                }
+            ]
+        }
     ]

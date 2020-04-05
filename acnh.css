@@ -57,7 +57,7 @@
 
 .hemisphere__text {
   margin: 0;
-  margin-right: 20px;
+  margin-right: 15px;
   font-size: 18px;
   font-weight: bold;
 }
@@ -73,6 +73,14 @@
   color: #4c7566;
   font-weight: bold;
   font-size: 24px;
+}
+
+.button__toggleDonated {
+  margin-right: 20px;
+}
+
+.button__toggleDonated:disabled {
+  background-color: #8a8a8a;
 }
 
 .filters__or {
@@ -302,20 +310,16 @@ input[type="checkbox"] {
     margin: 5px 0;
   }
 
-  .hemisphere__text {
-    display: none;
-  }
-
   .container {
     flex-grow: 1;
     height: 400px;
   }
 
   .fossil__container {
-    height: 150px;
+    height: auto;
   }
 
-  .container > * {
+  .fish__container > *, .bug__container > * {
     margin: 0;
   }
 
@@ -340,6 +344,10 @@ input[type="checkbox"] {
 @media (max-width: 850px) {
   .filters {
     flex-direction: column;
+  }
+
+  .button__toggleDonated {
+    margin-bottom: 20px;
   }
 
   .filters__dropdown {
