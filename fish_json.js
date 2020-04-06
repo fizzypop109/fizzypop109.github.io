@@ -315,7 +315,7 @@ var fish_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_15_i.png",
             "name": "frog",
-            "price": 0,
+            "price": 120,
             "location": "pond",
             "shadowSize": 2,
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
@@ -339,7 +339,7 @@ var fish_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_19_i.png",
             "name": "giant snakehead",
-            "price": 0,
+            "price": 5500,
             "location": "pond",
             "shadowSize": 5,
             "time": ["", "", "", "", "", "", "", "", "", "9", "10", "11", "12", "13", "14", "15", "", "", "", "", "", "", "", ""],
@@ -627,7 +627,7 @@ var fish_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_25_i.png",
             "name": "pond smelt",
-            "price": 0,
+            "price": 500,
             "location": "river",
             "shadowSize": 2,
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],

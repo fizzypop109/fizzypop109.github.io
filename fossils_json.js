@@ -108,12 +108,8 @@ var fossils_json =
             "name": "deinonychus",
             "parts": [
                 {
-                    "name": "skull",
-                    "price": 3000
-                },
-                {
                     "name": "torso",
-                    "price": 0
+                    "price": 3000
                 },
                 {
                     "name": "tail",

@@ -25,8 +25,8 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_14_i.png",
             "name": "atlas moth",
-            "price": 0,
-            "location": "",
+            "price": 1300,
+            "location": "on trees",
             "time": ["0", "1", "2", "3", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "april", "may", "june", "july", "august", "september", "", "", ""],
@@ -47,8 +47,8 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_34_i.png",
             "name": "banded dragonfly",
-            "price": 0,
-            "location": "",
+            "price": 4500,
+            "location": "flying",
             "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "may", "june", "july", "august", "september", "october", "", ""],
@@ -58,7 +58,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_21_i.png",
             "name": "bell cricket",
-            "price": 0,
+            "price": 430,
             "location": "in grass",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
@@ -69,7 +69,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_49_i.png",
             "name": "blue weevil beetle",
-            "price": 0,
+            "price": 800,
             "location": "on trees",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
@@ -102,8 +102,8 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_31_i.png",
             "name": "cicada shell",
-            "price": 0,
-            "location": "",
+            "price": 10,
+            "location": "on trees",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
@@ -157,7 +157,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_59_i.png",
             "name": "cyclommatus stag",
-            "price": 0,
+            "price": 8000,
             "location": "on trees",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
@@ -212,7 +212,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_50_i.png",
             "name": "dung beetle",
-            "price": 0,
+            "price": 3000,
             "location": "on ground",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
@@ -245,8 +245,8 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_30_i.png",
             "name": "evening cicada",
-            "price": 0,
-            "location": "",
+            "price": 550,
+            "location": "on trees",
             "time": ["", "", "", "", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "16", "17", "18", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
@@ -278,7 +278,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_72_i.png",
             "name": "fly",
-            "price": 0,
+            "price": 60,
             "location": "on rotten food & garbage",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
@@ -289,8 +289,8 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_28_i.png",
             "name": "giant cicada",
-            "price": 0,
-            "location": "",
+            "price": 500,
+            "location": "on trees",
             "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
@@ -300,7 +300,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_57_i.png",
             "name": "giant stag",
-            "price": 0,
+            "price": 10000,
             "location": "on trees",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "23"],
             "season": {
@@ -310,9 +310,9 @@ var bugs_json =
         },
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_40_i.png",
-            "name": "giant water beetle",
+            "name": "giant water bug",
             "price": 2000,
-            "location": "",
+            "location": "in rivers",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "", "", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "april", "may", "june", "july", "august", "september", "", "", ""],
@@ -322,7 +322,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_61_i.png",
             "name": "giraffe stag",
-            "price": 0,
+            "price": 12000,
             "location": "on trees",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
@@ -333,7 +333,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_60_i.png",
             "name": "golden stag",
-            "price": 0,
+            "price": 12000,
             "location": "on trees",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
@@ -344,7 +344,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_54_i.png",
             "name": "goliath beetle",
-            "price": 0,
+            "price": 8000,
             "location": "on trees",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
@@ -366,8 +366,8 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_7_i.png",
             "name": "great purple emperor",
-            "price": 0,
-            "location": "",
+            "price": 3000,
+            "location": "flying",
             "time": ["", "", "", "", "4", "5", "6", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "may", "june", "july", "august", "", "", "", ""],
@@ -399,7 +399,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_63_i.png",
             "name": "horned atlas",
-            "price": 0,
+            "price": 8000,
             "location": "on trees",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
@@ -410,7 +410,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_62_i.png",
             "name": "horned dynastid",
-            "price": 0,
+            "price": 1350,
             "location": "on trees",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
@@ -421,7 +421,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_64_i.png",
             "name": "horned elephant",
-            "price": 0,
+            "price": 8000,
             "location": "on trees",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
@@ -432,7 +432,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_65_i.png",
             "name": "horned hercules",
-            "price": 0,
+            "price": 12000,
             "location": "on trees",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
@@ -443,7 +443,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_45_i.png",
             "name": "jewel beetle",
-            "price": 0,
+            "price": 2400,
             "location": "on trees",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
@@ -520,7 +520,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_56_i.png",
             "name": "miyama stag",
-            "price": 0,
+            "price": 1000,
             "location": "on trees",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
@@ -641,7 +641,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_58_i.png",
             "name": "rainbow stag",
-            "price": 0,
+            "price": 6000,
             "location": "on trees",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "", "", "19", "20", "21", "22", "23"],
             "season": {
@@ -685,8 +685,8 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_27_i.png",
             "name": "robust cicada",
-            "price": 0,
-            "location": "",
+            "price": 300,
+            "location": "on trees",
             "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
@@ -707,7 +707,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_55_i.png",
             "name": "saw stag",
-            "price": 0,
+            "price": 2000,
             "location": "on trees",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
@@ -718,7 +718,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_52_i.png",
             "name": "scarab beetle",
-            "price": 0,
+            "price": 10000,
             "location": "on trees",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "23"],
             "season": {
@@ -729,7 +729,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/img/c30dafd2080da93930e89326968932e3.jpg",
             "name": "scorpion",
-            "price": 0,
+            "price": 8000,
             "location": "on ground",
             "time": ["0", "1", "2", "3", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "19", "20", "21", "22", "23"],
             "season": {
@@ -839,7 +839,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_66_i.png",
             "name": "walking stick",
-            "price": 0,
+            "price": 600,
             "location": "on trees",
             "time": ["", "", "", "", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "17", "18", "", "", "", "", ""],
             "season": {
@@ -861,7 +861,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_71_i.png",
             "name": "wharf roach",
-            "price": 0,
+            "price": 200,
             "location": "on beach (rocks)",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
