@@ -67,7 +67,7 @@ var fossils_json =
                     "price": 4000
                 },
                 {
-                    "name": "torso",
+                    "name": "tail",
                     "price": 3500
                 }
             ]
@@ -85,12 +85,12 @@ var fossils_json =
                     "price": 6000
                 },
                 {
-                    "name": "lower back",
-                    "price": 5000
-                },
-                {
                     "name": "chest",
                     "price": 5500
+                },
+                {
+                    "name": "pelvis",
+                    "price": 5000
                 },
                 {
                     "name": "tail",
@@ -164,12 +164,16 @@ var fossils_json =
                     "price": 4500
                 },
                 {
-                    "name": "hip",
-                    "price": 4000
+                    "name": "pelvis",
+                    "price": 4500
                 },
                 {
                     "name": "tail",
                     "price": 4500
+                },
+                {
+                    "name": "tail tip",
+                    "price": 4000
                 }
             ]
         },
@@ -259,7 +263,7 @@ var fossils_json =
             ]
         },
         {
-            "name": "megalocerops",
+            "name": "megaloceros",
             "parts": [
                 {
                     "name": "left",
