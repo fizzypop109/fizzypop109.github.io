@@ -42,11 +42,18 @@ var container = document.getElementsByClassName("main-container")[0];
 var hemButton = document.getElementsByClassName("button__hemisphere")[0];
 var toggleDonatedButton = document.getElementsByClassName("button__toggleDonated")[0];
 
+// Get and store all containers on the page
+var containers = document.getElementsByClassName("container");
+
 // Check required as `hemButton` doesn't exist on fossil page
 if (hemButton) { hemButton.innerText = hemisphere };
 
-// Check required as `toggleDonatedButton` doesn't exist on fossil page (YET)
-if (toggleDonatedButton) { donatedHidden == 'false' ? toggleDonatedButton.innerText = "Hide Donated" : toggleDonatedButton.innerText = "Show Donated" };
+if (donatedHidden == 'false') {
+  toggleDonatedButton.innerText = "Hide Donated";
+} else {
+  toggleDonatedButton.innerText = "Show Donated";
+  container.classList.add('hide-donated');
+}
 
 // Setup localStorage object
 var data = {};
@@ -436,17 +443,20 @@ function loadData() {
 
         for (const [name, value] of donatedValues) {
           document.getElementById(name).checked = value;
-          // If the checkbox is ticked, add the whole container to donatedItems
-          value == true ? donatedItems.push(document.getElementById(name).parentElement.parentElement.parentElement) : "";
+          // If the checkbox is ticked, add `is-donated` class to the item container
+          if (value) {
+            if (itemType !== 'fossil') {
+              document.getElementById(name).parentElement.parentElement.parentElement.classList.add('is-donated')
+            } else {
+              const itemContainer = getFossilContainer(document.getElementById(name));
+
+              if (checkFossilCompletion(itemContainer)) {
+                itemContainer.classList.add('is-donated');
+              }
+            }
+          }
         }
       }
-    }
-  }
-
-  // If donatedHidden is true, then hide all the divs in the array
-  if (donatedHidden == 'true') {
-    for (var i = 0; i < donatedItems.length; i++) {
-      donatedItems[i].style.display = "none";
     }
   }
 
@@ -487,20 +497,31 @@ function checkboxSetup() {
         // Store the checked values in donatedValues
         donatedValues[this.id] = this.checked;
 
+        const itemContainer = this.parentElement.parentElement.parentElement;
+
         // If donated box is ticked, check the caught box too
-        if (this.checked == true) {
+        if (this.checked) {
           document.getElementById(this.id).previousSibling.previousSibling.checked = true;
           caughtValues[document.getElementById(this.id).previousSibling.previousSibling.id] = true;
 
           itemTypeValues['caughtValues'] = caughtValues;
           data[itemType] = itemTypeValues;
           localStorage.setItem('data', JSON.stringify(data));
+
+          // add is-donated class to the container for filtering purposes
+          itemContainer.classList.add('is-donated')
+        } else {
+          // remove is-donated class from the container for filtering purposes
+          itemContainer.classList.remove('is-donated')
         }
 
         // add donatedValues to itemTypeValues, add itemTypeValues to data, then set data in localStorage
         itemTypeValues['donatedValues'] = donatedValues;
         data[itemType] = itemTypeValues;
         localStorage.setItem('data', JSON.stringify(data));
+
+        // run search to ensure
+        search()
       });
     }
   } else {
@@ -522,6 +543,8 @@ function checkboxSetup() {
 
     // Add a change listener to each donatedCheckbox
     for (let i = 0; i < donatedCheckboxes.length; i++) {
+      const itemContainer = getFossilContainer(donatedCheckboxes[i])
+      
       donatedCheckboxes[i].addEventListener("change", function() {
         // Store the checked values in donatedValues
         donatedValues[this.id] = this.checked;
@@ -534,6 +557,16 @@ function checkboxSetup() {
           itemTypeValues['caughtValues'] = caughtValues;
           data[itemType] = itemTypeValues;
           localStorage.setItem('data', JSON.stringify(data));
+
+          // add is-donated class to the container for filtering purposes
+          if (itemContainer.classList.contains('parts')) {
+            itemContainer.classList.add('is-donated');
+          } else if (checkFossilCompletion(itemContainer)) {
+            itemContainer.classList.add('is-donated');
+          }
+        } else {
+          // remove is-donated class from the container for filtering purposes
+          itemContainer.classList.remove('is-donated')
         }
 
         // add donatedValues to itemTypeValues, add itemTypeValues to data, then set data in localStorage
@@ -545,6 +578,36 @@ function checkboxSetup() {
   }
 }
 
+/**
+ * Checks fossil collection container for complete donated set
+ * @param fossilCollectionContainer Container of the fossil being checked
+ * @returns boolean
+ */
+function checkFossilCompletion(fossilCollectionContainer) {
+  const collectionDonatedCheckboxes = fossilCollectionContainer.querySelectorAll('.donated');
+  for (var i=0; i < collectionDonatedCheckboxes.length; i++) {
+    if (!collectionDonatedCheckboxes[i].checked) {
+      return false;
+    }
+  }
+  return true;
+}
+
+/**
+ * Returns the appropriate container for either a fossil item or collection
+ * @param fossilDonatedCheckbox HTML node of the checkbox for the fossil
+ * @returns HTML element
+ */
+function getFossilContainer(fossilDonatedCheckbox) {
+  // Check to see if checked item is part of a collection
+  const threeParentsUp = fossilDonatedCheckbox.parentElement.parentElement.parentElement;
+  const isInCollection = threeParentsUp.classList.contains('part');
+  // Target container of overall collection/single item
+  const fossilContainer = isInCollection ? threeParentsUp.parentElement.parentElement : threeParentsUp;
+
+  return fossilContainer;
+}
+
 // FILTER FUNCTIONS //
 
 /**
@@ -554,21 +617,13 @@ function search() {
   // Loop through all containers, and if the title doesn't include the search query, set display to none
   var query = document.getElementsByClassName("filters__search")[0].value;
   var filter = query.toUpperCase();
-  // Use filter results if there is at least one result
-  var containers = filterResults.length ? filterResults : document.getElementsByClassName("container");
+  
   for (i = 0; i < containers.length; i++) {
     var name = containers[i].getElementsByTagName("h2")[0].innerText;
     if (name.toUpperCase().indexOf(filter) > -1) {
       containers[i].style.display = "flex";
     } else {
       containers[i].style.display = "none";
-    }
-  }
-
-  // If donatedHidden is true, then hide all the divs in the array
-  if (donatedHidden == 'true') {
-    for (var i = 0; i < donatedItems.length; i++) {
-      donatedItems[i].style.display = "none";
     }
   }
 }
@@ -581,64 +636,43 @@ function handleFilterChange(e) {
   // Allows select element to be passed in js without mocking event object
   var selectElement = e.target || e;
   var filterType = selectElement.value;
-
-  var containers = document.getElementsByClassName("container");
-  // Clear global variable of any previous results
-  filterResults = [];
   
   // Reset display of each container first
-  filterAll(containers);
+  filterAll();
 
   switch (filterType) {
     case "all":
-      // Enable toggle donated button
-      toggleDonatedButton.disabled = false;
       // this is done above, before all filters are ran
       break;
     case "now":
-      toggleDonatedButton.disabled = true;
-      filterNow(containers);
+      filterNow();
       break;
     case "month":
-      toggleDonatedButton.disabled = true;
-      filterMonth(containers);
+      filterMonth();
       break;
     case "leaving":
-      toggleDonatedButton.disabled = true;
-      filterLeaving(containers);
+      filterLeaving();
       break;
     case "new":
-      toggleDonatedButton.disabled = true;
-      filterNew(containers);
+      filterNew();
       break;
   }
-
-  // Call search in case user has current search value
-  search();
 }
 
 /**
- * Show all of the items by setting the display of every container to flex
- * @param  {HTMLCollection} containers A HTMLCollection containing all of the item containers
+ * Show all of the items by removing the is-filtered class from all item containers
  */
-function filterAll(containers) {
-  for (i = 0; i < containers.length; i++) {
-    containers[i].style.display = "flex";
-  }
-
-  // If donatedHidden is true, then hide all the divs in the array
-  if (donatedHidden == 'true') {
-    for (var i = 0; i < donatedItems.length; i++) {
-      donatedItems[i].style.display = "none";
-    }
+function filterAll() {
+  const filteredContainers = document.querySelectorAll('.is-filtered');
+  for (i = 0; i < filteredContainers.length; i++) {
+    filteredContainers[i].classList.remove('is-filtered');
   }
 }
 
 /**
  * Show items which are available in the current month AND hour, and hide the others
- * @param  {HTMLCollection} containers A HTMLCollection containing all of the item containers
  */
-function filterNow(containers) {
+function filterNow() {
   // For each item container
   for (i = 0; i < containers.length; i++) {
     var availableHours = containers[i].getElementsByClassName("clock")[0].getElementsByClassName("available");
@@ -674,17 +708,7 @@ function filterNow(containers) {
 
     // If either hourAvailable or monthAvailable are false, the item is NOT available now, so hide it
     if (!hourAvailable || !monthAvailable) {
-      containers[i].style.display = "none";
-    } else {
-      // Global variable storing successfully filtered items to enable search + filter
-      filterResults.push(containers[i]);
-    }
-  }
-
-  // If donatedHidden is true, then hide all the divs in the array
-  if (donatedHidden == 'true') {
-    for (var i = 0; i < donatedItems.length; i++) {
-      donatedItems[i].style.display = "none";
+      containers[i].classList.add('is-filtered');
     }
   }
 }
@@ -693,7 +717,7 @@ function filterNow(containers) {
  * Show items which are available in the current month, and hide the others
  * @param  {HTMLCollection} containers A HTMLCollection containing all of the item containers
  */
-function filterMonth(containers) {
+function filterMonth() {
   // For each item container
   for (i = 0; i < containers.length; i++) {
     var availableMonths = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName("available");
@@ -715,26 +739,15 @@ function filterMonth(containers) {
 
     // If after looping through each available month, the flag has not been set, hide the item
     if (!monthAvailable) {
-      containers[i].style.display = "none";
-    } else {
-      // Global variable storing successfully filtered items to enable search + filter
-      filterResults.push(containers[i]);
-    }
-  }
-
-  // If donatedHidden is true, then hide all the divs in the array
-  if (donatedHidden == 'true') {
-    for (var i = 0; i < donatedItems.length; i++) {
-      donatedItems[i].style.display = "none";
+      containers[i].classList.add('is-filtered');
     }
   }
 }
 
 /**
  * Show items which are available in the current month AND NOT available in the next month
- * @param  {HTMLCollection} containers A HTMLCollection containing all of the item containers
  */
-function filterLeaving(containers) {
+function filterLeaving() {
   // For each item container
   for (i = 0; i < containers.length; i++) {
     var months = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName("month");
@@ -748,27 +761,16 @@ function filterLeaving(containers) {
     var nextMonthDiv = "";
     currentMonthDiv.classList.contains("december") ? nextMonthDiv = months[0] : nextMonthDiv = currentMonthDiv.nextSibling;
 
-    if (currentMonthDiv.classList.contains("available") && !nextMonthDiv.classList.contains("available")) {
-      // Global variable storing successfully filtered items to enable search + filter
-      filterResults.push(containers[i]);
-    } else {
-      containers[i].style.display = "none";
-    }
-  }
-
-  // If donatedHidden is true, then hide all the divs in the array
-  if (donatedHidden == 'true') {
-    for (var i = 0; i < donatedItems.length; i++) {
-      donatedItems[i].style.display = "none";
+    if (!(currentMonthDiv.classList.contains("available") && !nextMonthDiv.classList.contains("available"))) {
+      containers[i].classList.add('is-filtered');
     }
   }
 }
 
 /**
  * Show items which are available in the current month AND NOT available in the last month
- * @param  {HTMLCollection} containers A HTMLCollection containing all of the item containers
  */
-function filterNew(containers) {
+function filterNew() {
   // For each item container
   for (i = 0; i < containers.length; i++) {
     var months = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName("month");
@@ -782,18 +784,8 @@ function filterNew(containers) {
     var lastMonthDiv = "";
     currentMonthDiv.classList.contains("january") ? lastMonthDiv = months[11] : lastMonthDiv = currentMonthDiv.previousSibling;
 
-    if (currentMonthDiv.classList.contains("available") && !lastMonthDiv.classList.contains("available")) {
-      // Global variable storing successfully filtered items to enable search + filter
-      filterResults.push(containers[i]);    
-    } else {
-      containers[i].style.display = "none";
-    }
-  }
-
-  // If donatedHidden is true, then hide all the divs in the array
-  if (donatedHidden == 'true') {
-    for (var i = 0; i < donatedItems.length; i++) {
-      donatedItems[i].style.display = "none";
+    if (!(currentMonthDiv.classList.contains("available") && !lastMonthDiv.classList.contains("available"))) {
+      containers[i].classList.add('is-filtered');
     }
   }
 }
@@ -809,9 +801,10 @@ function toggleDonated() {
   // Save the donatedHidden selection to localStorage
   localStorage.setItem('donatedHidden', donatedHidden);
 
-  // Hide or show all the divs that are in donatedItems
-  for (var i = 0; i < donatedItems.length; i++) {
-    donatedHidden == 'true' ? donatedItems[i].style.display = "none" : donatedItems[i].style.display = "flex";
+  if (donatedHidden == 'true') {
+    document.querySelector('.main-container').classList.add('hide-donated');
+  } else {
+    document.querySelector('.main-container').classList.remove('hide-donated');
   }
 }
 
@@ -826,11 +819,9 @@ function switchHem() {
   // Save the hemisphere selection to localStorage
   localStorage.setItem('hemisphere', hemisphere);
 
-  var itemContainers = document.getElementsByClassName("container");
-
   // Go through the calendar month divs and remove the "available" classes
-  for (var i = 0; i < itemContainers.length; i++) {
-    var calendarDiv = itemContainers[i].children[2].children[0];
+  for (var i = 0; i < containers.length; i++) {
+    var calendarDiv = containers[i].children[2].children[0];
     var months = calendarDiv.getElementsByTagName('div');
 
     for (var j = 0; j < months.length; j++) {
