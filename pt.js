@@ -433,7 +433,7 @@ function loadData() {
         var caughtValues = Object.entries(data[itemType]['caughtValues']);
 
         for (const [name, value] of caughtValues) {
-          document.getElementById(name).checked = value;
+          if (document.getElementById(name)) { document.getElementById(name).checked = value; }
         }
       }
 
@@ -442,9 +442,9 @@ function loadData() {
         var donatedValues = Object.entries(data[itemType]['donatedValues']);
 
         for (const [name, value] of donatedValues) {
-          document.getElementById(name).checked = value;
-          // If the checkbox is ticked, add `is-donated` class to the item container
-          if (value) {
+          if (document.getElementById(name)) { document.getElementById(name).checked = value; }
+          // If the checkbox is ticked, add `is-donated` class to the item container if it exists (covers data change issues)
+          if (document.getElementById(name) && value) {
             if (itemType !== 'fossil') {
               document.getElementById(name).parentElement.parentElement.parentElement.classList.add('is-donated')
             } else {
