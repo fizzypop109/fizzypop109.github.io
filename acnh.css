@@ -16,17 +16,17 @@
 }
 
 .index__logo {
-  height: 400px;
+  height: 50vh;
 }
 
 .index__menu {
   display: flex;
   justify-content: space-between;
-  width: 40%;
 }
 
 .index__menu__button {
   padding: 10px 35px;
+  margin: 0 10px;
 }
 
 /* GENERAL ITEM PAGE STYLES */
@@ -75,21 +75,21 @@
   font-size: 24px;
 }
 
-.button__toggleDonated {
-  margin-right: 20px;
-}
-
 .button__toggleDonated:disabled {
   background-color: #8a8a8a;
 }
 
-.filters__or {
+.filters__dropdown {
   margin: 0 20px;
 }
 
 .filters__search, .filters__dropdown {
   padding: 10px 20px;
   font-size: 20px;
+}
+
+.fossils__filters__search {
+  margin-left: 30px;
 }
 
 .filters__search:active, .filters__search:focus, .filters__dropdown:active, .filters__dropdown:focus {
@@ -320,6 +320,14 @@ input[type="checkbox"] {
     margin: 5px 0;
   }
 
+  .header {
+    margin: 0 10px;
+  }
+
+  .hemisphere__text {
+    margin-right: 5px;
+  }
+
   .container {
     flex-grow: 1;
     height: 400px;
@@ -354,17 +362,19 @@ input[type="checkbox"] {
 @media (max-width: 850px) {
   .filters {
     flex-direction: column;
+    margin: 20px 0;
   }
 
-  .button__toggleDonated {
-    margin-bottom: 20px;
+  .filters__dropdown__container {
+    margin: 10px 0;
   }
 
   .filters__dropdown {
     font-size: 14px;
   }
 
-  .filters__or {
-    margin: 10px 0;
+  .fossils__filters__search {
+    margin-top: 20px;
+    margin-left: 0;
   }
 }
