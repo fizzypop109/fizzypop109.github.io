@@ -330,7 +330,14 @@ input[type="checkbox"] {
 
   .container {
     flex-grow: 1;
-    height: 400px;
+  }
+
+  .name {
+    font-size: 20px;
+  }
+
+  .container__info__text > p {
+    font-size: 14px;
   }
 
   .fossil__container {
@@ -358,6 +365,8 @@ input[type="checkbox"] {
     margin-top: 20px;
   }
 }
+
+/* Keep filters stacked until width is over 850px */
 
 @media (max-width: 850px) {
   .filters {

@@ -297,10 +297,6 @@ var fossils_json =
                     "price": 4000
                 },
                 {
-                    "name": "torso",
-                    "price": 2800
-                },
-                {
                     "name": "tail",
                     "price": 3000
                 }
@@ -336,11 +332,11 @@ var fossils_json =
                     "price": 4000
                 },
                 {
-                    "name": "neck",
+                    "name": "body",
                     "price": 4500
                 },
                 {
-                    "name": "torso",
+                    "name": "tail",
                     "price": 4500
                 }
             ]
@@ -349,7 +345,7 @@ var fossils_json =
             "name": "pteranodon",
             "parts": [
                 {
-                    "name": "skull",
+                    "name": "body",
                     "price": 4000
                 },
                 {
@@ -387,7 +383,7 @@ var fossils_json =
                     "price": 2500
                 },
                 {
-                    "name": "torso",
+                    "name": "tail",
                     "price": 2000
                 }
             ]
