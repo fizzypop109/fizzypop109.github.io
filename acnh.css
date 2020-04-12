@@ -332,11 +332,11 @@ input[type="checkbox"] {
     flex-grow: 1;
   }
 
-  .name {
+  .name, .part__name {
     font-size: 20px;
   }
 
-  .container__info__text > p {
+  .container__info__text > p, .price {
     font-size: 14px;
   }
 
