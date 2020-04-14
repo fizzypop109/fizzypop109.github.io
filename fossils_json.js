@@ -20,7 +20,7 @@ var fossils_json =
             "parts": [
                 {
                     "name": "skull",
-                    "price": 3500
+                    "price": 5000
                 },
                 {
                     "name": "torso",
@@ -36,23 +36,6 @@ var fossils_json =
             
             "name": "anomalocaris",
             "price": 2000
-        },
-        {
-            "name": "apatosaurus",
-            "parts": [
-                {
-                    "name": "skull",
-                    "price": 5000
-                },
-                {
-                    "name": "torso",
-                    "price": 4500
-                },
-                {
-                    "name": "tail",
-                    "price": 4000
-                }
-            ]
         },
         {
             
@@ -127,10 +110,6 @@ var fossils_json =
                 {
                     "name": "torso",
                     "price": 5000
-                },
-                {
-                    "name": "tail",
-                    "price": 4500
                 }
             ]
         },
@@ -153,11 +132,11 @@ var fossils_json =
                 },
                 {
                     "name": "neck",
-                    "price": 5000
+                    "price": 4500
                 },
                 {
                     "name": "chest",
-                    "price": 4500
+                    "price": 4000
                 },
                 {
                     "name": "pelvis",
@@ -165,7 +144,7 @@ var fossils_json =
                 },
                 {
                     "name": "tail",
-                    "price": 4500
+                    "price": 5000
                 },
                 {
                     "name": "tail tip",
@@ -226,7 +205,7 @@ var fossils_json =
         {
             
             "name": "juramaia",
-            "price": 1500
+            "price": 1000
         },
         {
             "name": "mammoth",
@@ -298,7 +277,7 @@ var fossils_json =
                 },
                 {
                     "name": "tail",
-                    "price": 3000
+                    "price": 3500
                 }
             ]
         },
@@ -318,11 +297,6 @@ var fossils_json =
                     "price": 2500
                 }
             ]
-        },
-        {
-            
-            "name": "peking man",
-            "price": 1100
         },
         {
             "name": "plesiosaur",
@@ -362,7 +336,7 @@ var fossils_json =
             "name": "quetzalcoatlus",
             "parts": [
                 {
-                    "name": "skull",
+                    "name": "torso",
                     "price": 4500
                 },
                 {
@@ -402,11 +376,11 @@ var fossils_json =
                 },
                 {
                     "name": "torso",
-                    "price": 3000
+                    "price": 5000
                 },
                 {
                     "name": "tail",
-                    "price": 2000
+                    "price": 4000
                 }
             ]
         },
@@ -428,32 +402,15 @@ var fossils_json =
             ]
         },
         {
-            "name": "styracosaurus",
-            "parts": [
-                {
-                    "name": "skull",
-                    "price": 3500
-                },
-                {
-                    "name": "torso",
-                    "price": 3000
-                },
-                {
-                    "name": "tail",
-                    "price": 2500
-                }
-            ]
-        },
-        {
             "name": "triceratops",
             "parts": [
                 {
                     "name": "skull",
-                    "price": 6000
+                    "price": 5500
                 },
                 {
                     "name": "torso",
-                    "price": 5500
+                    "price": 5000
                 },
                 {
                     "name": "tail",
@@ -480,19 +437,6 @@ var fossils_json =
                 {
                     "name": "tail",
                     "price": 5000
-                }
-            ]
-        },
-        {
-            "name": "velociraptor",
-            "parts": [
-                {
-                    "name": "skull",
-                    "price": 3000
-                },
-                {
-                    "name": "torso",
-                    "price": 2500
                 }
             ]
         }
