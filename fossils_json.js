@@ -115,11 +115,6 @@ var fossils_json =
         },
         {
             
-            "name": "dinosaur egg",
-            "price": 1400
-        },
-        {
-            
             "name": "dinosaur track",
             "price": 1000
         },
@@ -161,29 +156,6 @@ var fossils_json =
             
             "name": "eusthenopteron",
             "price": 2000
-        },
-        {
-            
-            "name": "fern fossil",
-            "price": 1000
-        },
-        {
-            
-            "name": "fossilized feces",
-            "price": 1100
-        },
-        {
-            "name": "ichthyosaur",
-            "parts": [
-                {
-                    "name": "skull",
-                    "price": 2500
-                },
-                {
-                    "name": "torso",
-                    "price": 2000
-                }
-            ]
         },
         {
             "name": "iguanodon",
@@ -269,7 +241,7 @@ var fossils_json =
             ]
         },
         {
-            "name": "pachycephalo",
+            "name": "pachycephalosaurus",
             "parts": [
                 {
                     "name": "skull",
