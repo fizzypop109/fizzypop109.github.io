@@ -88,7 +88,7 @@
   font-size: 20px;
 }
 
-.fossils__filters__search {
+.fossils__filters__search, .art__filters__search {
   margin-left: 30px;
 }
 
@@ -137,6 +137,11 @@
   margin-top: 10px;
   height: 110px;
   border: 5px solid #4c7566;
+}
+
+.art__container__info > .art__image {
+  height: auto;
+  max-width: 90%;
 }
 
 .container p, .container h2 {
@@ -353,6 +358,10 @@ input[type="checkbox"] {
     justify-content: space-between;
   }
 
+  .art__container__info {
+    flex-direction: column;
+  }
+
   .container__info__text {
     margin-left: 10px;
   }
@@ -382,7 +391,7 @@ input[type="checkbox"] {
     font-size: 14px;
   }
 
-  .fossils__filters__search {
+  .fossils__filters__search, .art__filters__search {
     margin-top: 20px;
     margin-left: 0;
   }

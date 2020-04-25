@@ -26,6 +26,9 @@ switch(document.getElementsByClassName('title')[0].innerText) {
     items = JSON.parse(JSON.stringify(fossils_json));
     itemType = 'fossil';
     break;
+  case "Art":
+    items = JSON.parse(JSON.stringify(art_json));
+    itemType = 'art';
 }
 
 // Get the Hemisphere value from localStorage, else set to Southern
@@ -35,7 +38,7 @@ var hemisphere = localStorage.getItem('hemisphere') || "Southern";
 var donatedHidden = localStorage.getItem('donatedHidden') || 'false';
 
 // Check if the user already has had their fossil data cleared, else set to false
-var oldFossilsCleared = localStorage.getItem('oldFossilsCleared') || "false";
+// var oldFossilsCleared = localStorage.getItem('oldFossilsCleared') || "false";
 
 // Get and store the main container (holds all the item containers) and the hemipshere button and toggleDonated button
 var container = document.getElementsByClassName("main-container")[0];
@@ -90,8 +93,8 @@ function createItem(item) {
   var itemBox = document.createElement("div");
   itemBox.classList.add(itemType + "__container", "container");
 
-  // For Bugs and Fish items
-  if (itemType !== "fossil") {
+  // For Bug and Fish items
+  if (itemType == "bug" || itemType == "fish") {
     // Item info
     var infoDiv = document.createElement("div");
     infoDiv.classList.add(itemType + "__container__info", "info");
@@ -189,6 +192,84 @@ function createItem(item) {
     itemBox.appendChild(itemTrackers);
 
     container.appendChild(itemBox);
+  } else if (itemType == "art") {
+    // Item info
+    var infoDiv = document.createElement("div");
+    infoDiv.classList.add(itemType + "__container__info", "info");
+
+    // Item image
+    var itemImage = document.createElement("img");
+    itemImage.classList.add(itemType + "__image", "image");
+    itemImage.src = item.image;
+
+    // Item info text (name, real name, artist, price)
+    var infoTextDiv = document.createElement("div");
+    infoTextDiv.classList.add(itemType + "__container__info__text", "container__info__text");
+
+    // Item name
+    var itemName = document.createElement("h2");
+    itemName.innerText = item.name;
+    itemName.classList.add(itemType + "__name", "name");
+
+    // Item real name
+    var itemRealName = document.createElement("p");
+    itemRealName.innerText = "Real Name: " + item["real name"];
+    itemRealName.classList.add(itemType + "__realName", "realName");
+
+    // Item artist
+    var itemArtist = document.createElement("p");
+    itemArtist.innerText = "Artist: " + item.artist;
+    itemArtist.classList.add(itemType + "__artist", "artist");
+      
+    // Item price
+    var itemPrice = document.createElement("p");
+    itemPrice.innerText = item.price != 0 ? "Buy for: " + item.price + " bells" : "Buy for: Unknown bells";
+    itemPrice.classList.add(itemType + "__price", "price");
+
+    // Item fake info
+    var itemFake = document.createElement("p");
+    itemFake.innerText = item.fake != 0 ? "Fake If... " + item.fake : "Fake If... Unknown";
+    itemFake.classList.add(itemType + "__fake", "fake");
+
+    // Checkbox container and items
+    var itemTrackers = document.createElement("div");
+    itemTrackers.classList.add(itemType + "__trackers", "trackers");
+
+    var itemTrackersItems = document.createElement("div");
+    itemTrackersItems.classList.add(itemType + "__trackers__items", "trackers__items");
+
+    // Donated checkbox
+    var itemDonated = document.createElement("input");
+    itemDonated.classList.add(itemType + "__donated", "donated");
+    itemDonated.type = "checkbox";
+    itemDonated.name = "Donated";
+    itemDonated.id = item.name + "_donated";
+
+    var itemDonated_label = document.createElement("label");
+    itemDonated_label.innerText = "Donated?";
+    itemDonated_label.htmlFor = item.name + "_donated";
+
+    // Append elements
+    infoTextDiv.appendChild(itemName);
+    infoTextDiv.appendChild(itemRealName);
+    infoTextDiv.appendChild(itemArtist);
+    infoTextDiv.appendChild(itemPrice);
+    infoTextDiv.appendChild(itemFake);
+
+    infoDiv.appendChild(itemImage);
+    infoDiv.appendChild(infoTextDiv);
+
+    itemBox.appendChild(infoDiv);
+
+    itemTrackersItems.appendChild(itemDonated_label);
+    itemTrackersItems.appendChild(itemDonated);
+
+    itemTrackers.appendChild(itemTrackersItems);
+
+    itemBox.appendChild(itemTrackers);
+
+    container.appendChild(itemBox);
+
   } else {
     // If the fossil has multiple parts, create those elements, otherwise, just add a name and price
     if (item.parts) {
@@ -414,14 +495,14 @@ function loadData() {
   data = JSON.parse(localStorage.getItem('data')) || {};
 
   // Clear out the old fossil data if it hasn't already been done
-  if (oldFossilsCleared == "false") {
-    // Make sure data actually HAS fossil data first
-    if (data['fossil']) {
-      data['fossil'] = {};
-      localStorage.setItem('data', JSON.stringify(data));
-      localStorage.setItem('oldFossilsCleared', "true");
-    }
-  }
+  // if (oldFossilsCleared == "false") {
+  //   // Make sure data actually HAS fossil data first
+  //   if (data['fossil']) {
+  //     data['fossil'] = {};
+  //     localStorage.setItem('data', JSON.stringify(data));
+  //     localStorage.setItem('oldFossilsCleared', "true");
+  //   }
+  // }
 
   // If data isn't empty, separate it out into caughtValues and donatedValues, and set the checkboxes that were stored
   if (Object.keys(data).length !== 0) {
@@ -476,8 +557,8 @@ function checkboxSetup() {
   var donatedCheckboxes = document.getElementsByClassName(itemType + '__donated');
   var donatedValues = itemTypeValues['donatedValues'] || {};
 
-  // Temporary separation of fossil and non-fossil setup until I clean it up
-  if (itemType !== "fossil") {
+  // Temporary separation of fossil, art and non-fossil,art setup until I clean it up
+  if (itemType !== "fossil" && itemType !== "art") {
     // Add a change listener to each caughtCheckbox
     for (let i = 0; i < caughtCheckboxes.length; i++) {
       caughtCheckboxes[i].addEventListener("change", function() {
@@ -501,12 +582,15 @@ function checkboxSetup() {
 
         // If donated box is ticked, check the caught box too
         if (this.checked) {
-          document.getElementById(this.id).previousSibling.previousSibling.checked = true;
-          caughtValues[document.getElementById(this.id).previousSibling.previousSibling.id] = true;
+          // Art items don't have a caught checkbox
+          if (itemType != "art") {
+            document.getElementById(this.id).previousSibling.previousSibling.checked = true;
+            caughtValues[document.getElementById(this.id).previousSibling.previousSibling.id] = true;
 
-          itemTypeValues['caughtValues'] = caughtValues;
-          data[itemType] = itemTypeValues;
-          localStorage.setItem('data', JSON.stringify(data));
+            itemTypeValues['caughtValues'] = caughtValues;
+            data[itemType] = itemTypeValues;
+            localStorage.setItem('data', JSON.stringify(data));
+          }
 
           // add is-donated class to the container for filtering purposes
           itemContainer.classList.add('is-donated')
@@ -514,7 +598,7 @@ function checkboxSetup() {
           // remove is-donated class from the container for filtering purposes
           itemContainer.classList.remove('is-donated')
         }
-
+      
         // add donatedValues to itemTypeValues, add itemTypeValues to data, then set data in localStorage
         itemTypeValues['donatedValues'] = donatedValues;
         data[itemType] = itemTypeValues;
@@ -551,12 +635,15 @@ function checkboxSetup() {
 
         // If donated box is ticked, check the caught box too
         if (this.checked == true) {
-          document.getElementById(this.id).previousSibling.previousSibling.checked = true;
-          caughtValues[document.getElementById(this.id).previousSibling.previousSibling.id] = true;
+          // Art items don't have a caught checkbox
+          if (itemType != "art") {
+            document.getElementById(this.id).previousSibling.previousSibling.checked = true;
+            caughtValues[document.getElementById(this.id).previousSibling.previousSibling.id] = true;
 
-          itemTypeValues['caughtValues'] = caughtValues;
-          data[itemType] = itemTypeValues;
-          localStorage.setItem('data', JSON.stringify(data));
+            itemTypeValues['caughtValues'] = caughtValues;
+            data[itemType] = itemTypeValues;
+            localStorage.setItem('data', JSON.stringify(data));
+          }
 
           // add is-donated class to the container for filtering purposes
           if (itemContainer.classList.contains('parts')) {
