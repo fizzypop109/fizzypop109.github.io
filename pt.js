@@ -29,6 +29,11 @@ switch(document.getElementsByClassName('title')[0].innerText) {
   case "Art":
     items = JSON.parse(JSON.stringify(art_json));
     itemType = 'art';
+    break;
+  case "Songs":
+    items = JSON.parse(JSON.stringify(songs_json));
+    itemType = 'song';
+    break;
 }
 
 // Get the Hemisphere value from localStorage, else set to Southern
@@ -269,7 +274,65 @@ function createItem(item) {
     itemBox.appendChild(itemTrackers);
 
     container.appendChild(itemBox);
+  } else if (itemType == 'song') {
+    // Item info
+    var infoDiv = document.createElement("div");
+    infoDiv.classList.add(itemType + "__container__info", "info");
 
+    // Item image
+    var itemImage = document.createElement("img");
+    itemImage.classList.add(itemType + "__image", "image");
+    itemImage.src = item.image;
+
+    // Item info text (name, real name, artist, price)
+    var infoTextDiv = document.createElement("div");
+    infoTextDiv.classList.add(itemType + "__container__info__text", "container__info__text");
+
+    // Item name
+    var itemName = document.createElement("h2");
+    itemName.innerText = item.name;
+    itemName.classList.add(itemType + "__name", "name");
+      
+    // Item price
+    var itemPrice = document.createElement("p");
+    itemPrice.innerText = item.price != 0 ? "Buy for: " + item.price + " bells" : "Buy for: Unknown bells";
+    itemPrice.classList.add(itemType + "__price", "price");
+
+    // Checkbox container and items
+    var itemTrackers = document.createElement("div");
+    itemTrackers.classList.add(itemType + "__trackers", "trackers");
+
+    var itemTrackersItems = document.createElement("div");
+    itemTrackersItems.classList.add(itemType + "__trackers__items", "trackers__items");
+
+    // Owned checkbox
+    var itemDonated = document.createElement("input");
+    itemDonated.classList.add(itemType + "__donated", "donated");
+    itemDonated.type = "checkbox";
+    itemDonated.name = "Donated";
+    itemDonated.id = item.name + "_donated";
+
+    var itemDonated_label = document.createElement("label");
+    itemDonated_label.innerText = "Owned?";
+    itemDonated_label.htmlFor = item.name + "_donated";
+
+    // Append elements
+    infoTextDiv.appendChild(itemName);
+    infoTextDiv.appendChild(itemPrice);
+
+    infoDiv.appendChild(itemImage);
+    infoDiv.appendChild(infoTextDiv);
+
+    itemBox.appendChild(infoDiv);
+
+    itemTrackersItems.appendChild(itemDonated_label);
+    itemTrackersItems.appendChild(itemDonated);
+
+    itemTrackers.appendChild(itemTrackersItems);
+
+    itemBox.appendChild(itemTrackers);
+
+    container.appendChild(itemBox);
   } else {
     // If the fossil has multiple parts, create those elements, otherwise, just add a name and price
     if (item.parts) {
@@ -583,7 +646,7 @@ function checkboxSetup() {
         // If donated box is ticked, check the caught box too
         if (this.checked) {
           // Art items don't have a caught checkbox
-          if (itemType != "art") {
+          if (itemType != "art" && itemType != "song") {
             document.getElementById(this.id).previousSibling.previousSibling.checked = true;
             caughtValues[document.getElementById(this.id).previousSibling.previousSibling.id] = true;
 

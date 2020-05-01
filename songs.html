@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Songs</title>
+    <link href="https://fonts.googleapis.com/css?family=Mali&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="acnh.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body class="songs__body body" onload="loadData()">
+    <div class="songs__header header">
+      <button type="button" class="button__back" onclick="location.href = 'index.html';">
+        Back
+      </button>
+      <h1 class="songs__title title">Songs</h1>
+    </div>
+
+    <div class="songs__filters filters">
+      <button type="button" class="button__toggleDonated" onclick="toggleDonated()">
+        Checking...
+      </button>
+      <input type="text" class="songs__filters__search filters__search" placeholder="Search!" oninput="search()"></input>
+    </div>
+
+    <div class="songs__container main-container">
+    </div>
+  </body>
+
+  <script src="songs_json.js"></script>
+  <script src="pt.js"></script>
+
+</html>

@@ -88,7 +88,7 @@
   font-size: 20px;
 }
 
-.fossils__filters__search, .art__filters__search {
+.fossils__filters__search, .art__filters__search, .songs__filters__search {
   margin-left: 30px;
 }
 
@@ -391,7 +391,7 @@ input[type="checkbox"] {
     font-size: 14px;
   }
 
-  .fossils__filters__search, .art__filters__search {
+  .fossils__filters__search, .art__filters__search, .songs__filters__search {
     margin-top: 20px;
     margin-left: 0;
   }
