@@ -25,7 +25,7 @@ var bugs_json =
         {
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_14_i.png",
             "name": "atlas moth",
-            "price": 1300,
+            "price": 3000,
             "location": "on trees",
             "time": ["0", "1", "2", "3", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "19", "20", "21", "22", "23"],
             "season": {
