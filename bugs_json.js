@@ -37,7 +37,7 @@ var bugs_json =
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_68_i.png",
             "name": "bagworm",
             "price": 600,
-            "location": "on trees",
+            "location": "shaking trees",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
@@ -74,7 +74,7 @@ var bugs_json =
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
-                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
+                "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -85,7 +85,7 @@ var bugs_json =
             "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
-                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
+                "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -107,7 +107,7 @@ var bugs_json =
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
-                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
+                "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -129,7 +129,7 @@ var bugs_json =
             "time": ["", "", "", "", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "april", "may", "june", "july", "august", "", "", "", ""],
-                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
+                "southern": ["january", "february", "", "", "", "", "", "", "", "october", "november", "december"]
             }
         },
         {
@@ -250,7 +250,7 @@ var bugs_json =
             "time": ["", "", "", "", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "16", "17", "18", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
-                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
+                "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -261,7 +261,7 @@ var bugs_json =
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "", "", "", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "june", "", "", "", "", "", ""],
-                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
+                "southern": ["", "", "", "", "", "", "", "", "", "", "", "december"]
             }
         },
         {
@@ -294,7 +294,7 @@ var bugs_json =
             "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
-                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
+                "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -368,10 +368,10 @@ var bugs_json =
             "name": "great purple emperor",
             "price": 3000,
             "location": "flying",
-            "time": ["", "", "", "", "4", "5", "6", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+            "time": ["", "", "", "", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "may", "june", "july", "august", "", "", "", ""],
-                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
+                "southern": ["january", "february", "", "", "", "", "", "", "", "", "november", "december"]
             }
         },
         {
@@ -444,11 +444,11 @@ var bugs_json =
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_45_i.png",
             "name": "jewel beetle",
             "price": 2400,
-            "location": "on trees",
+            "location": "on tree stumps",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "april", "may", "june", "july", "august", "", "", "", ""],
-                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
+                "southern": ["january", "february", "", "", "", "", "", "", "", "october", "november", "december"]
             }
         },
         {
@@ -602,7 +602,7 @@ var bugs_json =
             "time": ["", "", "", "", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "march", "april", "may", "june", "", "", "", "", "", ""],
-                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
+                "southern": ["", "", "", "", "", "", "", "", "september", "october", "november", "december"]
             }
         },
         {
@@ -690,7 +690,7 @@ var bugs_json =
             "time": ["", "", "", "", "", "", "", "", "8", "9", "10", "11", "12", "13", "14", "15", "16", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
-                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
+                "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -712,7 +712,7 @@ var bugs_json =
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
-                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
+                "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -723,7 +723,7 @@ var bugs_json =
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "", "", "", ""],
-                "southern": ["", "", "", "", "", "", "", "", "", "", "", ""]
+                "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
@@ -741,7 +741,7 @@ var bugs_json =
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_75_i.png",
             "name": "snail",
             "price": 250,
-            "location": "on rocks (raining)",
+            "location": "on rocks (raining) & on bushes",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
@@ -807,7 +807,7 @@ var bugs_json =
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_46_i.png",
             "name": "violin beetle",
             "price": 450,
-            "location": "on trees",
+            "location": "on tree stumps",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "may", "june", "", "", "september", "october", "november", ""],
@@ -851,7 +851,7 @@ var bugs_json =
             "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/musi_25_i.png",
             "name": "wasp",
             "price": 2500,
-            "location": "on trees",
+            "location": "shaking trees",
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],

@@ -5,7 +5,6 @@ var art_json =
             "name": "academic painting",
             "real name": "vitruvian man",
             "artist": "leonardo da vinci",
-            "price": 0,
             "fake": "there is a coffee stain in the upper right corner"
         },
         {
@@ -13,7 +12,6 @@ var art_json =
             "name": "amazing painting",
             "real name": "the night watch",
             "artist": "rembrandt van rijn",
-            "price": 0,
             "fake": "the man in front (wearing black) is missing his hat"
         },
         {
@@ -21,7 +19,6 @@ var art_json =
             "name": "ancient statue",
             "real name": "jomon period dogu figurine shakoki-dogu",
             "artist": "unknown",
-            "price": 0,
             "fake": "the statue has two antennas coming out of the side of its head"
         },
         {
@@ -29,7 +26,6 @@ var art_json =
             "name": "basic painting",
             "real name": "blue boy",
             "artist": "thomas gainsborough",
-            "price": 0,
             "fake": "the man has full bangs"
         },
         {
@@ -37,7 +33,6 @@ var art_json =
             "name": "beautiful statue",
             "real name": "venus de milo",
             "artist": "alexandros of antioch",
-            "price": 0,
             "fake": "she is wearing a necklace or collar"
         },
         {
@@ -45,7 +40,6 @@ var art_json =
             "name": "calm painting",
             "real name": "a sunday afternoon on the island of la grande jatte",
             "artist": "georges seurat",
-            "price": 0,
             "fake": "this painting is always genuine"
         },
         {
@@ -53,7 +47,6 @@ var art_json =
             "name": "common painting",
             "real name": "the gleaners",
             "artist": "jean-Francois millet",
-            "price": 0,
             "fake": "this painting is always genuine"
         },
         {
@@ -61,7 +54,6 @@ var art_json =
             "name": "detailed painting",
             "real name": "ajisai sokeizu",
             "artist": "ito jakuchu",
-            "price": 0,
             "fake": "the foliage is purple (instead of blue) and is missing a signature on the left"
         },
         {
@@ -69,7 +61,6 @@ var art_json =
             "name": "dynamic painting",
             "real name": "the great wave off kanagawa",
             "artist": "katsushika hokusai",
-            "price": 0,
             "fake": "this painting is always genuine"
         },
         {
@@ -77,7 +68,6 @@ var art_json =
             "name": "familiar statue",
             "real name": "the thinker",
             "artist": "auguste rodin",
-            "price": 0,
             "fake": "this statue is always genuine"
         },
         {
@@ -85,7 +75,6 @@ var art_json =
             "name": "famous painting",
             "real name": "mona lisa",
             "artist": "leonardo da vinci",
-            "price": 0,
             "fake": "her eyebrows are slanted upwards (looks angry)"
         },
         {
@@ -93,7 +82,6 @@ var art_json =
             "name": "flowery painting",
             "real name": "sunflowers",
             "artist": "vincent van gogh",
-            "price": 0,
             "fake": "this painting is always genuine"
         },
         {
@@ -101,7 +89,6 @@ var art_json =
             "name": "gallant statue",
             "real name": "david",
             "artist": "michelangelo",
-            "price": 0,
             "fake": "he is holding a book under his arm or is holding cloth"
         },
         {
@@ -109,7 +96,6 @@ var art_json =
             "name": "glowing painting",
             "real name": "the fighting temeraire",
             "artist": "joseph mallord william turner",
-            "price": 0,
             "fake": "this painting is always genuine"
         },
         {
@@ -117,7 +103,6 @@ var art_json =
             "name": "graceful painting",
             "real name": "beauty looking back",
             "artist": "hishikawa moronobu",
-            "price": 0,
             "fake": "the woman takes up around 80% of the painting's height and is missing a white tag in her hair"
         },
         {
@@ -125,7 +110,6 @@ var art_json =
             "name": "great statue",
             "real name": "king kamehameha I",
             "artist": "thomas ridgeway gould",
-            "price": 0,
             "fake": "this statue is always genuine"
         },
         {
@@ -133,7 +117,6 @@ var art_json =
             "name": "informative statue",
             "real name": "rosetta stone",
             "artist": "unknown",
-            "price": 0,
             "fake": "the stone is blue"
         },
         {
@@ -141,7 +124,6 @@ var art_json =
             "name": "jolly painting",
             "real name": "summer",
             "artist": "giuseppe arcimboldo",
-            "price": 0,
             "fake": "the sprout is missing from the chest"
         },
         {
@@ -149,7 +131,6 @@ var art_json =
             "name": "motherly statue",
             "real name": "musei capitolini",
             "artist": "unknown",
-            "price": 0,
             "fake": "there is a tongue sticking out of the mouth"
         },
         {
@@ -157,7 +138,6 @@ var art_json =
             "name": "moving painting",
             "real name": "the birth of venus",
             "artist": "sandro botticelli",
-            "price": 0,
             "fake": "the trees are missing in the upper right corner"
         },
         {
@@ -165,7 +145,6 @@ var art_json =
             "name": "moody painting",
             "real name": "the sower",
             "artist": "jean-Francois millet",
-            "price": 0,
             "fake": "this painting is always genuine"
         },
         {
@@ -173,7 +152,6 @@ var art_json =
             "name": "mysterious painting",
             "real name": "isle of the dead",
             "artist": "arnold bocklin",
-            "price": 0,
             "fake": "this painting is always genuine"
         },
         {
@@ -181,7 +159,6 @@ var art_json =
             "name": "mystic statue",
             "real name": "bust of nefertiti",
             "artist": "thutmose",
-            "price": 0,
             "fake": "there is an earring in the right ear (on the viewer's left)"
         },
         {
@@ -189,7 +166,6 @@ var art_json =
             "name": "nice painting",
             "real name": "the fifer",
             "artist": "edouard manet",
-            "price": 0,
             "fake": "this painting is always genuine"
         },
         {
@@ -197,7 +173,6 @@ var art_json =
             "name": "perfect painting",
             "real name": "apples and oranges",
             "artist": "paul cezanne",
-            "price": 0,
             "fake": "this painting is always genuine"
         },
         {
@@ -205,7 +180,6 @@ var art_json =
             "name": "proper painting",
             "real name": "a bar at the folies-Bergere",
             "artist": "edouard manet",
-            "price": 0,
             "fake": "this painting is always genuine"
         },
         {
@@ -213,7 +187,6 @@ var art_json =
             "name": "quaint painting",
             "real name": "the milkmaid",
             "artist": "johannes vermeer",
-            "price": 0,
             "fake": "there is a thicker stream of milk pouring from the jug"
         },
         {
@@ -221,7 +194,6 @@ var art_json =
             "name": "rock-head statue",
             "real name": "olmec colossal head",
             "artist": "unknown",
-            "price": 0,
             "fake": "he is smiling"
         },
         {
@@ -229,7 +201,6 @@ var art_json =
             "name": "robust statue",
             "real name": "discobolus",
             "artist": "unknown",
-            "price": 0,
             "fake": "he is wearing a watch on his raised arm or the disc has a loop (looks like a shield)"
         },
         {
@@ -237,7 +208,6 @@ var art_json =
             "name": "scary painting",
             "real name": "otani oniji III as yakko edobei",
             "artist": "toshusai sharaku",
-            "price": 0,
             "fake": "his eyebrows are slanted downwards (looks sad)"
         },
         {
@@ -245,7 +215,6 @@ var art_json =
             "name": "scenic painting",
             "real name": "the hunters in the snow",
             "artist": "pieter brueghel the elder",
-            "price": 0,
             "fake": "the hunter between the trees and the two dogs to his left are missing"
         },
         {
@@ -253,7 +222,6 @@ var art_json =
             "name": "serene painting",
             "real name": "lady with an ermine",
             "artist": "leonardo da vinci",
-            "price": 0,
             "fake": "the ermine has racoon-like circles around its eyes"
         },
         {
@@ -261,7 +229,6 @@ var art_json =
             "name": "sinking painting",
             "real name": "ophelia",
             "artist": "john everett millais",
-            "price": 0,
             "fake": "this painting is always genuine"
         },
         {
@@ -269,7 +236,6 @@ var art_json =
             "name": "solemn painting",
             "real name": "las meninas",
             "artist": "diego velasquez",
-            "price": 0,
             "fake": "the man in the back's arm is raised higher"
         },
         {
@@ -277,7 +243,6 @@ var art_json =
             "name": "tremendous statue",
             "real name": "houmuwu ding",
             "artist": "unknown",
-            "price": 0,
             "fake": "the statue has a lid"
         },
         {
@@ -285,7 +250,6 @@ var art_json =
             "name": "twinkling painting",
             "real name": "the starry night",
             "artist": "vincent van gogh",
-            "price": 0,
             "fake": "this painting is always genuine"
         },
         {
@@ -293,7 +257,6 @@ var art_json =
             "name": "valiant statue",
             "real name": "nike of samothrace",
             "artist": "unknown",
-            "price": 0,
             "fake": "nike's left leg is forward (instead of right) or she is angled slightly differently"
         },
         {
@@ -301,7 +264,6 @@ var art_json =
             "name": "warm painting",
             "real name": "the clothed maja",
             "artist": "francisco de goya",
-            "price": 0,
             "fake": "this painting is always genuine"
         },
         {
@@ -309,7 +271,6 @@ var art_json =
             "name": "warrior statue",
             "real name": "terracotta army",
             "artist": "unknown",
-            "price": 0,
             "fake": "he is holding a shovel"
         },
         {
@@ -317,7 +278,6 @@ var art_json =
             "name": "wild painting - left",
             "real name": "folding screen of fujin and raijin",
             "artist": "tawaraya sotatsu",
-            "price": 0,
             "fake": "the beast is green"
         },
         {
@@ -325,7 +285,6 @@ var art_json =
             "name": "wild painting - right",
             "real name": "folding screen of fujin and raijin",
             "artist": "tawaraya sotatsu",
-            "price": 0,
             "fake": "the beast is white"
         },
         {
@@ -333,7 +292,6 @@ var art_json =
             "name": "wistful painting",
             "real name": "girl with a pearl earring",
             "artist": "johannes vermeer",
-            "price": 0,
             "fake": "the girl has a star-shaped earring or her eyes are closed"
         },
         {
@@ -341,7 +299,6 @@ var art_json =
             "name": "worthy painting",
             "real name": "liberty leading the people",
             "artist": "eugene delacroix",
-            "price": 0,
             "fake": "this painting is always genuine"
         },
     ]

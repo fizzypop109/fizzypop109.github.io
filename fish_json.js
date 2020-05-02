@@ -545,7 +545,7 @@ var fish_json =
             "name": "nibble fish",
             "price": 1500,
             "location": "river",
-            "shadowSize": 2,
+            "shadowSize": 1,
             "time": ["", "", "", "", "", "", "", "", "", "9", "10", "11", "12", "13", "14", "15", "", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "may", "june", "july", "august", "september", "", "", ""],
@@ -797,7 +797,7 @@ var fish_json =
             "name": "snapping turtle",
             "price": 5000,
             "location": "river",
-            "shadowSize": 5,
+            "shadowSize": 4,
             "time": ["0", "1", "2", "3", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "april", "may", "june", "july", "august", "september", "october", "", ""],

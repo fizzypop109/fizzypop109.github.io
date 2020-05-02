@@ -225,11 +225,6 @@ function createItem(item) {
     var itemArtist = document.createElement("p");
     itemArtist.innerText = "Artist: " + item.artist;
     itemArtist.classList.add(itemType + "__artist", "artist");
-      
-    // Item price
-    var itemPrice = document.createElement("p");
-    itemPrice.innerText = item.price != 0 ? "Buy for: " + item.price + " bells" : "Buy for: Unknown bells";
-    itemPrice.classList.add(itemType + "__price", "price");
 
     // Item fake info
     var itemFake = document.createElement("p");
@@ -258,7 +253,6 @@ function createItem(item) {
     infoTextDiv.appendChild(itemName);
     infoTextDiv.appendChild(itemRealName);
     infoTextDiv.appendChild(itemArtist);
-    infoTextDiv.appendChild(itemPrice);
     infoTextDiv.appendChild(itemFake);
 
     infoDiv.appendChild(itemImage);
@@ -292,11 +286,6 @@ function createItem(item) {
     var itemName = document.createElement("h2");
     itemName.innerText = item.name;
     itemName.classList.add(itemType + "__name", "name");
-      
-    // Item price
-    var itemPrice = document.createElement("p");
-    itemPrice.innerText = item.price != 0 ? "Buy for: " + item.price + " bells" : "Buy for: Unknown bells";
-    itemPrice.classList.add(itemType + "__price", "price");
 
     // Checkbox container and items
     var itemTrackers = document.createElement("div");
@@ -318,7 +307,6 @@ function createItem(item) {
 
     // Append elements
     infoTextDiv.appendChild(itemName);
-    infoTextDiv.appendChild(itemPrice);
 
     infoDiv.appendChild(itemImage);
     infoDiv.appendChild(infoTextDiv);
