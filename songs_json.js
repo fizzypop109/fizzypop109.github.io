@@ -161,6 +161,10 @@ var songs_json =
             "name": "K.K Island"
         },
         {
+            "image": "Images/Songs/kk-jazz.png",
+            "name": "K.K Jazz"
+        },
+        {
             "image": "Images/Songs/kk-jongara.png",
             "name": "K.K. Jongara"
         },
