@@ -18,6 +18,10 @@ switch(document.getElementsByClassName('title')[0].innerText) {
     items = JSON.parse(JSON.stringify(fish_json));
     itemType = 'fish';
     break;
+  case "Sea":
+    items = JSON.parse(JSON.stringify(sea_json));
+    itemType = 'sea';
+    break;
   case "Bugs":
     items = JSON.parse(JSON.stringify(bugs_json));
     itemType = 'bug';
@@ -99,7 +103,7 @@ function createItem(item) {
   itemBox.classList.add(itemType + "__container", "container");
 
   // For Bug and Fish items
-  if (itemType == "bug" || itemType == "fish") {
+  if (itemType == "bug" || itemType == "fish" || itemType == "sea") {
     // Item info
     var infoDiv = document.createElement("div");
     infoDiv.classList.add(itemType + "__container__info", "info");
@@ -122,11 +126,6 @@ function createItem(item) {
     var itemPrice = document.createElement("p");
     itemPrice.innerText = item.price != 0 ? "Sell for: " + item.price + " bells" : "Sell for: Unknown bells";
     itemPrice.classList.add(itemType + "__price", "price");
-
-    // Item location
-    var itemLocation = document.createElement("p");
-    itemLocation.innerText = item.location != "" ? "Location: " + item.location : "Location: Unknown";
-    itemLocation.classList.add(itemType + "__location", "location");
 
     // Item time availability
     var itemTime = createClock(item);
@@ -164,15 +163,35 @@ function createItem(item) {
 
     infoTextDiv.appendChild(itemName);
     infoTextDiv.appendChild(itemPrice);
-    infoTextDiv.appendChild(itemLocation);
 
-    if (itemType == "fish") {
+     // Sea creatures do not have a location
+    if (itemType == "bug" || itemType == "fish") {
+      // Item location
+      var itemLocation = document.createElement("p");
+      itemLocation.innerText = item.location != "" ? "Location: " + item.location : "Location: Unknown";
+      itemLocation.classList.add(itemType + "__location", "location");
+
+      infoTextDiv.appendChild(itemLocation);
+    }
+
+    // Fish and sea creatures have a shadow size
+    if (itemType == "fish" || itemType == "sea") {
       // Fish shadow size
       var itemSize = document.createElement("p");
       itemSize.innerText = item.shadowSize != "" ? "Shadow Size: " + item.shadowSize : "Shadow Size: Unknown";
       itemSize.classList.add(itemType + "__size", "size");
 
       infoTextDiv.appendChild(itemSize);
+    }
+
+    // Sea creatures also have a speed
+    if (itemType == "sea") {
+      // Sea creature speed
+      var itemSpeed = document.createElement("p");
+      itemSpeed.innerText = item.speed != "" ? "Speed: " + item.speed : "Speed: Unknown";
+      itemSpeed.classList.add(itemType + "__speed", "speed");
+
+      infoTextDiv.appendChild(itemSpeed);
     }
 
     infoDiv.appendChild(itemImage);

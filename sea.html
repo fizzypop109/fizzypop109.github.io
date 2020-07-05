@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Sea Creatures List</title>
+    <link href="https://fonts.googleapis.com/css?family=Mali&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="acnh.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body class="sea__body body" onload="loadData()">
+    <div class="sea__header header">
+      <button type="button" class="button__back" onclick="location.href = 'index.html';">
+        Back
+      </button>
+      <h1 class="sea__title title">Sea</h1>
+      <div class="sea__hemisphere hemisphere">
+        <p class="sea__hemisphere__text hemisphere__text">On:</p>
+        <button type="button" class="button__hemisphere" onclick="switchHem()">
+          Checking...
+        </button>
+      </div>
+    </div>
+
+    <div class="sea__filters filters">
+      <button type="button" class="button__toggleDonated" onclick="toggleDonated()">
+        Checking...
+      </button>
+      <div class="sea__filters__dropdown__container filters__dropdown__container">
+        <select id="filters" class="sea__filters__dropdown filters__dropdown" onchange="handleFilterChange(event)">
+          <option value="all" selected>All</option>
+          <option value="now">What Can I Catch Right Now?</option>
+          <option value="month">What Can I Catch This Month?</option>
+          <option value="leaving">Last Chance</option>
+          <option value="new">New This Month</option>
+        </select>
+      </div>
+      <input type="text" class="sea__filters__search filters__search" placeholder="Search!" oninput="search()"></input>
+    </div>
+
+    <div class="seas__container main-container">
+    </div>
+  </body>
+
+  <script src="sea_json.js"></script>
+  <script src="pt.js"></script>
+
+</html>
