@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Gyroid List</title>
+    <link href="https://fonts.googleapis.com/css?family=Mali&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="acnh.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body class="gyroids__body body" onload="loadData()">
+    <div class="gyroids__header header">
+      <button type="button" class="button__back" onclick="location.href = 'index.html';">
+        Back
+      </button>
+      <h1 class="gyroids__title title">Gyroids</h1>
+    </div>
+
+    <div class="gyroids__filters filters">
+      <button type="button" class="button__toggleDonated" onclick="toggleDonated()">
+        Checking...
+      </button>
+      <input type="text" class="gyroids__filters__search filters__search" placeholder="Search!" oninput="search()"></input>
+    </div>
+
+    <div class="gyroids__container main-container">
+    </div>
+  </body>
+
+  <script src="gyroids_json.js"></script>
+  <script src="pt.js"></script>
+
+</html>
