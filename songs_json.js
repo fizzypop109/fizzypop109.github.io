@@ -428,8 +428,4 @@ var songs_json =
             "image": "Images/Songs/welcome-horizons.png",
             "name": "Welcome Horizons"
         },
-        {
-            "image": "Images/Songs/wild-world.png",
-            "name": "Wild World"
-        }
     ]
