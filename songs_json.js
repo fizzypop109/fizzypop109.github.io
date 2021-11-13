@@ -2,11 +2,11 @@ var songs_json =
     [
         {
             "image": "Images/Songs/agent-kk.png",
-            "name": "Agent K.K"
+            "name": "Agent K.K."
         },
         {
             "image": "Images/Songs/aloha-kk.png",
-            "name": "Aloha K.K"
+            "name": "Aloha K.K."
         },
         {
             "image": "Images/Songs/animal-city.png",
@@ -14,19 +14,23 @@ var songs_json =
         },
         {
             "image": "Images/Songs/bubblegum-kk.png",
-            "name": "Bubblegum K.K"
+            "name": "Bubblegum K.K."
         },
         {
             "image": "Images/Songs/cafe-kk.png",
-            "name": "Cafe K.K"
+            "name": "Cafe K.K."
+        },
+        {
+            "image": "Images/Songs/chillwave.png",
+            "name": "Chillwave"
         },
         {
             "image": "Images/Songs/comrade-kk.png",
-            "name": "Comrade K.K"
+            "name": "Comrade K.K."
         },
         {
             "image": "Images/Songs/dj-kk.png",
-            "name": "DJ K.K"
+            "name": "DJ K.K."
         },
         {
             "image": "Images/Songs/drivin.png",
@@ -46,7 +50,7 @@ var songs_json =
         },
         {
             "image": "Images/Songs/hypno-kk.png",
-            "name": "Hypno K.K"
+            "name": "Hypno K.K."
         },
         {
             "image": "Images/Songs/i-love-you.png",
@@ -54,19 +58,23 @@ var songs_json =
         },
         {
             "image": "Images/Songs/imperial-kk.png",
-            "name": "Imperial K.K"
+            "name": "Imperial K.K."
         },
         {
             "image": "Images/Songs/kk-adventure.png",
-            "name": "K.K Adventure"
+            "name": "K.K. Adventure"
         },
         {
             "image": "Images/Songs/kk-aria.png",
-            "name": "K.K Aria"
+            "name": "K.K. Aria"
         },
         {
             "image": "Images/Songs/kk-ballad.png",
-            "name": "K.K Ballad"
+            "name": "K.K. Ballad"
+        },
+        {
+            "image": "Images/Songs/kk-bashment.png",
+            "name": "K.K. Bashment"
         },
         {
             "image": "Images/Songs/kk-bazaar.png",
@@ -82,19 +90,27 @@ var songs_json =
         },
         {
             "image": "Images/Songs/kk-bossa.png",
-            "name": "K.K Bossa"
+            "name": "K.K. Bossa"
+        },
+        {
+            "image": "Images/Songs/kk-break.png",
+            "name": "K.K. Break"
         },
         {
             "image": "Images/Songs/kk-calypso.png",
-            "name": "K.K Calypso"
+            "name": "K.K. Calypso"
         },
         {
             "image": "Images/Songs/kk-casbah.png",
-            "name": "K.K Casbah"
+            "name": "K.K. Casbah"
         },
         {
             "image": "Images/Songs/kk-chorale.png",
             "name": "K.K. Chorale"
+        },
+        {
+            "image": "Images/Songs/kk-chorinho.png",
+            "name": "K.K. Chorinho"
         },
         {
             "image": "Images/Songs/kk-condor.png",
@@ -106,15 +122,15 @@ var songs_json =
         },
         {
             "image": "Images/Songs/kk-cruisin.png",
-            "name": "K.K Crusin'"
+            "name": "K.K. Crusin'"
         },
         {
             "image": "Images/Songs/kk-db.png",
-            "name": "K.K D&B"
+            "name": "K.K. D&B"
         },
         {
             "image": "Images/Songs/kk-dirge.png",
-            "name": "K.K Dirge"
+            "name": "K.K. Dirge"
         },
         {
             "image": "Images/Songs/kk-disco.png",
@@ -125,20 +141,28 @@ var songs_json =
             "name": "K.K. Dixie"
         },
         {
+            "image": "Images/Songs/kk-dub.png",
+            "name": "K.K. Dub"
+        },
+        {
             "image": "Images/Songs/kk-etude.png",
             "name": "K.K. Etude"
         },
         {
             "image": "Images/Songs/kk-faire.png",
-            "name": "K.K Faire"
+            "name": "K.K. Faire"
         },
         {
             "image": "Images/Songs/kk-flamenco.png",
-            "name": "K.K Flamenco"
+            "name": "K.K. Flamenco"
         },
         {
             "image": "Images/Songs/kk-folk.png",
             "name": "K.K. Folk"
+        },
+        {
+            "image": "Images/Songs/kk-fugue.png",
+            "name": "K.K. Fugue"
         },
         {
             "image": "Images/Songs/kk-fusion.png",
@@ -150,23 +174,31 @@ var songs_json =
         },
         {
             "image": "Images/Songs/kk-gumbo.png",
-            "name": "K.K Gumbo"
+            "name": "K.K. Gumbo"
+        },
+        {
+            "image": "Images/Songs/kk-hop.png",
+            "name": "K.K. Hop"
         },
         {
             "image": "Images/Songs/kk-house.png",
-            "name": "K.K House"
+            "name": "K.K. House"
         },
         {
             "image": "Images/Songs/kk-island.png",
-            "name": "K.K Island"
+            "name": "K.K. Island"
         },
         {
             "image": "Images/Songs/kk-jazz.png",
-            "name": "K.K Jazz"
+            "name": "K.K. Jazz"
         },
         {
             "image": "Images/Songs/kk-jongara.png",
             "name": "K.K. Jongara"
+        },
+        {
+            "image": "Images/Songs/kk-khoomei.png",
+            "name": "K.K. Khoomei"
         },
         {
             "image": "Images/Songs/kk-lament.png",
@@ -175,6 +207,10 @@ var songs_json =
         {
             "image": "Images/Songs/kk-love-song.png",
             "name": "K.K. Love Song"
+        },
+        {
+            "image": "Images/Songs/kk-lovers.png",
+            "name": "K.K. Lovers"
         },
         {
             "image": "Images/Songs/kk-lullaby.png",
@@ -190,11 +226,11 @@ var songs_json =
         },
         {
             "image": "Images/Songs/kk-march.png",
-            "name": "K.K March"
+            "name": "K.K. March"
         },
         {
             "image": "Images/Songs/kk-mariachi.png",
-            "name": "K.K Mariachi"
+            "name": "K.K. Mariachi"
         },
         {
             "image": "Images/Songs/kk-metal.png",
@@ -210,15 +246,19 @@ var songs_json =
         },
         {
             "image": "Images/Songs/kk-oasis.png",
-            "name": "K.K Oasis"
+            "name": "K.K. Oasis"
         },
         {
             "image": "Images/Songs/kk-parade.png",
-            "name": "K.K Parade"
+            "name": "K.K. Parade"
+        },
+        {
+            "image": "Images/Songs/kk-polka.png",
+            "name": "K.K. Polka"
         },
         {
             "image": "Images/Songs/kk-ragtime.png",
-            "name": "K.K Ragtime"
+            "name": "K.K. Ragtime"
         },
         {
             "image": "Images/Songs/kk-rally.png",
@@ -234,11 +274,19 @@ var songs_json =
         },
         {
             "image": "Images/Songs/kk-rockabilly.png",
-            "name": "K.K Rockabilly"
+            "name": "K.K. Rockabilly"
+        },
+        {
+            "image": "Images/Songs/kk-robot-synth.png",
+            "name": "K.K. Robot Synth"
+        },
+        {
+            "image": "Images/Songs/kk-safari.png",
+            "name": "K.K Safari"
         },
         {
             "image": "Images/Songs/kk-salsa.png",
-            "name": "K.K Salsa"
+            "name": "K.K. Salsa"
         },
         {
             "image": "Images/Songs/kk-samba.png",
@@ -249,20 +297,24 @@ var songs_json =
             "name": "K.K. Ska"
         },
         {
+            "image": "Images/Songs/kk-slack-key.png",
+            "name": "K.K. Slack-Key"
+        },
+        {
             "image": "Images/Songs/kk-sonata.png",
             "name": "K.K. Sonata"
         },
         {
             "image": "Images/Songs/kk-song.png",
-            "name": "K.K Song"
+            "name": "K.K. Song"
         },
         {
             "image": "Images/Songs/kk-soul.png",
-            "name": "K.K Soul"
+            "name": "K.K. Soul"
         },
         {
             "image": "Images/Songs/kk-steppe.png",
-            "name": "K.K Steppe"
+            "name": "K.K. Steppe"
         },
         {
             "image": "Images/Songs/kk-stroll.png",
@@ -278,7 +330,7 @@ var songs_json =
         },
         {
             "image": "Images/Songs/kk-tango.png",
-            "name": "K.K Tango"
+            "name": "K.K. Tango"
         },
         {
             "image": "Images/Songs/kk-technopop.png",
@@ -291,10 +343,6 @@ var songs_json =
         {
             "image": "Images/Songs/kk-western.png",
             "name": "K.K. Western"
-        },
-        {
-            "image": "Images/Songs/kk-safari.png",
-            "name": "K.K Safari"
         },
         {
             "image": "Images/Songs/king-kk.png",
@@ -380,8 +428,4 @@ var songs_json =
             "image": "Images/Songs/welcome-horizons.png",
             "name": "Welcome Horizons"
         },
-        {
-            "image": "Images/Songs/wild-world.png",
-            "name": "Wild World"
-        }
     ]
