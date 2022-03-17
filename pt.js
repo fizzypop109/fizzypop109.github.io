@@ -85,12 +85,12 @@ var currentHourIndex = new Date().getHours();
  */
 function initItems() {
   // Empty the container
-  var child = container.lastElementChild;  
-  while (child) { 
-    container.removeChild(child); 
-    child = container.lastElementChild; 
+  var child = container.lastElementChild;
+  while (child) {
+    container.removeChild(child);
+    child = container.lastElementChild;
   }
-  
+
   // For each item, create a "card"
   for (var item of items) {
     createItem(item);
@@ -125,7 +125,7 @@ function createItem(item) {
     var itemName = document.createElement("h2");
     itemName.innerText = item.name;
     itemName.classList.add(itemType + "__name", "name");
-      
+
     // Item price
     var itemPrice = document.createElement("p");
     itemPrice.innerText = item.price != 0 ? "Sell for: " + item.price + " bells" : "Sell for: Unknown bells";
@@ -448,7 +448,7 @@ function createFossil(fossil, part, container) {
   var partName = document.createElement("h2");
   partName.innerText = part.name;
   partName.classList.add("fossil__part__name", "part__name");
-       
+
   // Item price
   var partPrice = document.createElement("p");
   partPrice.innerText = part.price != 0 ? "Sell for: " + part.price + " bells" : "Sell for: Unknown bells";
@@ -532,7 +532,7 @@ function createClock(item) {
   currentTimeIcon.classList.add("current__time");
   currentTimeIcon.src = "white-circle.png";
   hourDivs[currentHourIndex].appendChild(currentTimeIcon);
-  
+
   clockContainer.appendChild(clock);
 
   // Create a line of text to label 12AM and 12PM on the bar
@@ -733,7 +733,7 @@ function checkboxSetup() {
           // remove is-donated class from the container for filtering purposes
           itemContainer.classList.remove('is-donated')
         }
-      
+
         // add donatedValues to itemTypeValues, add itemTypeValues to data, then set data in localStorage
         itemTypeValues['donatedValues'] = donatedValues;
         data[itemType] = itemTypeValues;
@@ -763,7 +763,7 @@ function checkboxSetup() {
     // Add a change listener to each donatedCheckbox
     for (let i = 0; i < donatedCheckboxes.length; i++) {
       const itemContainer = getFossilContainer(donatedCheckboxes[i])
-      
+
       donatedCheckboxes[i].addEventListener("change", function() {
         // Store the checked values in donatedValues
         donatedValues[this.id] = this.checked;
@@ -839,7 +839,7 @@ function search() {
   // Loop through all containers, and if the title doesn't include the search query, set display to none
   var query = document.getElementsByClassName("filters__search")[0].value;
   var filter = query.toUpperCase();
-  
+
   for (i = 0; i < containers.length; i++) {
     var name = containers[i].getElementsByTagName("h2")[0].innerText;
     if (name.toUpperCase().indexOf(filter) > -1) {
@@ -858,7 +858,7 @@ function handleFilterChange(e) {
   // Allows select element to be passed in js without mocking event object
   var selectElement = e.target || e;
   var filterType = selectElement.value;
-  
+
   // Reset display of each container first
   filterAll();
 
@@ -870,13 +870,16 @@ function handleFilterChange(e) {
       filterNow();
       break;
     case "month":
-      filterMonth();
+      filterMonth(MONTHS[currentMonthIndex]);
       break;
     case "leaving":
       filterLeaving();
       break;
     case "new":
       filterNew();
+      break;
+    default:
+      filterMonth(filterType);
       break;
   }
 }
@@ -939,14 +942,11 @@ function filterNow() {
  * Show items which are available in the current month, and hide the others
  * @param  {HTMLCollection} containers A HTMLCollection containing all of the item containers
  */
-function filterMonth() {
+function filterMonth(month) {
   // For each item container
   for (i = 0; i < containers.length; i++) {
     var availableMonths = containers[i].getElementsByClassName("calendar")[0].getElementsByClassName("available");
     var monthsArray = [].slice.call(availableMonths);
-
-    var month = MONTHS[currentMonthIndex];
-
     var monthAvailable = false;
 
     // Search through monthsArray
