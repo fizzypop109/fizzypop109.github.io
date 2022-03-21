@@ -146,7 +146,7 @@
 
 .container p, .container h2 {
   color: white;
-  word-break: break-all;
+  overflow-wrap: break-word;
   text-align: center;
 }
 
