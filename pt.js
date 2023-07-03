@@ -12,6 +12,21 @@ var filterResults = [];
 // Holds donated items to hide/show while showing All ONLY
 var donatedItems = [];
 
+if(document.getElementsByClassName('title')[0].innerText == "Critters") {
+  // Critters need individual itemTypes set in order to display correctly
+  for(var i=0; i<fish_json.length; i++) {
+    fish_json[i]["itemType"] = "fish";
+  }
+
+  for(var i=0; i<bugs_json.length; i++) {
+      bugs_json[i]["itemType"] = "bug";
+  }
+
+  for(var i=0; i<sea_json.length; i++) {
+      sea_json[i]["itemType"] = "sea";
+  }
+}
+
 // Set items and itemType based on the open page
 switch(document.getElementsByClassName('title')[0].innerText) {
   case "Fish":
@@ -25,6 +40,10 @@ switch(document.getElementsByClassName('title')[0].innerText) {
   case "Bugs":
     items = JSON.parse(JSON.stringify(bugs_json));
     itemType = 'bug';
+    break;
+  case "Critters":
+    items = JSON.parse(JSON.stringify(bugs_json.concat(sea_json).concat(fish_json)));
+    itemType = 'critter';
     break;
   case "Fossils":
     items = JSON.parse(JSON.stringify(fossils_json));
@@ -106,8 +125,11 @@ function createItem(item) {
   var itemBox = document.createElement("div");
   itemBox.classList.add(itemType + "__container", "container");
 
+
   // For Bug and Fish items
-  if (itemType == "bug" || itemType == "fish" || itemType == "sea") {
+  if (itemType == "bug" || itemType == "fish" || itemType == "sea" || itemType == "critter") {
+    var finalType =  itemType == "critter" ? item["itemType"] : itemType
+
     // Item info
     var infoDiv = document.createElement("div");
     infoDiv.classList.add(itemType + "__container__info", "info");
@@ -130,6 +152,17 @@ function createItem(item) {
     var itemPrice = document.createElement("p");
     itemPrice.innerText = item.price != 0 ? "Sell for: " + item.price + " bells" : "Sell for: Unknown bells";
     itemPrice.classList.add(itemType + "__price", "price");
+
+    // item type (for critters to know the final type)
+    var itemTypeInput = document.createElement("input");
+    itemTypeInput.setAttribute("type", "hidden");
+    itemTypeInput.setAttribute("name", "itemType");
+    itemTypeInput.setAttribute("value", finalType);
+    itemTypeInput.classList.add(itemType + "__type", "type");
+
+    infoTextDiv.appendChild(itemName);
+    infoTextDiv.appendChild(itemPrice);
+    infoTextDiv.appendChild(itemTypeInput);
 
     // Item time availability
     var itemTime = createClock(item);
@@ -165,11 +198,8 @@ function createItem(item) {
     itemDonated_label.innerText = "Donated?";
     itemDonated_label.htmlFor = item.name + "_donated";
 
-    infoTextDiv.appendChild(itemName);
-    infoTextDiv.appendChild(itemPrice);
-
      // Sea creatures do not have a location
-    if (itemType == "bug" || itemType == "fish") {
+    if (finalType == "bug" || finalType == "fish") {
       // Item location
       var itemLocation = document.createElement("p");
       itemLocation.innerText = item.location != "" ? "Location: " + item.location : "Location: Unknown";
@@ -179,7 +209,7 @@ function createItem(item) {
     }
 
     // Fish and sea creatures have a shadow size
-    if (itemType == "fish" || itemType == "sea") {
+    if (finalType == "fish" || finalType == "sea") {
       // Fish shadow size
       var itemSize = document.createElement("p");
       itemSize.innerText = item.shadowSize != "" ? "Shadow Size: " + item.shadowSize : "Shadow Size: Unknown";
@@ -189,7 +219,7 @@ function createItem(item) {
     }
 
     // Sea creatures also have a speed
-    if (itemType == "sea") {
+    if (finalType == "sea") {
       // Sea creature speed
       var itemSpeed = document.createElement("p");
       itemSpeed.innerText = item.speed != "" ? "Speed: " + item.speed : "Speed: Unknown";
@@ -623,6 +653,42 @@ function createCalendar(item) {
   return calendarContainer;
 }
 
+function loadDataForType(itemType) {
+  if (typeof data[itemType] == "undefined") { return; }
+
+  var itemTypeValues = Object.entries(data[itemType]);
+
+  // Iterate through caughtValues
+  if (typeof data[itemType]['caughtValues'] != "undefined") {
+    var caughtValues = Object.entries(data[itemType]['caughtValues']);
+
+    for (const [name, value] of caughtValues) {
+      if (document.getElementById(name)) { document.getElementById(name).checked = value; }
+    }
+  }
+
+  // Iterate through donatedValues
+  if (typeof data[itemType]['donatedValues'] != "undefined") {
+    var donatedValues = Object.entries(data[itemType]['donatedValues']);
+
+    for (const [name, value] of donatedValues) {
+      if (document.getElementById(name)) { document.getElementById(name).checked = value; }
+
+      // If the checkbox is ticked, add `is-donated` class to the item container if it exists (covers data change issues)
+      if (document.getElementById(name) && value) {
+        if (itemType !== 'fossil') {
+          document.getElementById(name).parentElement.parentElement.parentElement.classList.add('is-donated')
+        } else {
+          const itemContainer = getFossilContainer(document.getElementById(name));
+          if (checkFossilCompletion(itemContainer)) {
+            itemContainer.classList.add('is-donated');
+          }
+        }
+      }
+    }
+  }
+}
+
 /**
  * Get the checkbox data from localStorage and set the necessary on-page elements
  */
@@ -641,38 +707,12 @@ function loadData() {
 
   // If data isn't empty, separate it out into caughtValues and donatedValues, and set the checkboxes that were stored
   if (Object.keys(data).length !== 0) {
-      if (typeof data[itemType] != 'undefined') {
-      var itemTypeValues = Object.entries(data[itemType]);
-
-      // Iterate through caughtValues
-      if (typeof data[itemType]['caughtValues'] != "undefined") {
-        var caughtValues = Object.entries(data[itemType]['caughtValues']);
-
-        for (const [name, value] of caughtValues) {
-          if (document.getElementById(name)) { document.getElementById(name).checked = value; }
-        }
-      }
-
-      // Iterate through donatedValues
-      if (typeof data[itemType]['donatedValues'] != "undefined") {
-        var donatedValues = Object.entries(data[itemType]['donatedValues']);
-
-        for (const [name, value] of donatedValues) {
-          if (document.getElementById(name)) { document.getElementById(name).checked = value; }
-          // If the checkbox is ticked, add `is-donated` class to the item container if it exists (covers data change issues)
-          if (document.getElementById(name) && value) {
-            if (itemType !== 'fossil') {
-              document.getElementById(name).parentElement.parentElement.parentElement.classList.add('is-donated')
-            } else {
-              const itemContainer = getFossilContainer(document.getElementById(name));
-
-              if (checkFossilCompletion(itemContainer)) {
-                itemContainer.classList.add('is-donated');
-              }
-            }
-          }
-        }
-      }
+    if(itemType == "critter") {
+      loadDataForType("bug")
+      loadDataForType("sea")
+      loadDataForType("fish")
+    } else {
+      loadDataForType(itemType)
     }
   }
 
@@ -683,26 +723,34 @@ function loadData() {
 /**
  * Setup the caught and donated checkboxes with eventListeners and localStorage saving
  */
+ function getItemType(itemType, item) {
+   if(itemType != "critter") return itemType;
+
+   var parent = item.parentElement.parentElement.parentElement
+   var info = parent.getElementsByClassName('info')[0]
+   var text = info.getElementsByClassName('container__info__text')[0]
+   return text.getElementsByClassName('type')[0].value
+ }
+
 function checkboxSetup() {
-  var itemTypeValues = data[itemType] || {};
-
   var caughtCheckboxes = document.getElementsByClassName(itemType + '__caught');
-  var caughtValues = itemTypeValues['caughtValues'] || {};
-
   var donatedCheckboxes = document.getElementsByClassName(itemType + '__donated');
-  var donatedValues = itemTypeValues['donatedValues'] || {};
 
   // Temporary separation of fossil, art and non-fossil,art setup until I clean it up
   if (itemType !== "fossil" && itemType !== "art") {
     // Add a change listener to each caughtCheckbox
     for (let i = 0; i < caughtCheckboxes.length; i++) {
       caughtCheckboxes[i].addEventListener("change", function() {
+        var finalItemType = getItemType(itemType, this)
+        var itemTypeValues = data[finalItemType] || {}
+        var caughtValues = itemTypeValues['caughtValues'] || {}
+
         // Store the checked values in caughtValues
         caughtValues[this.id] = this.checked;
 
         // add caughtValues to itemTypeValues, add itemTypeValues to data, then set data in localStorage
         itemTypeValues['caughtValues'] = caughtValues;
-        data[itemType] = itemTypeValues;
+        data[finalItemType] = itemTypeValues;
         localStorage.setItem('data', JSON.stringify(data));
       });
     }
@@ -710,6 +758,11 @@ function checkboxSetup() {
     // Add a change listener to each donatedCheckbox
     for (let i = 0; i < donatedCheckboxes.length; i++) {
       donatedCheckboxes[i].addEventListener("change", function() {
+        var finalItemType = getItemType(itemType, this)
+        var itemTypeValues = data[finalItemType] || {}
+        var donatedValues = itemTypeValues['donatedValues'] || {}
+        var caughtValues = itemTypeValues['caughtValues'] || {}
+
         // Store the checked values in donatedValues
         donatedValues[this.id] = this.checked;
 
@@ -723,7 +776,7 @@ function checkboxSetup() {
             caughtValues[document.getElementById(this.id).previousSibling.previousSibling.id] = true;
 
             itemTypeValues['caughtValues'] = caughtValues;
-            data[itemType] = itemTypeValues;
+            data[finalItemType] = itemTypeValues;
             localStorage.setItem('data', JSON.stringify(data));
           }
 
@@ -736,7 +789,7 @@ function checkboxSetup() {
 
         // add donatedValues to itemTypeValues, add itemTypeValues to data, then set data in localStorage
         itemTypeValues['donatedValues'] = donatedValues;
-        data[itemType] = itemTypeValues;
+        data[finalItemType] = itemTypeValues;
         localStorage.setItem('data', JSON.stringify(data));
 
         // run search to ensure
@@ -744,6 +797,10 @@ function checkboxSetup() {
       });
     }
   } else {
+    var itemTypeValues = data[itemType] || {};
+    var caughtValues = itemTypeValues['caughtValues'] || {};
+    var donatedValues = itemTypeValues['donatedValues'] || {};
+
     // Add a change listener to each caughtCheckbox
     for (let i = 0; i < caughtCheckboxes.length; i++) {
       caughtCheckboxes[i].addEventListener("change", function() {
