@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Critters List</title>
+    <link href="https://fonts.googleapis.com/css?family=Mali&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="acnh.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body class="critters__body body" onload="loadData()">
+    <div class="critters__header header">
+      <button type="button" class="button__back" onclick="location.href = 'index.html';">
+        Back
+      </button>
+      <h1 class="critters__title title">Critters</h1>
+      <div class="critters__hemisphere hemisphere">
+        <p class="critters__hemisphere__text hemisphere__text">On:</p>
+        <button type="button" class="button__hemisphere" onclick="switchHem()">
+          Checking...
+        </button>
+      </div>
+    </div>
+
+    <div class="critters__filters filters">
+      <button type="button" class="button__toggleDonated" onclick="toggleDonated()">
+        Checking...
+      </button>
+      <div class="critters__filters__dropdown__container filters__dropdown__container">
+        <select id="critters" class="critters__filters__dropdown filters__dropdown" onchange="handleFilterChange(event)">
+          <option value="all" selected>All</option>
+          <option value="now">What Can I Catch Right Now?</option>
+          <option value="month">What Can I Catch This Month?</option>
+          <option value="leaving">Last Chance</option>
+          <option value="new">New This Month</option>
+          <option value="january">January</option>
+          <option value="february">February</option>
+          <option value="march">March</option>
+          <option value="april">April</option>
+          <option value="may">May</option>
+          <option value="june">June</option>
+          <option value="july">July</option>
+          <option value="august">August</option>
+          <option value="september">September</option>
+          <option value="october">October</option>
+          <option value="november">November</option>
+          <option value="december">December</option>
+        </select>
+      </div>
+      <input type="text" class="critters__filters__search filters__search" placeholder="Search!" oninput="search()"></input>
+    </div>
+
+    <div class="critters__container main-container">
+    </div>
+  </body>
+
+  <script src="bugs_json.js"></script>
+  <script src="fish_json.js"></script>
+  <script src="sea_json.js"></script>
+  <script src="pt.js"></script>
+
+</html>
