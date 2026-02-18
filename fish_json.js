@@ -1,7 +1,7 @@
 var fish_json =
     [
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_56_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/2/24/NH-Icon-anchovy.png/revision/latest?cb=20200401003129",
             "name": "anchovy",
             "price": 200,
             "location": "sea",
@@ -13,7 +13,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_36_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/6/63/NH-Icon-angelfish.png/revision/latest?cb=20200401003128",
             "name": "angelfish",
             "price": 3000,
             "location": "river",
@@ -25,7 +25,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_44_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/7/7f/NH-Icon-arapaima.png/revision/latest?cb=20200401003128",
             "name": "arapaima",
             "price": 10000,
             "location": "river",
@@ -37,7 +37,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_41_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/b/bf/NH-Icon-arowana.png/revision/latest?cb=20200401003128",
             "name": "arowana",
             "price": 10000,
             "location": "river",
@@ -49,7 +49,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_58_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/8/8c/NH-Icon-barredknifejaw.png/revision/latest?cb=20200401003128",
             "name": "barred knifejaw",
             "price": 5000,
             "location": "sea",
@@ -61,7 +61,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_79_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/c/c7/NH-Icon-barreleye.png/revision/latest?cb=20200401003128",
             "name": "barreleye",
             "price": 15000,
             "location": "sea",
@@ -73,7 +73,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_37_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/7/7c/NH-Icon-betta.png/revision/latest?cb=20200401003129",
             "name": "betta",
             "price": 2500,
             "location": "river",
@@ -85,7 +85,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_1_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/e/ea/NH-Icon-bitterling.png/revision/latest?cb=20200401003128",
             "name": "bitterling",
             "price": 900,
             "location": "river",
@@ -97,7 +97,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_22_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/e/e2/NH-Icon-blackbass.png/revision/latest?cb=20200401003129",
             "name": "black bass",
             "price": 400,
             "location": "river",
@@ -109,7 +109,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_54_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/3/39/NH-Icon-blowfish.png/revision/latest?cb=20200401003129",
             "name": "blowfish",
             "price": 5000,
             "location": "sea",
@@ -121,7 +121,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_20_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/6/69/NH-Icon-bluegill.png/revision/latest?cb=20200401003129",
             "name": "bluegill",
             "price": 180,
             "location": "river",
@@ -133,7 +133,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_67_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/2/2f/NH-Icon-bluemarlin.png/revision/latest?cb=20200401003129",
             "name": "blue marlin",
             "price": 10000,
             "location": "pier",
@@ -145,7 +145,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_51_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/8/8e/NH-Icon-butterflyfish.png/revision/latest?cb=20200401003129",
             "name": "butterfly fish",
             "price": 1000,
             "location": "sea",
@@ -157,7 +157,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_5_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/2/2c/NH-Icon-carp.png/revision/latest?cb=20200401003129",
             "name": "carp",
             "price": 300,
             "location": "pond",
@@ -169,7 +169,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_18_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/2/29/NH-Icon-catfish.png/revision/latest?cb=20200401003129",
             "name": "catfish",
             "price": 800,
             "location": "pond",
@@ -181,7 +181,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_28_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/1/15/NH-Icon-char.png/revision/latest?cb=20200401003129",
             "name": "char",
             "price": 3800,
             "location": "river (clifftop)",
@@ -193,7 +193,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_27_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/5/5f/NH-Icon-cherrysalmon.png/revision/latest?cb=20200401003129",
             "name": "cherry salmon",
             "price": 1000,
             "location": "river (clifftop)",
@@ -205,7 +205,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_49_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/2/2f/NH-Icon-clownfish.png/revision/latest?cb=20200401003129",
             "name": "clown fish",
             "price": 650,
             "location": "sea",
@@ -217,7 +217,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_80_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/3/31/NH-Icon-coelacanth.png/revision/latest?cb=20200401003129",
             "name": "coelacanth",
             "price": 15000,
             "location": "sea (rainy days)",
@@ -229,7 +229,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_11_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/c/cd/NH-Icon-crawfish.png/revision/latest?cb=20200401003129",
             "name": "crawfish",
             "price": 200,
             "location": "pond",
@@ -241,7 +241,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_3_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/0/03/NH-Icon-cruciancarp.png/revision/latest?cb=20200401003129",
             "name": "crucian carp",
             "price": 160,
             "location": "river",
@@ -253,7 +253,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_61_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/c/c6/NH-Icon-dab.png/revision/latest?cb=20200401003129",
             "name": "dab",
             "price": 300,
             "location": "sea",
@@ -265,7 +265,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_4_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/2/22/NH-Icon-dace.png/revision/latest?cb=20200401003129",
             "name": "dace",
             "price": 240,
             "location": "river",
@@ -277,7 +277,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_42_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/d/df/NH-Icon-dorado.png/revision/latest?cb=20200401003129",
             "name": "dorado",
             "price": 15000,
             "location": "river",
@@ -289,7 +289,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_77_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/a/a5/NH-Icon-footballfish.png/revision/latest?cb=20200401003129",
             "name": "football fish",
             "price": 2500,
             "location": "sea",
@@ -301,7 +301,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_16_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/e/ee/NH-Icon-freshwatergoby.png/revision/latest?cb=20200401003129",
             "name": "freshwater goby",
             "price": 400,
             "location": "river",
@@ -313,7 +313,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_15_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/6/6b/NH-Icon-frog.png/revision/latest?cb=20200401003129",
             "name": "frog",
             "price": 120,
             "location": "pond",
@@ -325,7 +325,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_43_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/9/9f/NH-Icon-gar.png/revision/latest?cb=20200401003129",
             "name": "gar",
             "price": 6000,
             "location": "pond",
@@ -337,7 +337,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_19_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/0/0c/NH-Icon-giantsnakehead.png/revision/latest?cb=20200401003129",
             "name": "giant snakehead",
             "price": 5500,
             "location": "pond",
@@ -349,7 +349,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_68_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/7/7b/NH-Icon-gianttrevally.png/revision/latest?cb=20200401003129",
             "name": "giant trevally",
             "price": 4500,
             "location": "pier",
@@ -361,7 +361,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_29_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/5/5c/NH-Icon-goldentrout.png/revision/latest?cb=20200401003129",
             "name": "golden trout",
             "price": 15000,
             "location": "river (clifftop)",
@@ -373,7 +373,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_7_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/e/ed/NH-Icon-goldfish.png/revision/latest?cb=20200401003129",
             "name": "goldfish",
             "price": 1300,
             "location": "pond",
@@ -385,7 +385,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_74_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/3/38/NH-Icon-greatwhiteshark.png/revision/latest?cb=20200401003129",
             "name": "great white shark",
             "price": 15000,
             "location": "sea",
@@ -397,7 +397,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_34_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/6/63/NH-Icon-guppy.png/revision/latest?cb=20200401003129",
             "name": "guppy",
             "price": 1300,
             "location": "river",
@@ -409,7 +409,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_73_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/2/25/NH-Icon-hammerheadshark.png/revision/latest?cb=20200401003129",
             "name": "hammerhead shark",
             "price": 8000,
             "location": "sea",
@@ -421,7 +421,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_57_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/d/d5/NH-Icon-horsemackerel.png/revision/latest?cb=20200401003129",
             "name": "horse mackerel",
             "price": 150,
             "location": "sea",
@@ -433,7 +433,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_10_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/c/c3/NH-Icon-killifish.png/revision/latest?cb=20200401003129",
             "name": "killifish",
             "price": 300,
             "location": "pond",
@@ -445,7 +445,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_32_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/f/fd/NH-Icon-kingsalmon.png/revision/latest?cb=20200401003129",
             "name": "king salmon",
             "price": 1800,
             "location": "river (mouth)",
@@ -457,7 +457,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_6_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/7/74/NH-Icon-koi.png/revision/latest?cb=20200401003129",
             "name": "koi",
             "price": 4000,
             "location": "pond",
@@ -469,7 +469,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_17_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/7/77/NH-Icon-loach.png/revision/latest?cb=20200401003129",
             "name": "loach",
             "price": 400,
             "location": "river",
@@ -481,7 +481,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_69_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/8/82/NH-Icon-mahimahi.png/revision/latest?cb=20200401003129",
             "name": "mahi-mahi",
             "price": 6000,
             "location": "pier",
@@ -493,7 +493,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_33_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/e/e3/NH-Icon-mittencrab.png/revision/latest?cb=20200401003129",
             "name": "mitten crab",
             "price": 2000,
             "location": "river",
@@ -505,7 +505,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_64_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/e/e5/NH-Icon-morayeel.png/revision/latest?cb=20200401003130",
             "name": "moray eel",
             "price": 2000,
             "location": "sea",
@@ -517,7 +517,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_52_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/6/6f/NH-Icon-napoleonfish.png/revision/latest?cb=20200401003129",
             "name": "napoleonfish",
             "price": 10000,
             "location": "sea",
@@ -529,7 +529,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_38_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/d/da/NH-Icon-neontetra.png/revision/latest?cb=20200401003129",
             "name": "neon tetra",
             "price": 500,
             "location": "river",
@@ -541,7 +541,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_35_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/8/89/NH-Icon-nibblefish.png/revision/latest?cb=20200401003129",
             "name": "nibble fish",
             "price": 1500,
             "location": "river",
@@ -553,7 +553,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_78_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/3/33/NH-Icon-oarfish.png/revision/latest?cb=20200401003129",
             "name": "oarfish",
             "price": 9000,
             "location": "sea",
@@ -565,7 +565,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_70_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/5/52/NH-Icon-oceansunfish.png/revision/latest?cb=20200401003129",
             "name": "ocean sunfish",
             "price": 4000,
             "location": "sea",
@@ -577,7 +577,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_62_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/9/9e/NH-Icon-oliveflounder.png/revision/latest?cb=20200401003129",
             "name": "olive flounder",
             "price": 800,
             "location": "sea",
@@ -589,7 +589,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_2_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/2/2c/NH-Icon-palechub.png/revision/latest?cb=20200401003129",
             "name": "pale chub",
             "price": 160,
             "location": "river",
@@ -601,7 +601,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_24_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/d/dc/NH-Icon-pike.png/revision/latest?cb=20200401003130",
             "name": "pike",
             "price": 1800,
             "location": "river",
@@ -613,7 +613,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_40_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/b/b9/NH-Icon-piranha.png/revision/latest?cb=20200401003130",
             "name": "piranha",
             "price": 2500,
             "location": "river",
@@ -625,7 +625,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_25_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/4/41/NH-Icon-pondsmelt.png/revision/latest?cb=20200401003130",
             "name": "pond smelt",
             "price": 500,
             "location": "river",
@@ -637,7 +637,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_8_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/c/c9/NH-Icon-popeyedgoldfish.png/revision/latest?cb=20200401003129",
             "name": "pop-eyed goldfish",
             "price": 1300,
             "location": "pond",
@@ -649,7 +649,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_55_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/1/1f/NH-Icon-pufferfish.png/revision/latest?cb=20200401003130",
             "name": "puffer fish",
             "price": 250,
             "location": "sea",
@@ -661,7 +661,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_39_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/6/68/NH-Icon-rainbowfish.png/revision/latest?cb=20200401003129",
             "name": "rainbowfish",
             "price": 800,
             "location": "river",
@@ -673,7 +673,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_9_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/f/f9/NH-Icon-ranchugoldfish.png/revision/latest?cb=20200401003129",
             "name": "ranchu goldfish",
             "price": 4500,
             "location": "pond",
@@ -685,7 +685,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_71_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/d/db/NH-Icon-ray.png/revision/latest?cb=20200401003129",
             "name": "ray",
             "price": 3000,
             "location": "sea",
@@ -697,7 +697,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_60_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/d/dd/NH-Icon-redsnapper.png/revision/latest?cb=20200401003130",
             "name": "red snapper",
             "price": 3000,
             "location": "sea",
@@ -709,7 +709,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_65_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/a/ac/NH-Icon-ribboneel.png/revision/latest?cb=20200401003129",
             "name": "ribbon eel",
             "price": 600,
             "location": "sea",
@@ -721,7 +721,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_45_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/a/a0/NH-Icon-saddledbichir.png/revision/latest?cb=20200401003130",
             "name": "saddled bichir",
             "price": 4000,
             "location": "river",
@@ -733,7 +733,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_31_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/f/fb/NH-Icon-salmon.png/revision/latest?cb=20200401003129",
             "name": "salmon",
             "price": 700,
             "location": "river (mouth)",
@@ -745,7 +745,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_72_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/7/73/NH-Icon-sawshark.png/revision/latest?cb=20200401003129",
             "name": "saw shark",
             "price": 12000,
             "location": "sea",
@@ -757,7 +757,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_48_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/5/55/NH-Icon-seahorse.png/revision/latest?cb=20200401003129",
             "name": "seahorse",
             "price": 1100,
             "location": "sea",
@@ -769,7 +769,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_59_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/2/22/NH-Icon-seabass.png/revision/latest?cb=20200401003130",
             "name": "sea bass",
             "price": 400,
             "location": "sea",
@@ -781,7 +781,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_47_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/8/8f/NH-Icon-seabutterfly.png/revision/latest?cb=20200401003129",
             "name": "sea butterfly",
             "price": 1000,
             "location": "sea",
@@ -793,7 +793,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_13_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/2/24/NH-Icon-snappingturtle.png/revision/latest?cb=20200401003129",
             "name": "snapping turtle",
             "price": 5000,
             "location": "river",
@@ -805,7 +805,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_12_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/c/c3/NH-Icon-softshelledturtle.png/revision/latest?cb=20200401003129",
             "name": "soft-shelled turtle",
             "price": 3750,
             "location": "river",
@@ -817,7 +817,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_63_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/3/3b/NH-Icon-squid.png/revision/latest?cb=20200401003130",
             "name": "squid",
             "price": 500,
             "location": "sea",
@@ -829,7 +829,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_30_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/7/7b/NH-Icon-stringfish.png/revision/latest?cb=20200401003129",
             "name": "stringfish",
             "price": 15000,
             "location": "river (clifftop)",
@@ -841,7 +841,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_46_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/9/98/NH-Icon-sturgeon.png/revision/latest?cb=20200401003129",
             "name": "sturgeon",
             "price": 10000,
             "location": "river (mouth)",
@@ -853,7 +853,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_76_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/b/b9/NH-Icon-suckerfish.png/revision/latest?cb=20200401003131",
             "name": "suckerfish",
             "price": 1500,
             "location": "sea",
@@ -865,7 +865,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_50_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/1/11/NH-Icon-surgeonfish.png/revision/latest?cb=20200401003129",
             "name": "surgeonfish",
             "price": 1000,
             "location": "sea",
@@ -877,7 +877,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_26_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/4/40/NH-Icon-sweetfish.png/revision/latest?cb=20200401003129",
             "name": "sweetfish",
             "price": 900,
             "location": "river",
@@ -889,7 +889,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_14_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/1/1c/NH-Icon-tadpole.png/revision/latest?cb=20200401003129",
             "name": "tadpole",
             "price": 100,
             "location": "pond",
@@ -901,7 +901,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_23_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/5/53/NH-Icon-tilapia.png/revision/latest?cb=20200401003129",
             "name": "tilapia",
             "price": 800,
             "location": "river",
@@ -913,7 +913,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_66_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/5/50/NH-Icon-tuna.png/revision/latest?cb=20200401003129",
             "name": "tuna",
             "price": 7000,
             "location": "pier",
@@ -925,7 +925,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_75_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/1/1c/NH-Icon-whaleshark.png/revision/latest?cb=20200401003129",
             "name": "whale shark",
             "price": 13000,
             "location": "sea",
@@ -937,7 +937,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_21_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/1/1d/NH-Icon-yellowperch.png/revision/latest?cb=20200401003129",
             "name": "yellow perch",
             "price": 300,
             "location": "river",
@@ -949,7 +949,7 @@ var fish_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sakana_53_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/1/1c/NH-Icon-zebraturkeyfish.png/revision/latest?cb=20200401003130",
             "name": "zebra turkeyfish",
             "price": 500,
             "location": "sea",

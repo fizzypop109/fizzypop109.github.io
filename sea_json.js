@@ -1,7 +1,7 @@
 var sea_json =
     [
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_17_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/f/f1/NH-Icon-abalone.png/revision/latest?cb=20200705031438",
             "name": "abalone",
             "price": 2000,
             "shadowSize": "large",
@@ -13,7 +13,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_28_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/e/e3/NH-Icon-acornbarnacle.png/revision/latest?cb=20200705031838",
             "name": "acorn barnacle",
             "price": 600,
             "shadowSize": "extra small",
@@ -25,7 +25,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_19_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/a/ab/NH-Icon-chamberednautilus.png/revision/latest?cb=20200705031407",
             "name": "chambered nautilus",
             "price": 1800,
             "shadowSize": "medium",
@@ -37,7 +37,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_25_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/7/7e/NH-Icon-dungenesscrab.png/revision/latest?cb=20200705031712",
             "name": "dungeness crab",
             "price": 1900,
             "shadowSize": "large",
@@ -49,7 +49,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_23_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/8/85/NH-Icon-fireflysquid.png/revision/latest?cb=20200705031756",
             "name": "firefly squid",
             "price": 1400,
             "shadowSize": "small",
@@ -61,7 +61,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_39_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/a/a3/NH-Icon-flatworm.png/revision/latest?cb=20200704041314",
             "name": "flatworm",
             "price": 700,
             "shadowSize": "extra small",
@@ -73,7 +73,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_24_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/5/52/NH-Icon-gazamicrab.png/revision/latest?cb=20200705031852",
             "name": "gazami crab",
             "price": 2200,
             "shadowSize": "medium",
@@ -85,7 +85,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_35_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/1/19/NH-Icon-giantisopod.png/revision/latest?cb=20200704041055",
             "name": "giant isopod",
             "price": 12000,
             "shadowSize": "large",
@@ -97,7 +97,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_18_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/0/09/NH-Icon-gigasgiantclam.png/revision/latest?cb=20200704040822",
             "name": "gigas giant clam",
             "price": 15000,
             "shadowSize": "large",
@@ -109,7 +109,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_36_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/d/d4/NH-Icon-horseshoecrab.png/revision/latest?cb=20200705032022",
             "name": "horseshoe crab",
             "price": 2500,
             "shadowSize": "medium",
@@ -121,7 +121,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_34_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/b/bc/NH-Icon-lobster.png/revision/latest?cb=20200704041035",
             "name": "lobster",
             "price": 4500,
             "shadowSize": "large",
@@ -133,7 +133,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_32_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/a/a5/NH-Icon-mantisshrimp.png/revision/latest?cb=20200705031823",
             "name": "mantis shrimp",
             "price": 2500,
             "shadowSize": "medium",
@@ -145,7 +145,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_9_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/b/b2/NH-Icon-moonjellyfish.png/revision/latest?cb=20200704041516",
             "name": "moon jellyfish",
             "price": 600,
             "shadowSize": "medium",
@@ -157,7 +157,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_12_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/4/49/NH-Icon-mussel.png/revision/latest?cb=20200705031258",
             "name": "mussel",
             "price": 1500,
             "shadowSize": "medium",
@@ -169,7 +169,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_20_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/4/4e/NH-Icon-octopus.png/revision/latest?cb=20200705031421",
             "name": "octopus",
             "price": 1200,
             "shadowSize": "medium",
@@ -181,7 +181,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_13_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/a/a1/NH-Icon-oyster.png/revision/latest?cb=20200705031323",
             "name": "oyster",
             "price": 1100,
             "shadowSize": "medium",
@@ -193,7 +193,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_11_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/d/d8/NH-Icon-pearloyster.png/revision/latest?cb=20200705031119",
             "name": "pearl oyster",
             "price": 2800,
             "shadowSize": "medium",
@@ -205,7 +205,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_27_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/a/ae/NH-Icon-redkingcrab.png/revision/latest?cb=20200705032051",
             "name": "red king crab",
             "price": 8000,
             "shadowSize": "large",
@@ -217,7 +217,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_14_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/7/7e/NH-Icon-scallop.png/revision/latest?cb=20200705031310",
             "name": "scallop",
             "price": 1200,
             "shadowSize": "medium",
@@ -229,7 +229,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_8_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/b/b4/NH-Icon-seaanemone.png/revision/latest?cb=20200705031052",
             "name": "sea anemone",
             "price": 500,
             "shadowSize": "large",
@@ -241,7 +241,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_3_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/f/fc/NH-Icon-seacucumber.png/revision/latest?cb=20200704040731",
             "name": "sea cucumber",
             "price": 500,
             "shadowSize": "large",
@@ -253,7 +253,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_2_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/5/51/NH-Icon-seagrapes.png/revision/latest?cb=20200705031927",
             "name": "sea grapes",
             "price": 900,
             "shadowSize": "medium",
@@ -265,7 +265,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_4_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/3/39/NH-Icon-seapig.png/revision/latest?cb=20200704040518",
             "name": "sea pig",
             "price": 10000,
             "shadowSize": "medium",
@@ -277,7 +277,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_37_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/7/79/NH-Icon-seapineapple.png/revision/latest?cb=20200704041211",
             "name": "sea pineapple",
             "price": 1500,
             "shadowSize": "small",
@@ -289,7 +289,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_10_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/d/d4/NH-Icon-seaslug.png/revision/latest?cb=20200705031105",
             "name": "sea slug",
             "price": 600,
             "shadowSize": "extra small",
@@ -301,7 +301,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_5_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/9/92/NH-Icon-seastar.png/revision/latest?cb=20200705031036",
             "name": "sea star",
             "price": 500,
             "shadowSize": "medium",
@@ -313,7 +313,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_6_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/d/d6/NH-Icon-seaurchin.png/revision/latest?cb=20200705031938",
             "name": "sea urchin",
             "price": 1700,
             "shadowSize": "medium",
@@ -325,7 +325,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_1_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/8/82/NH-Icon-seaweed.png/revision/latest?cb=20200705032224",
             "name": "seaweed",
             "price": 600,
             "shadowSize": "small",
@@ -337,7 +337,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_7_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/c/cd/NH-Icon-slatepencilurchin.png/revision/latest?cb=20200705032001",
             "name": "slate pencil urchin",
             "price": 2000,
             "shadowSize": "medium",
@@ -349,7 +349,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_26_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/6/69/NH-Icon-snowcrab.png/revision/latest?cb=20200705031650",
             "name": "snow crab",
             "price": 6000,
             "shadowSize": "large",
@@ -361,7 +361,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_29_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/d/d5/NH-Icon-spidercrab.png/revision/latest?cb=20200705031809",
             "name": "spider crab",
             "price": 12000,
             "shadowSize": "large",
@@ -373,7 +373,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_33_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/7/72/NH-Icon-spinylobster.png/revision/latest?cb=20200704041014",
             "name": "spiny lobster",
             "price": 5000,
             "shadowSize": "medium",
@@ -385,7 +385,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_38_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/1/19/NH-Icon-spottedgardeneel.png/revision/latest?cb=20200704041433",
             "name": "spotted garden eel",
             "price": 1100,
             "shadowSize": "medium",
@@ -397,7 +397,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_31_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/6/68/NH-Icon-sweetshrimp.png/revision/latest?cb=20200705031538",
             "name": "sweet shrimp",
             "price": 1400,
             "shadowSize": "small",
@@ -409,7 +409,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_30_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/c/c7/NH-Icon-tigerprawn.png/revision/latest?cb=20200705032036",
             "name": "tiger prawn",
             "price": 3000,
             "shadowSize": "medium",
@@ -421,7 +421,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_16_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/4/41/NH-Icon-turbanshell.png/revision/latest?cb=20200705031350",
             "name": "turban shell",
             "price": 1000,
             "shadowSize": "small",
@@ -433,7 +433,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_21_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/f/f5/NH-Icon-umbrellaoctopus.png/revision/latest?cb=20200705031450",
             "name": "umbrella octopus",
             "price": 6000,
             "shadowSize": "small",
@@ -445,7 +445,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_22_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/1/13/NH-Icon-vampiresquid.png/revision/latest?cb=20200705032011",
             "name": "vampire squid",
             "price": 10000,
             "shadowSize": "large",
@@ -457,7 +457,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_40_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/2/22/NH-Icon-venusflowerbasket.png/revision/latest?cb=20200704041357",
             "name": "venus' flower basket",
             "price": 5000,
             "shadowSize": "large",
@@ -469,7 +469,7 @@ var sea_json =
             }
         },
         {
-            "image": "https://gamewith-en.akamaized.net/article_tools/animal-crossing-new-horizons/gacha/sc_15_i.png",
+            "image": "https://static.wikia.nocookie.net/animalcrossing/images/5/51/NH-Icon-whelk.png/revision/latest?cb=20200704041534",
             "name": "whelk",
             "price": 1000,
             "shadowSize": "medium",
