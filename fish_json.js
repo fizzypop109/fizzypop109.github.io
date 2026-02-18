@@ -33,7 +33,7 @@ var fish_json =
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "", "", "", "", "", "", "", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "june", "july", "august", "september", "", "", ""],
-                "southern": ["january", "february", "march", "april", "", "", "", "", "", "", "", "december"]
+                "southern": ["january", "february", "march", "", "", "", "", "", "", "", "", "december"]
             }
         },
         {
@@ -81,7 +81,7 @@ var fish_json =
             "time": ["", "", "", "", "", "", "", "", "", "9", "10", "11", "12", "13", "14", "15", "", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "may", "june", "july", "august", "september", "october", "", ""],
-                "southern": ["january", "february", "march", "", "", "", "", "", "", "", "november", "december"]
+                "southern": ["january", "february", "march", "april", "", "", "", "", "", "", "november", "december"]
             }
         },
         {
@@ -345,7 +345,7 @@ var fish_json =
             "time": ["", "", "", "", "", "", "", "", "", "9", "10", "11", "12", "13", "14", "15", "", "", "", "", "", "", "", ""],
             "season": {
                 "northern": ["", "", "", "", "", "june", "july", "august", "", "", "", ""],
-                "southern": ["january", "february", "", "", "", "", "", "", "", "", "", ""]
+                "southern": ["january", "february", "", "", "", "", "", "", "", "", "", "december"]
             }
         },
         {
@@ -885,7 +885,7 @@ var fish_json =
             "time": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
             "season": {
                 "northern": ["", "", "", "", "", "", "july", "august", "september", "", "", ""],
-                "southern": ["january", "february", "march", "", "", "", "", "", "", "", "", "december"]
+                "southern": ["january", "february", "march", "", "", "", "", "", "", "", "", ""]
             }
         },
         {
